@@ -6,7 +6,7 @@
     "Session": {
         "Bookmarks": [
         ],
-        "CurrentFile": "Section_4.tex",
+        "CurrentFile": "glossary.tex",
         "FileVersion": 1,
         "Files": [
             {
@@ -16,14 +16,6 @@
                 "FirstLine": 276,
                 "FoldedLines": "",
                 "Line": 66
-            },
-            {
-                "Col": 42,
-                "EditorGroup": 0,
-                "FileName": "glossary.tex",
-                "FirstLine": 0,
-                "FoldedLines": "",
-                "Line": 3
             },
             {
                 "Col": 0,
@@ -122,6 +114,14 @@
                 "Line": 0
             },
             {
+                "Col": 43,
+                "EditorGroup": 0,
+                "FileName": "glossary.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 8
+            },
+            {
                 "Col": 0,
                 "EditorGroup": 0,
                 "FileName": "Appen_A.tex",
@@ -146,12 +146,12 @@
                 "Line": 0
             },
             {
-                "Col": 0,
+                "Col": 123,
                 "EditorGroup": 0,
                 "FileName": "Appen_D.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
-                "Line": 0
+                "Line": 18
             }
         ],
         "MasterFile": "",

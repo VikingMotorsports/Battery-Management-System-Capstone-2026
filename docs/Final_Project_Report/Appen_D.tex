@@ -1,1 +1,115 @@
-This document lays out how someone is able 
+This document lays out how someone is able to ensure the \gls{bms} is fully operational.
+
+\subsection{Top Down Testing}
+
+\subsubsection{Purpose}
+
+To test the entire system against its requirements by performing a top-down test.
+
+\subsubsection{System Equipment}
+
+\textbf{Equipment Needed}
+\begin{itemize}
+	\item System Equipment
+	\begin{itemize}
+		\item Battery Monitoring Module
+		\item \gls{bmu}
+		\item Current SHUNT Module
+		\item 1.5 miliOhm SHUNT Resistor
+		\item 12V battery with \gls{lv} system power bus
+		\item Jumper wires for Daisy chain and \gls{i2c} interfaces
+	\end{itemize}
+	\item Test Equipment
+	\begin{itemize}
+		\item STLINK-V3MINIE
+		\item \gls{can}-to-\gls{usb} connector
+		\item Hair Dryer
+		\item Multimeter
+		\item Zephyr Development Environment and STM32CubePorgrammer
+		\item Power Supply
+	\end{itemize}
+	\item Other Equipment
+	\begin{itemize}
+		\item Two battery modules with removable cells
+		\item Two 24V halogen light bulbs
+		\item Power cable connecting \gls{hv} system
+		\item \gls{hv} switches
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Pre-Test Setup}
+
+\begin{enumerate}
+	\item Attach the montioring boards to each of the battery modules. Ensure the exposed terminals of  the thermistors are \textbf{connected to \emph{negative} terminal of the cell they're measuring}.
+	\item  Connect the SHUNT resistor \gls{lv} terminals and Pack connectors to the Current SHUNT boards IN and $V_{BUS}$ connectors respectively.
+	\item Assemble the rest of the \gls{hv} system with the SHUNT resistor \gls{hv} terminals, halogen bulb loads and switches. Only have two swtiches active.
+	\item Connect the following modules and interfaces:\begin{itemize}
+		\item The daisy chain connectors of the monitoring boards to each other. Then connect the south connector (COMML) of the first and the north connector (COMMH) of the last monitoring board to the COMM connectors on the \gls{bmu}.
+		\item The \gls{i2c} interface between the Current SHUNT module and the \gls{bmu}.
+		\item The Power Lines and Alert signal to the Header next to the \gls{i2c} interface on the \gls{bmu}.
+		\item The STATUS\_LED on the \gls{bmu} to a simple active high \gls{led}.
+		\item The 12 volt power supply and ground to the \gls{lv} system power bus.
+		\item The \gls{can-fd} interface on the \gls{bmu} to the \gls{can}-to-\gls{usb} connector.
+		\item The STLINK-V3MINIE with the debugging port of the \gls{bmu}
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Top Down Test Steps}
+\begin{enumerate}
+	\item Tap the PWR button on the \gls{bmu} to activate the \gls{bms}
+	\item If the \gls{bmu} is not per installed with Firmware follow these instructions \begin{enumerate}
+		\item open a terminal on the machine with the Zephyr Development Enviorment and STM32CubeProgrammer
+		\item Use the Zephyr command  \begin{verbatim}
+			west build -p always -b nucleo_c092rc 
+			[Battery-Management-System-Capstone-2026 file path]/BMS_Firmware
+		\end{verbatim}
+		\item Use the Zephyr command \verb|west flash| to flash the \gls{bmu} with the zephyr.elf file produced from the \gls{bms}\_Firmware directory.
+	\end{enumerate}
+	\item Read from device file connected to by \gls{can}-to-\gls{usb} connector
+	\item Measure the voltages of each cell, record the highest and lowest voltage, calculate the pack voltage, and compare to \gls{bms} voltage measurements.
+	\item Measure the voltage across the SHUNT resistor, calculate current, and compare that the \gls{bms} pack current
+	\item Measure the voltage of the SHUNTDOWN\_REQ which should be logic low or ~0V, observe the \gls{led} connected to STATUS\_LED that should be currently off, and look at the message on the \gls{can-fd} with id 0x010 which should be 0x00.
+	\item Blow hair Dryer on battery modules. SHUNTDOWN\_REQ should be logic high or 5V, the \gls{led} is on, and the message has a value of 0x81.
+	\item Reset the \gls{bms} by turnning off and on the \gls{bmu}
+	\item Now remove a cell from a Battery Module. SHUNTDOWN\_REQ should be 5V, the \gls{led} is on, and the message has a value of 0x84.
+	\item Attach the power supply to the empty cell terminals and reset the \gls{bms}. SHUNTDOWN\_REQ should be 5V, the \gls{led} is on, and the message has a value of 0x88.
+	\item Return the normal cell to its place, reset the \gls{bms}, and add activate the third bulb switch. SHUNTDOWN\_REQ should be 5V, the \gls{led} is on, and the message has a value of 0x82.
+	\item Switch off the third bulb, reset the \gls{bms}, and disconnect \textbf{both} the daisy chain connectors on the \gls{bmu}. SHUNTDOWN\_REQ should be 5V, the \gls{led} is on, and the message has a value of 0x90.
+	\item Reconnect \textbf{both} the daisy chain connectors, reset the \gls{bms}, and use STM32CubeProgrammer to stop the program. SHUNTDOWN\_REQ should be 5V, the \gls{led} is on, and the message has a value of 0xA0.
+	\item Turn off the \gls{bms} by tapping the PWR button again
+\end{enumerate}
+
+\subsubsection{Post-Test Teardown}
+
+\begin{enumerate}
+	\item Remove \gls{lv} power bus from \gls{bmu}
+	\item Remove all the connections between the modules
+	\item Disassemble the \gls{hv} system
+	\item Remove the Current SHUNT module from SHUNT resistor and the Montior from each battery module.
+\end{enumerate}
+
+\subsection{Bottom-Up Testing}
+
+Each table below shows the test for each board.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+	\begin{tabular}{|llllllllll|}
+		\hline
+		\multicolumn{10}{|l|}{Test Author: Jose Ramirez}                                                                                                                                                                                                                                                                                                                                                                                 \\ \hline
+		\multicolumn{1}{|l|}{}                      & \multicolumn{2}{l|}{Test Case Name:} & \multicolumn{3}{l|}{CAN-FD Bus Test}                                    & \multicolumn{3}{l|}{Test ID \#:}                                                                                                                                                                                                      & 01                        \\ \hline
+		\multicolumn{1}{|l|}{}                      & \multicolumn{2}{l|}{Description:}    & \multicolumn{3}{l|}{Tests CAN-FD transmission}                          & \multicolumn{3}{l|}{Type:}                                                                                                                                                                                                            & Black Box                 \\ \hline
+		\multicolumn{10}{|l|}{Tester Information}                                                                                                                                                                                                                                                                                                                                                                                        \\ \hline
+		\multicolumn{1}{|l|}{}                      & \multicolumn{2}{l|}{Name of Tester:} & \multicolumn{3}{l|}{}                                                   & \multicolumn{3}{l|}{Date:}                                                                                                                                                                                                            &                           \\ \hline
+		\multicolumn{1}{|l|}{}                      & \multicolumn{2}{l|}{HW/SW Version:}  & \multicolumn{3}{l|}{1.0}                                                & \multicolumn{3}{l|}{Time:}                                                                                                                                                                                                            &                           \\ \hline
+		\multicolumn{1}{|l|}{}                      & \multicolumn{2}{l|}{Setup:}          & \multicolumn{7}{l|}{\begin{tabular}[c]{@{}l@{}}Connect the a programmed BMU with \\ BMS\_CAN\_Message\_Test to a CAN-to-USB Connector\end{tabular}}                                                                                                                                                                                         \\ \hline
+		\multicolumn{1}{|l|}{\multirow{2}{*}{TEST}} & \multicolumn{3}{l|}{\multirow{2}{*}{INPUTS}}          & \multicolumn{2}{l|}{\multirow{2}{*}{EXPECTED OUTPUTS}} & \multicolumn{1}{l|}{\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}P\\ A\\ S\\ S\end{tabular}}} & \multicolumn{1}{l|}{\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}F\\ A\\ I\\ L\end{tabular}}} & \multicolumn{1}{l|}{\multirow{2}{*}{N/A}} & \multirow{2}{*}{Comments} \\
+		\multicolumn{1}{|l|}{}                      & \multicolumn{3}{l|}{}                                 & \multicolumn{2}{l|}{}                                  & \multicolumn{1}{l|}{}                                                                       & \multicolumn{1}{l|}{}                                                                       & \multicolumn{1}{l|}{}                     &                           \\ \hline
+		\multicolumn{1}{|l|}{1}                     & \multicolumn{3}{l|}{}                                 & \multicolumn{2}{l|}{}                                  & \multicolumn{1}{l|}{}                                                                       & \multicolumn{1}{l|}{}                                                                       & \multicolumn{1}{l|}{}                     &                           \\ \hline
+		\multicolumn{1}{|l|}{2}                     & \multicolumn{3}{l|}{}                                 & \multicolumn{2}{l|}{}                                  & \multicolumn{1}{l|}{}                                                                       & \multicolumn{1}{l|}{}                                                                       & \multicolumn{1}{l|}{}                     &                           \\ \hline
+		\multicolumn{1}{|l|}{3}                     & \multicolumn{3}{l|}{}                                 & \multicolumn{2}{l|}{}                                  & \multicolumn{1}{l|}{}                                                                       & \multicolumn{1}{l|}{}                                                                       & \multicolumn{1}{l|}{}                     &                           \\ \hline
+		\multicolumn{1}{|l|}{4}                     & \multicolumn{3}{l|}{}                                 & \multicolumn{2}{l|}{}                                  & \multicolumn{1}{l|}{}                                                                       & \multicolumn{1}{l|}{}                                                                       & \multicolumn{1}{l|}{}                     &                           \\ \hline
+		\multicolumn{1}{|l|}{}                      & \multicolumn{5}{l|}{Overall test result:}                                                                      & \multicolumn{1}{l|}{}                                                                       & \multicolumn{1}{l|}{}                                                                       & \multicolumn{1}{l|}{}                     &                           \\ \hline
+	\end{tabular}
+\end{table}

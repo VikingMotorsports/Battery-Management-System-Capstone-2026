@@ -11,6 +11,129 @@
 		(company "VIKING MOTOR SPORTS (VMS)")
 	)
 	(lib_symbols
+		(symbol "Connector:TestPoint_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint_Small"
+				(at 0 2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_Small_0_1"
+				(circle
+					(center 0 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_Small_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C_Small"
 			(pin_numbers
 				(hide yes)
@@ -1602,6 +1725,18 @@
 		(uuid "78bd3b05-e378-4b46-b370-8c94fc9c5bb3")
 	)
 	(junction
+		(at 264.16 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7db73c3e-fbee-4fac-b82c-4f1621f010db")
+	)
+	(junction
+		(at 264.16 140.97)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d187c328-3d02-499f-8cb3-3dd17169997f")
+	)
+	(junction
 		(at 208.28 153.67)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1991,7 +2126,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "148e3aca-8643-4d97-9f0d-395bdfd0ce52")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR034"
 			(at 208.28 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -2051,7 +2186,7 @@
 		(instances
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/ebb995bd-0019-4c04-a0dd-2962c6aaae17"
-					(reference "#PWR031")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -2066,9 +2201,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "2c3e34ef-94dd-4652-b1e2-5084f2441d70")
-		(property "Reference" "R24"
+		(property "Reference" "R27"
 			(at 226.06 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2132,7 +2267,7 @@
 		(instances
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/ebb995bd-0019-4c04-a0dd-2962c6aaae17"
-					(reference "R24")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -2229,7 +2364,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3d5dc7e7-8e09-4c28-866a-dac4b41fda4c")
-		(property "Reference" "R23"
+		(property "Reference" "R26"
 			(at 192.024 142.748 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2293,7 +2428,7 @@
 		(instances
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/ebb995bd-0019-4c04-a0dd-2962c6aaae17"
-					(reference "R23")
+					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -2506,7 +2641,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "563802d2-cfc3-43bf-bfd9-d18f3cebd995")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR038"
 			(at 281.94 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -2566,7 +2701,87 @@
 		(instances
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/ebb995bd-0019-4c04-a0dd-2962c6aaae17"
-					(reference "#PWR035")
+					(reference "#PWR038")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 264.16 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7b70cbe2-a726-484a-9470-a8ee52015425")
+		(property "Reference" "TP17"
+			(at 265.43 134.6199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 265.43 137.1599 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 269.24 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 269.24 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 264.16 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e7a8a367-269e-4990-af36-a8bf90d0e42a")
+		)
+		(instances
+			(project "BMU"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/ebb995bd-0019-4c04-a0dd-2962c6aaae17"
+					(reference "TP17")
 					(unit 1)
 				)
 			)
@@ -2584,7 +2799,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7c988c93-7365-4060-a9af-d85d85c923b6")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR036"
 			(at 222.25 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -2644,7 +2859,7 @@
 		(instances
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/ebb995bd-0019-4c04-a0dd-2962c6aaae17"
-					(reference "#PWR033")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -2747,7 +2962,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a5ecdb5e-4e50-4e19-8740-7c6c8444cb26")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR035"
 			(at 214.63 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -2807,7 +3022,7 @@
 		(instances
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/ebb995bd-0019-4c04-a0dd-2962c6aaae17"
-					(reference "#PWR032")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -2825,7 +3040,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c32cad11-4e4e-42b8-8592-38f35c8c6798")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR037"
 			(at 234.95 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -2885,7 +3100,7 @@
 		(instances
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/ebb995bd-0019-4c04-a0dd-2962c6aaae17"
-					(reference "#PWR034")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -2902,7 +3117,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c4a6a2ac-8545-4709-8ca4-36c21d6f9f6d")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR033"
 			(at 201.93 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -2962,7 +3177,7 @@
 		(instances
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/ebb995bd-0019-4c04-a0dd-2962c6aaae17"
-					(reference "#PWR030")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -3043,6 +3258,86 @@
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/ebb995bd-0019-4c04-a0dd-2962c6aaae17"
 					(reference "C17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 264.16 140.97 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ffdd31ff-2aef-48ac-b052-e7d710ce7b40")
+		(property "Reference" "TP18"
+			(at 265.43 139.6999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 265.43 142.2399 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 269.24 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 269.24 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 264.16 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c3f0e41c-d77c-4524-b454-4f51b768f72f")
+		)
+		(instances
+			(project "BMU"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/ebb995bd-0019-4c04-a0dd-2962c6aaae17"
+					(reference "TP18")
 					(unit 1)
 				)
 			)

@@ -845,7 +845,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:TestPoint_Small"
+		(symbol "Connector:TestPoint_Square"
 			(pin_numbers
 				(hide yes)
 			)
@@ -868,7 +868,7 @@
 					)
 				)
 			)
-			(property "Value" "TestPoint_Small"
+			(property "Value" "TestPoint_Square"
 				(at 0 2.032 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -889,7 +889,7 @@
 					)
 				)
 			)
-			(property "Datasheet" ""
+			(property "Datasheet" "~"
 				(at 5.08 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -933,10 +933,10 @@
 					)
 				)
 			)
-			(symbol "TestPoint_Small_0_1"
-				(circle
-					(center 0 0)
-					(radius 0.508)
+			(symbol "TestPoint_Square_0_1"
+				(rectangle
+					(start -0.762 0.762)
+					(end 0.762 -0.762)
 					(stroke
 						(width 0)
 						(type default)
@@ -946,7 +946,7 @@
 					)
 				)
 			)
-			(symbol "TestPoint_Small_1_1"
+			(symbol "TestPoint_Square_1_1"
 				(pin passive line
 					(at 0 0 90)
 					(length 0)
@@ -2663,7 +2663,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
+		(lib_id "Connector:TestPoint_Square")
 		(at 240.03 153.67 0)
 		(unit 1)
 		(body_style 1)
@@ -2672,10 +2672,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "06d4fcbf-84a7-43bc-863f-7e9739362084")
 		(property "Reference" "TP3"
-			(at 241.3 152.3999 0)
+			(at 241.046 152.654 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2708,7 +2707,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 245.11 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -2743,7 +2742,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
+		(lib_id "Connector:TestPoint_Square")
 		(at 280.67 130.81 0)
 		(unit 1)
 		(body_style 1)
@@ -2752,10 +2751,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "0eb43912-b696-4bec-8ba5-36e915002c3c")
 		(property "Reference" "TP10"
-			(at 281.94 129.5399 0)
+			(at 281.686 129.794 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2788,7 +2786,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 285.75 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -2823,7 +2821,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
+		(lib_id "Connector:TestPoint_Square")
 		(at 279.4199 173.99 0)
 		(unit 1)
 		(body_style 1)
@@ -2832,10 +2830,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1364817d-706a-4110-b61a-342b72b84802")
 		(property "Reference" "TP8"
-			(at 280.6899 172.7199 0)
+			(at 280.416 173.228 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2868,7 +2865,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 284.4999 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -2903,7 +2900,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
+		(lib_id "Connector:TestPoint_Square")
 		(at 279.4 165.1 0)
 		(unit 1)
 		(body_style 1)
@@ -2912,10 +2909,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "195ab83c-57ee-47b7-9f3e-71887d413af1")
 		(property "Reference" "TP6"
-			(at 280.67 163.8299 0)
+			(at 280.416 164.084 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2948,7 +2944,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 284.48 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -3147,7 +3143,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
+		(lib_id "Connector:TestPoint_Square")
 		(at 280.6355 135.89 0)
 		(unit 1)
 		(body_style 1)
@@ -3156,10 +3152,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "3735071d-a4c4-425a-9596-8a73c571ce2f")
 		(property "Reference" "TP9"
-			(at 281.9055 134.6199 0)
+			(at 281.94 134.874 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3192,7 +3187,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 285.7155 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -3227,7 +3222,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
+		(lib_id "Connector:TestPoint_Square")
 		(at 279.4 171.45 0)
 		(unit 1)
 		(body_style 1)
@@ -3236,10 +3231,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "4ba6dee0-084c-4c22-b3c4-f0845a4ccc31")
 		(property "Reference" "TP7"
-			(at 280.67 170.1799 0)
+			(at 280.416 170.434 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3272,7 +3266,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 284.48 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -3650,7 +3644,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
+		(lib_id "Connector:TestPoint_Square")
 		(at 279.3877 167.64 0)
 		(unit 1)
 		(body_style 1)
@@ -3659,10 +3653,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "958a0466-b847-4e62-9c3c-af9e155b8004")
 		(property "Reference" "TP5"
-			(at 280.6577 166.3699 0)
+			(at 280.416 166.624 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3695,7 +3688,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 284.4677 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -3812,7 +3805,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
+		(lib_id "Connector:TestPoint_Square")
 		(at 240.03 144.78 0)
 		(unit 1)
 		(body_style 1)
@@ -3821,10 +3814,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "ab5c6a96-f5cd-418f-9917-896b00868c9e")
 		(property "Reference" "TP2"
-			(at 241.3 143.5099 0)
+			(at 241.3 143.764 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3857,7 +3849,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 245.11 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -3892,7 +3884,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
+		(lib_id "Connector:TestPoint_Square")
 		(at 280.67 133.35 0)
 		(unit 1)
 		(body_style 1)
@@ -3901,10 +3893,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b1f31ab5-92c5-40dd-8dd2-145cc73e7bc0")
 		(property "Reference" "TP11"
-			(at 281.94 132.0799 0)
+			(at 281.686 132.334 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3937,7 +3928,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 285.75 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -4300,7 +4291,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
+		(lib_id "Connector:TestPoint_Square")
 		(at 240.03 142.24 0)
 		(unit 1)
 		(body_style 1)
@@ -4309,10 +4300,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "d8c1ce57-47ce-4164-a2a5-219a999caf04")
 		(property "Reference" "TP1"
-			(at 241.3 140.9699 0)
+			(at 241.3 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4345,7 +4335,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 245.11 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -4380,7 +4370,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
+		(lib_id "Connector:TestPoint_Square")
 		(at 279.3064 177.8 0)
 		(unit 1)
 		(body_style 1)
@@ -4389,10 +4379,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "d98d696b-45e8-4102-a32e-228b9077dbeb")
 		(property "Reference" "TP4"
-			(at 280.5764 176.5299 0)
+			(at 280.162 176.784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4425,7 +4414,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 284.3864 177.8 0)
 			(hide yes)
 			(show_name no)

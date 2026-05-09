@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "CEP99102"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "CEP99102")
+        (spec "default")
+    )
+)

@@ -1,0 +1,9 @@
+Manufacturer=Sumida
+PartNumber=CEP99-102
+PartCategory=Transformer
+PackageCategory=Other
+PinCount=8
+Version=1.3
+Released=2023-03-28 04:18:08
+Downloaded=2026-04-25 23:15:59
+3D=Y

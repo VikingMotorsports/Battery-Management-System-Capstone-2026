@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 2.54
+          "drill": 1.0,
+          "height": 1.7,
+          "width": 1.7
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -50,7 +50,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.2
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [
@@ -259,7 +259,20 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "four_way_junction|1308100|711200|7349dff5-11c2-4d69-8886-741c5cf0f3a8|e35cb605-9cb3-4cfd-8294-7d5fc9be2830|/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4||",
+        ""
+      ],
+      [
+        "power_pin_not_driven|1384300|266700|f52a9b0c-5457-4dd7-9811-508899b7e8eb|00000000-0000-0000-0000-000000000000|/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4|/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4|",
+        ""
+      ],
+      [
+        "power_pin_not_driven|1384300|368300|738a2a68-89db-4ee5-b172-e055e8497d42|00000000-0000-0000-0000-000000000000|/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4|/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4|",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -445,9 +458,9 @@
       "endpoint_off_grid": "warning",
       "extra_units": "error",
       "field_name_whitespace": "warning",
-      "footprint_filter": "ignore",
+      "footprint_filter": "error",
       "footprint_link_issues": "warning",
-      "four_way_junction": "ignore",
+      "four_way_junction": "error",
       "global_label_dangling": "warning",
       "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",

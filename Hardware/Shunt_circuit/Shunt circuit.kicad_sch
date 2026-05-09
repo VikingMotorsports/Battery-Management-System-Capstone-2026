@@ -2968,121 +2968,16 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:PWR_FLAG"
-			(power global)
-			(pin_numbers
-				(hide yes)
+	)
+	(text "Power comming from the BMU (STM32)\n"
+		(exclude_from_sim no)
+		(at 258.826 53.086 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "flag power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
 		)
+		(uuid "0be1ed6c-2874-4dc6-86b2-153b13bd5ece")
 	)
 	(text "A0 and A1 tied to GNDA to set fixed I²C address.\n"
 		(exclude_from_sim no)
@@ -3209,7 +3104,7 @@
 		(uuid "73e3c309-a4d5-44b5-9e40-118bf68343f6")
 	)
 	(junction
-		(at 128.1459 88.9)
+		(at 128.27 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "74c20ef7-4328-4e47-978a-c9ae6803be02")
@@ -3243,12 +3138,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "899eac40-8fd7-46fa-a223-534a18845f55")
-	)
-	(junction
-		(at 234.95 71.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8b944428-4e20-443b-b1ee-4a840fd623fa")
 	)
 	(junction
 		(at 128.27 91.44)
@@ -3315,12 +3204,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d6f9d049-1952-4a37-9049-c7d61f697301")
-	)
-	(junction
-		(at 234.95 54.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f6b9fa4d-39ef-49b1-8961-3771b090288a")
 	)
 	(junction
 		(at 222.25 134.62)
@@ -3724,7 +3607,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 53.34) (xy 234.95 54.61)
+			(xy 234.95 53.34) (xy 234.95 58.42)
 		)
 		(stroke
 			(width 0)
@@ -4134,7 +4017,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 88.9) (xy 128.1459 88.9)
+			(xy 123.19 88.9) (xy 128.27 88.9)
 		)
 		(stroke
 			(width 0)
@@ -4154,7 +4037,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.1459 88.9) (xy 143.51 88.9)
+			(xy 128.27 88.9) (xy 143.51 88.9)
 		)
 		(stroke
 			(width 0)
@@ -4204,7 +4087,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 71.12) (xy 234.95 72.39)
+			(xy 234.95 66.04) (xy 234.95 72.39)
 		)
 		(stroke
 			(width 0)
@@ -4321,16 +4204,6 @@
 			(type default)
 		)
 		(uuid "b9c1e415-788c-412a-97ed-c4ed6741641f")
-	)
-	(wire
-		(pts
-			(xy 234.95 54.61) (xy 234.95 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bdd3b0ca-a0a3-4843-9375-feb935d4d77a")
 	)
 	(wire
 		(pts
@@ -4454,16 +4327,6 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 66.04) (xy 234.95 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d74f50a2-18a4-48d3-b45e-3e184d353cdb")
-	)
-	(wire
-		(pts
 			(xy 39.37 81.28) (xy 50.8 81.28)
 		)
 		(stroke
@@ -4511,16 +4374,6 @@
 			(type default)
 		)
 		(uuid "e39adb5b-dab5-47ad-8929-556032158d0e")
-	)
-	(wire
-		(pts
-			(xy 234.95 71.12) (xy 236.22 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e3e5cac3-c8de-43d4-9425-78016ed1f72c")
 	)
 	(wire
 		(pts
@@ -4692,16 +4545,6 @@
 		)
 		(uuid "fd460c69-75be-4871-a63f-209f080c4685")
 	)
-	(label "ALERT_OC_BMU_GPIO"
-		(at 176.53 134.62 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "307bf21d-af27-4c3c-a326-ea8d61127757")
-	)
 	(label "I2C_SDA"
 		(at 189.23 88.9 0)
 		(effects
@@ -4711,16 +4554,6 @@
 			(justify left bottom)
 		)
 		(uuid "416f9a23-880f-4f81-aba4-b65148ff2b69")
-	)
-	(label "PB8"
-		(at 199.39 97.79 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5269127f-2421-4ee9-b3ad-84af53e4ccc3")
 	)
 	(label "SDA"
 		(at 107.95 88.9 0)
@@ -4741,16 +4574,6 @@
 			(justify left bottom)
 		)
 		(uuid "6ce24cd2-4a05-4b14-8ffe-8a283c4184d8")
-	)
-	(label "PB5"
-		(at 199.39 134.62 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7d0e22f1-f7ed-49ea-8b9c-febe2f3dc72c")
 	)
 	(label "PACK+_OUT"
 		(at 69.85 81.28 0)
@@ -4781,16 +4604,6 @@
 			(justify left bottom)
 		)
 		(uuid "b6f50027-6b1d-4234-814d-aea5d7878227")
-	)
-	(label "PB9"
-		(at 199.39 88.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b959c500-877a-4b2f-86d9-6e42c32bc536")
 	)
 	(label "I2C_SCL"
 		(at 189.23 97.79 0)
@@ -7531,85 +7344,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 236.22 71.12 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "62a0d1a5-7299-401a-9ff8-70dae0de8fde")
-		(property "Reference" "#FLG02"
-			(at 238.125 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 240.03 71.1199 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 236.22 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 236.22 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 236.22 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5371143d-8a25-4089-8f7b-e776324f2362")
-		)
-		(instances
-			(project "Shunt circuit"
-				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#FLG02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 124.46 41.91 0)
 		(unit 1)
@@ -7879,7 +7613,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:D0008B_HV"
+		(property "Footprint" "footprints1:D0008B_HV"
 			(at 154.94 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -8195,7 +7929,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "8a159f78-af53-4110-8779-91a0d7c48cde")
 		(property "Reference" "#PWR020"
 			(at 128.27 121.92 0)
@@ -8209,7 +7942,7 @@
 			)
 		)
 		(property "Value" "+3.3VA"
-			(at 128.27 113.03 0)
+			(at 125.476 114.3 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8588,7 +8321,7 @@
 		(dnp no)
 		(uuid "a0705e97-f895-4377-8a4b-f8058f864cd2")
 		(property "Reference" "TP_ALERT_MCU1"
-			(at 207.264 133.858 0)
+			(at 198.882 132.842 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9071,7 +8804,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "adcc3db9-1ccb-48c5-9de1-53073268b00b")
 		(property "Reference" "#PWR024"
 			(at 132.08 124.46 0)
@@ -9085,7 +8817,7 @@
 			)
 		)
 		(property "Value" "+3.3VA"
-			(at 132.08 115.57 0)
+			(at 133.604 115.824 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9936,7 +9668,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Square")
-		(at 128.1459 88.9 0)
+		(at 128.27 88.9 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9946,7 +9678,7 @@
 		(dnp no)
 		(uuid "e2b71dee-68c3-4002-88fd-7caca06eac3b")
 		(property "Reference" "TP_SDA_ISO1"
-			(at 129.6699 88.138 0)
+			(at 129.794 88.138 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9957,7 +9689,7 @@
 			)
 		)
 		(property "Value" "TestPoint_Square"
-			(at 130.6859 90.1699 0)
+			(at 130.81 90.1699 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9969,7 +9701,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 133.2259 88.9 0)
+			(at 133.35 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9980,7 +9712,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 133.2259 88.9 0)
+			(at 133.35 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9991,7 +9723,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 128.1459 88.9 0)
+			(at 128.27 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10252,85 +9984,6 @@
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
 					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 234.95 54.61 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f134cd03-1888-40fa-bed4-13f886d70afd")
-		(property "Reference" "#FLG01"
-			(at 236.855 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 238.76 54.6099 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 234.95 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 234.95 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 234.95 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e906e7ae-d269-469e-951b-fad4227776af")
-		)
-		(instances
-			(project "Shunt circuit"
-				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#FLG01")
 					(unit 1)
 				)
 			)

@@ -968,135 +968,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_01x01"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x01"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x01_1_1"
-				(rectangle
-					(start -1.27 1.27)
-					(end 1.27 -1.27)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector_Generic:Conn_01x02"
 			(pin_names
 				(offset 1.016)
@@ -1471,6 +1342,251 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector_Generic:Conn_01x05"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x05"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x05_1_1"
+				(rectangle
+					(start -1.27 6.35)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+12V"
 			(power global)
 			(pin_numbers
@@ -1610,6 +1726,284 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+3V3"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+3V3"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3V3\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+3V3_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3V3_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+5V"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power global)
 			(pin_numbers
@@ -1727,8 +2121,8 @@
 		)
 	)
 	(rectangle
-		(start 171.704 166.116)
-		(end 231.394 176.276)
+		(start 346.456 161.036)
+		(end 361.696 173.99)
 		(stroke
 			(width 0)
 			(type default)
@@ -1736,23 +2130,11 @@
 		(fill
 			(type none)
 		)
-		(uuid "6df2a0e8-f189-4681-a8e3-542457311225")
+		(uuid "21dd8085-2bc2-4441-b2f6-efc6e00e186c")
 	)
 	(rectangle
-		(start 286.004 161.798)
-		(end 315.214 185.928)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "8b2ff4b6-b1aa-472b-93ea-51a70087f35a")
-	)
-	(rectangle
-		(start 322.58 133.35)
-		(end 346.71 148.59)
+		(start 326.644 129.54)
+		(end 341.884 144.78)
 		(stroke
 			(width 0)
 			(type default)
@@ -1763,8 +2145,8 @@
 		(uuid "8ef1582e-ea42-4e13-88d5-717555b33f03")
 	)
 	(rectangle
-		(start 156.21 120.904)
-		(end 181.356 162.814)
+		(start 170.18 118.364)
+		(end 195.326 170.18)
 		(stroke
 			(width 0)
 			(type default)
@@ -1776,7 +2158,7 @@
 	)
 	(text "4\n3\n2\n1\n"
 		(exclude_from_sim no)
-		(at 177.038 137.16 0)
+		(at 191.008 134.62 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1786,7 +2168,7 @@
 	)
 	(text "4\n3\n2\n1\n"
 		(exclude_from_sim no)
-		(at 177.038 156.21 0)
+		(at 191.008 153.67 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1794,9 +2176,29 @@
 		)
 		(uuid "0bf4c3b9-98d7-4e6b-afb9-8113809c0bb4")
 	)
-	(text "-COM connectors follow the TI EVM 4-pin format \n	for high-side and low-side daisy-chain interfaces.\n-Each connector carries one differential COM pair only; \n	unused pins are left NC."
+	(text "12V in from LV\n??? mA"
 		(exclude_from_sim no)
-		(at 173.99 171.45 0)
+		(at 232.664 89.154 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "1c105c2e-7b4a-4ac0-8fd6-aeca1d6dfac7")
+	)
+	(text "TO FAULT LED"
+		(exclude_from_sim no)
+		(at 325.374 151.384 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3c3e62c5-590e-4534-b84a-63feea73caa4")
+	)
+	(text "COM connectors follow the \nTI EVM 4-pin format for \nhigh-side and low-side \ndaisy-chain interfaces.\n\nEach connector carries one \ndifferential COM pair only; \nunused pins are left NC."
+		(exclude_from_sim no)
+		(at 198.374 170.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1805,9 +2207,19 @@
 		)
 		(uuid "689954c5-f6a4-4276-a040-55841478b4ca")
 	)
+	(text "Power\nTest\nPoints"
+		(exclude_from_sim no)
+		(at 330.454 89.662 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "9d4ab40a-89db-4424-b86e-fa6fb11b6580")
+	)
 	(text "TO ECU\n"
 		(exclude_from_sim no)
-		(at 342.138 147.32 0)
+		(at 334.01 137.16 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1817,7 +2229,7 @@
 	)
 	(text "BMU TOP-LEVEL ARCHITECTURE\n\nThis page summarizes the BMU interface board, including power distribution,\nSTM32 control, BQ79600 battery-monitor communication, CAN-FD interface,\nshunt-board interface, external connectors, and debug/test access points.\n\n1. POWER\nJ3 receives the 12 V BMU input. BMU-POWER provides fuse protection, power switch,\nPMOS input protection, 12 V to 5 V conversion, 5 V to 3.3 V regulation, and\npower-status LEDs.\n\n2. BQ79600 / COM BRIDGE\nBMU-COM Bridge connects the STM32 to the external battery-monitor daisy-chain /\nring network through the BQ79600 host bridge. J1 and J2 follow the TI EVM-style\n4-pin COM connector format; unused pins are intentionally left NC.\n\n3. MCU / DEBUG\nBMU-MCU contains the STM32 controller, reset circuit, STDC14 SWD connector,\nBQ79600 UART interface, CAN control signals, shunt-board interface, reserved GPIO,\nand shutdown signal.\n\n4. CAN-FD\nBMU-CAN provides the MCP2562FD CAN-FD physical-layer interface to the vehicle ECU /\nCAN network. J12 carries CANH, CANL, and CAN_GND. Termination is populated only\nwhen the BMU is an end node.\n\n5. SHUNT / GPIO / SAFETY\nThe shunt interface provides I2C, 3.3 V, ground, and ALERT_SHUNT. Reserved GPIO\nsignals and SHUTDOWN are kept for future expansion and shutdown/safety integration.\n\nRecommended test points:\n+12V, VIN_PROTECTED, +5V, +3V3, GND, UART1_TX, UART1_RX,\nBQ_FAULT_N, CAN_TX, CAN_RX, CAN_STBY, CANH, CANL, I2C_SCL, I2C_SDA,\nALERT_SHUNT, SHUTDOWN.\n"
 		(exclude_from_sim no)
-		(at 22.606 202.946 0)
+		(at 16.764 143.002 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -1826,9 +2238,9 @@
 		)
 		(uuid "d92171e3-4207-439c-8e4d-3e2560cdbd94")
 	)
-	(text "From SHUNT\n"
+	(text "TO SHUNT"
 		(exclude_from_sim no)
-		(at 308.61 184.15 0)
+		(at 353.822 167.894 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1838,7 +2250,7 @@
 	)
 	(text "BQ79616\n"
 		(exclude_from_sim no)
-		(at 165.1 124.46 0)
+		(at 179.07 121.92 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -1847,120 +2259,100 @@
 		(uuid "fab5aac8-6b7f-4d6a-82b6-5e3ce635403b")
 	)
 	(junction
-		(at 273.05 102.87)
+		(at 311.15 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "20b54376-ae7f-45bb-947e-8f210b55da8c")
+		(uuid "0d5791f2-7b6f-4268-ab9c-17ac785de661")
 	)
 	(junction
-		(at 273.05 118.11)
+		(at 311.15 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "2a8422ce-6b5c-4f87-ade8-5b63c26c0d2f")
+		(uuid "15d8f00a-8205-4be7-a08f-39f37d4aea96")
 	)
 	(junction
-		(at 279.3064 177.8)
+		(at 311.15 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "4b81c214-8b07-41fe-9757-323ae1455f97")
+		(uuid "5865ceee-69d8-4934-a73b-ccee2b2699cf")
 	)
 	(junction
-		(at 240.03 144.78)
+		(at 262.89 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6728cee1-ff32-4f0b-9795-fb19cab2dcaa")
 	)
 	(junction
-		(at 273.05 105.41)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6997610d-e08d-47a7-acdf-f2dd492d4eae")
-	)
-	(junction
-		(at 279.4199 173.99)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7feaa47b-b2ca-4485-bdf4-909ee5982ad8")
-	)
-	(junction
-		(at 279.4 165.1)
+		(at 302.26 162.56)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9010f772-fc47-4981-b4a0-723740d2e436")
 	)
 	(junction
-		(at 280.6355 135.89)
+		(at 309.88 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b0e52306-6b64-4ad7-a2d0-658a4eaa04ae")
+		(uuid "c2226f32-f89d-4b70-a2b6-361942b4bba5")
 	)
 	(junction
-		(at 273.05 107.95)
+		(at 311.15 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c78dcbc8-d17f-44b7-97b6-7224b8b3b078")
+		(uuid "c77b6635-897f-4a3e-90c9-ed4cecc26654")
 	)
 	(junction
-		(at 280.67 130.81)
+		(at 302.26 172.72)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "cad6690c-25a0-41d1-877e-4610bbfc48f4")
+		(uuid "cb9398a8-9702-4fea-b240-a824bc5e3cac")
 	)
 	(junction
-		(at 273.05 114.3)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cfcbcfdc-c497-4208-8dbb-a814240c9beb")
-	)
-	(junction
-		(at 279.4 171.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d28487c5-703f-4755-ab88-e52e7785071e")
-	)
-	(junction
-		(at 240.03 153.67)
+		(at 262.89 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d4a691c6-2d05-4aa5-b3f5-4fd268b32f95")
 	)
 	(junction
-		(at 240.03 142.24)
+		(at 262.89 139.7)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d56d7b11-f8af-4606-a91b-ef176490a875")
 	)
 	(junction
-		(at 279.3877 167.64)
+		(at 302.26 165.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e14d1fd5-202c-4d72-ac4d-a726e6efe7be")
 	)
-	(junction
-		(at 280.67 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e6e6269f-e979-4777-b9b0-ce445599c950")
-	)
 	(no_connect
-		(at 196.85 154.94)
+		(at 210.82 152.4)
 		(uuid "4b8592e9-880a-43e5-91e8-4e3a8c50a0f4")
 	)
 	(no_connect
-		(at 196.85 140.97)
+		(at 210.82 138.43)
 		(uuid "5a967f2e-756e-4340-8794-04aa5be79ef4")
 	)
 	(no_connect
-		(at 196.85 152.4)
+		(at 210.82 149.86)
 		(uuid "94347aa9-aa7b-4cd0-87ae-b125d1e59ad6")
 	)
 	(no_connect
-		(at 196.85 138.43)
+		(at 210.82 135.89)
 		(uuid "d41317dc-96cc-4d3d-b4c1-2e06b850f5f9")
 	)
 	(wire
 		(pts
-			(xy 236.22 105.41) (xy 236.22 110.49)
+			(xy 312.42 88.9) (xy 311.15 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e4090ec-fc04-455c-816f-f8aaacbfce6d")
+	)
+	(wire
+		(pts
+			(xy 264.16 82.55) (xy 264.16 87.63)
 		)
 		(stroke
 			(width 0)
@@ -1970,77 +2362,67 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 118.11) (xy 274.32 118.11)
+			(xy 311.15 86.36) (xy 303.53 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1e25cfb4-6f38-44d9-aec7-5972a7c2218c")
+		(uuid "1ea85e93-6867-4073-ad06-488fe3e03093")
 	)
 	(wire
 		(pts
-			(xy 273.05 120.65) (xy 273.05 118.11)
+			(xy 302.26 172.72) (xy 336.55 172.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1e3678b0-a16c-46c8-819f-0e75f2f156c2")
+		(uuid "1ef64288-b98f-4818-872a-e6f4df498e52")
 	)
 	(wire
 		(pts
-			(xy 273.05 100.33) (xy 273.05 102.87)
+			(xy 334.01 170.18) (xy 334.01 175.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "22f2ea5d-1afd-4415-adba-f1633af48e9a")
+		(uuid "20d07bf7-b7fc-4aca-a7ee-abd568ed2c5f")
 	)
 	(wire
 		(pts
-			(xy 274.32 107.95) (xy 273.05 107.95)
+			(xy 311.15 99.06) (xy 312.42 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "281d95c3-0f15-43a6-922a-4ab416a02d21")
+		(uuid "219fc260-050a-4095-b39f-cfc8b465d69b")
 	)
 	(wire
 		(pts
-			(xy 274.32 102.87) (xy 273.05 102.87)
+			(xy 311.15 101.6) (xy 311.15 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2a8ec421-08bd-41e6-a5f8-835d0d9395df")
+		(uuid "2d6ddb90-b3aa-42ff-8d2a-acb74849a41b")
 	)
 	(wire
 		(pts
-			(xy 273.05 114.3) (xy 274.32 114.3)
+			(xy 312.42 86.36) (xy 311.15 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2b65ea57-e967-48df-b0a4-07fe9b5bad48")
+		(uuid "2f1ec881-3cb5-42ef-9868-89b83432aec9")
 	)
 	(wire
 		(pts
-			(xy 276.86 130.81) (xy 288.29 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2d8cb1f5-af3b-4a82-a88d-03076016c9e6")
-	)
-	(wire
-		(pts
-			(xy 276.86 167.64) (xy 297.18 167.64)
+			(xy 299.72 165.1) (xy 336.55 165.1)
 		)
 		(stroke
 			(width 0)
@@ -2050,17 +2432,7 @@
 	)
 	(wire
 		(pts
-			(xy 276.86 133.35) (xy 288.29 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f74d89a-45da-46e1-9692-02f275c47cb9")
-	)
-	(wire
-		(pts
-			(xy 237.49 144.78) (xy 246.38 144.78)
+			(xy 255.27 142.24) (xy 269.24 142.24)
 		)
 		(stroke
 			(width 0)
@@ -2070,17 +2442,37 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 105.41) (xy 274.32 105.41)
+			(xy 311.15 99.06) (xy 311.15 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "49640300-d1d2-4617-b12e-439efec69424")
+		(uuid "36ff1e96-d278-4d7b-b5d8-c21d2b412fbc")
 	)
 	(wire
 		(pts
-			(xy 226.06 113.03) (xy 236.22 113.03)
+			(xy 309.88 78.74) (xy 309.88 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a9acf6b-2ead-4244-a7c5-dbca3128c1e3")
+	)
+	(wire
+		(pts
+			(xy 312.42 93.98) (xy 311.15 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f1e0720-fa17-4128-b549-ccacb14c9886")
+	)
+	(wire
+		(pts
+			(xy 254 90.17) (xy 264.16 90.17)
 		)
 		(stroke
 			(width 0)
@@ -2090,7 +2482,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 179.07) (xy 246.38 179.07)
+			(xy 262.89 176.53) (xy 269.24 176.53)
 		)
 		(stroke
 			(width 0)
@@ -2100,17 +2492,17 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 133.35) (xy 212.09 133.35)
+			(xy 311.15 88.9) (xy 311.15 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5580f18c-19dc-4d7d-98d5-3609be0b25c4")
+		(uuid "55acd274-1173-462c-aae3-2b2a549aa0bd")
 	)
 	(wire
 		(pts
-			(xy 276.86 156.21) (xy 288.29 156.21)
+			(xy 299.72 149.86) (xy 311.15 149.86)
 		)
 		(stroke
 			(width 0)
@@ -2120,7 +2512,7 @@
 	)
 	(wire
 		(pts
-			(xy 276.86 177.8) (xy 297.18 177.8)
+			(xy 299.72 172.72) (xy 302.26 172.72)
 		)
 		(stroke
 			(width 0)
@@ -2130,7 +2522,17 @@
 	)
 	(wire
 		(pts
-			(xy 316.23 137.16) (xy 331.47 137.16)
+			(xy 309.88 138.43) (xy 309.88 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63f95e10-3daa-4a8b-9b20-d4dc34f1095b")
+	)
+	(wire
+		(pts
+			(xy 299.72 133.35) (xy 316.23 133.35)
 		)
 		(stroke
 			(width 0)
@@ -2140,7 +2542,7 @@
 	)
 	(wire
 		(pts
-			(xy 316.23 139.7) (xy 331.47 139.7)
+			(xy 299.72 135.89) (xy 316.23 135.89)
 		)
 		(stroke
 			(width 0)
@@ -2150,17 +2552,17 @@
 	)
 	(wire
 		(pts
-			(xy 316.23 142.24) (xy 331.47 142.24)
+			(xy 210.82 154.94) (xy 229.87 154.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "66eb1607-a5f3-4d1e-aeec-9a2de025d020")
+		(uuid "67ada283-ff60-467e-aeee-15c754de8491")
 	)
 	(wire
 		(pts
-			(xy 245.11 176.53) (xy 246.38 176.53)
+			(xy 262.89 173.99) (xy 269.24 173.99)
 		)
 		(stroke
 			(width 0)
@@ -2170,7 +2572,17 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 113.03) (xy 236.22 116.84)
+			(xy 336.55 167.64) (xy 334.01 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6db6d179-ca80-4354-85b5-103f0d05d1fb")
+	)
+	(wire
+		(pts
+			(xy 264.16 90.17) (xy 264.16 93.98)
 		)
 		(stroke
 			(width 0)
@@ -2180,47 +2592,47 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 114.3) (xy 273.05 114.3)
+			(xy 210.82 133.35) (xy 229.87 133.35)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "77e51faf-b75e-4362-836c-6148a409843e")
+		(uuid "74f3c94e-f8d3-40d9-bc63-1aa4b5e514ca")
 	)
 	(wire
 		(pts
-			(xy 273.05 111.76) (xy 273.05 114.3)
+			(xy 303.53 86.36) (xy 303.53 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7b51639d-9117-44cd-868b-8da073072380")
+		(uuid "7c17f104-284c-4436-aef7-efa19feb6de5")
 	)
 	(wire
 		(pts
-			(xy 274.32 111.76) (xy 273.05 111.76)
+			(xy 210.82 130.81) (xy 229.87 130.81)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7efa58d0-7540-4b7c-b879-7cb7e39ee034")
+		(uuid "81bec4f3-2d17-4b83-beaa-32050299027d")
 	)
 	(wire
 		(pts
-			(xy 196.85 160.02) (xy 212.09 160.02)
+			(xy 309.88 81.28) (xy 309.88 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "80d27ae0-af4b-4c7e-95b3-7ac032fcad02")
+		(uuid "82ee8cdd-8be9-48c5-b95b-b6ef6ab90c3e")
 	)
 	(wire
 		(pts
-			(xy 245.11 173.99) (xy 246.38 173.99)
+			(xy 262.89 171.45) (xy 269.24 171.45)
 		)
 		(stroke
 			(width 0)
@@ -2230,17 +2642,17 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 118.11) (xy 273.05 118.11)
+			(xy 311.15 96.52) (xy 312.42 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8904fc2d-2ec7-4147-b8ff-b1da92ceba7d")
+		(uuid "8b7f98b5-bfd6-413a-9fb5-65650fadf70e")
 	)
 	(wire
 		(pts
-			(xy 237.49 142.24) (xy 246.38 142.24)
+			(xy 255.27 139.7) (xy 269.24 139.7)
 		)
 		(stroke
 			(width 0)
@@ -2250,57 +2662,67 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 157.48) (xy 212.09 157.48)
+			(xy 312.42 78.74) (xy 309.88 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9b0c9772-98e1-42d7-bcc4-fe5053f75e4e")
+		(uuid "96dbc650-6170-4881-89f1-54e4e9203721")
 	)
 	(wire
 		(pts
-			(xy 270.51 107.95) (xy 273.05 107.95)
+			(xy 309.88 138.43) (xy 316.23 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b3dc68f1-6cff-472b-ac9c-b39be582b747")
+		(uuid "9e17714c-d7ef-47e0-9699-4c4935f7ff1e")
 	)
 	(wire
 		(pts
-			(xy 273.05 102.87) (xy 273.05 105.41)
+			(xy 312.42 81.28) (xy 309.88 81.28)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b4dac779-cab5-4696-849d-af35c960b373")
+		(uuid "ae6fd00d-8aaf-4bad-b62b-6c10a7aee605")
 	)
 	(wire
 		(pts
-			(xy 276.86 135.89) (xy 288.29 135.89)
+			(xy 311.15 93.98) (xy 311.15 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b98a2c82-a187-4b72-aaa0-8e2f4ffd12fe")
+		(uuid "b7cfda19-2b0b-4575-8c8f-399b46777232")
 	)
 	(wire
 		(pts
-			(xy 276.86 173.99) (xy 297.18 173.99)
+			(xy 308.61 152.4) (xy 311.15 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "bf7d8492-d3b0-4c02-a5fe-d9daa31687ec")
+		(uuid "c05dece3-5fe1-4c7e-b498-6059f2b4eaf0")
 	)
 	(wire
 		(pts
-			(xy 245.11 171.45) (xy 246.38 171.45)
+			(xy 336.55 170.18) (xy 334.01 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0b29404-4be9-43d8-be36-ec40e4236176")
+	)
+	(wire
+		(pts
+			(xy 262.89 168.91) (xy 269.24 168.91)
 		)
 		(stroke
 			(width 0)
@@ -2310,17 +2732,17 @@
 	)
 	(wire
 		(pts
-			(xy 276.86 171.45) (xy 297.18 171.45)
+			(xy 210.82 157.48) (xy 229.87 157.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c7f6d5e2-042c-4550-bedd-2273b6c75cf2")
+		(uuid "c63d3770-7eae-4533-b719-4feef584f717")
 	)
 	(wire
 		(pts
-			(xy 276.86 165.1) (xy 297.18 165.1)
+			(xy 299.72 162.56) (xy 336.55 162.56)
 		)
 		(stroke
 			(width 0)
@@ -2330,27 +2752,37 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 100.33) (xy 273.05 100.33)
+			(xy 262.89 179.07) (xy 264.16 179.07)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cb5fc8a1-ea15-40ac-a302-85925a9bda93")
+		(uuid "cf987112-372f-4a63-ae95-5ba878ff96eb")
 	)
 	(wire
 		(pts
-			(xy 274.32 120.65) (xy 273.05 120.65)
+			(xy 311.15 101.6) (xy 312.42 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d2d438ce-0dda-49a0-b68f-27bec878e879")
+		(uuid "d3430fb0-b0af-482e-84b1-4950e209230b")
 	)
 	(wire
 		(pts
-			(xy 226.06 110.49) (xy 236.22 110.49)
+			(xy 311.15 96.52) (xy 311.15 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d59ec239-79fe-4bfe-8060-2ce4a14ce7db")
+	)
+	(wire
+		(pts
+			(xy 254 87.63) (xy 264.16 87.63)
 		)
 		(stroke
 			(width 0)
@@ -2360,17 +2792,27 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 135.89) (xy 212.09 135.89)
+			(xy 334.01 160.02) (xy 334.01 167.64)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "efc39061-6e89-4546-aed0-93328931d65f")
+		(uuid "e924833c-a943-4d25-8390-fdb4345d8a27")
 	)
 	(wire
 		(pts
-			(xy 237.49 153.67) (xy 246.38 153.67)
+			(xy 264.16 179.07) (xy 264.16 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eea64d97-5bd4-49e7-8a2c-f2cf8200da47")
+	)
+	(wire
+		(pts
+			(xy 255.27 151.13) (xy 269.24 151.13)
 		)
 		(stroke
 			(width 0)
@@ -2378,28 +2820,8 @@
 		)
 		(uuid "f4bd80b2-939e-44e5-a260-b0239fb0404a")
 	)
-	(wire
-		(pts
-			(xy 273.05 107.95) (xy 273.05 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa376f20-48f2-4620-a5a5-55e059d1f877")
-	)
-	(label "J4_GND"
-		(at 323.85 142.24 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0fa61ca8-6aaf-4226-946c-e3db0f9a09d0")
-	)
 	(label "High COMHP"
-		(at 198.12 135.89 0)
+		(at 214.63 133.35 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2408,48 +2830,28 @@
 		)
 		(uuid "12aa3dea-6d1a-4426-98fb-25916a19a695")
 	)
-	(label "J1_12V"
-		(at 227.33 110.49 0)
+	(label "I2C_SDA"
+		(at 332.74 165.1 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "147f6872-ff81-4f9f-a933-dafdddf31dc3")
+		(uuid "4cc08cf9-a63e-4f17-af4e-68786f05f4b1")
 	)
-	(label "SCL_STM32"
-		(at 287.02 165.1 0)
+	(label "I2C_SCL"
+		(at 332.74 162.56 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "2f2ba294-f7a4-4138-8496-5227bc1c9ed0")
+		(uuid "778e0d51-a2ee-407d-8ad7-b802673aa299")
 	)
-	(label "J1_GND"
-		(at 227.33 113.03 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5fd42a52-67c8-4f33-bfe7-75a5f24ca754")
-	)
-	(label "SDA_STM32"
-		(at 287.02 167.64 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8c446718-cafe-495a-a3b4-52caa61696da")
-	)
-	(label "J4_CANH"
-		(at 323.85 137.16 0)
+	(label "CANH"
+		(at 307.34 133.35 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2459,7 +2861,7 @@
 		(uuid "b4804749-b30c-4a40-b32e-3f2db693e533")
 	)
 	(label "LOW COMLP"
-		(at 198.12 157.48 0)
+		(at 214.63 154.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2469,7 +2871,7 @@
 		(uuid "c7d529e3-a08c-41d3-87ba-85b765f4a351")
 	)
 	(label "High COMHN"
-		(at 198.12 133.35 0)
+		(at 214.63 130.81 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2478,8 +2880,18 @@
 		)
 		(uuid "cb40945c-a075-4e4c-83e2-312720350a1b")
 	)
-	(label "J4_CANL"
-		(at 323.85 139.7 0)
+	(label "ALERT_SHUNT"
+		(at 332.74 172.72 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cee20f61-c5f5-487d-ad90-578f21f3fdae")
+	)
+	(label "CANL"
+		(at 307.34 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2489,7 +2901,7 @@
 		(uuid "e114dcbf-c049-4fad-a8e1-6ac84f071a23")
 	)
 	(label "LOW COMLN"
-		(at 198.12 160.02 0)
+		(at 214.63 157.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2500,7 +2912,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 236.22 105.41 0)
+		(at 264.16 82.55 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2511,7 +2923,7 @@
 		(fields_autoplaced yes)
 		(uuid "0163c260-ee5b-4b71-94d8-0ca7614918a6")
 		(property "Reference" "#PWR01"
-			(at 236.22 109.22 0)
+			(at 264.16 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2522,7 +2934,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 236.22 100.33 0)
+			(at 264.16 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2532,7 +2944,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 236.22 105.41 0)
+			(at 264.16 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2543,7 +2955,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 236.22 105.41 0)
+			(at 264.16 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2554,7 +2966,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 236.22 105.41 0)
+			(at 264.16 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2568,7 +2980,7 @@
 			(uuid "91a9be11-6125-41bd-8541-17bf57fbace2")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "#PWR01")
 					(unit 1)
@@ -2578,7 +2990,7 @@
 	)
 	(symbol
 		(lib_id "691382000003:691382000003")
-		(at 336.55 139.7 270)
+		(at 321.31 135.89 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2589,7 +3001,7 @@
 		(fields_autoplaced yes)
 		(uuid "02899bb3-9c1e-4860-b2ed-0cc89552e409")
 		(property "Reference" "J12"
-			(at 337.82 138.4299 90)
+			(at 322.58 134.6199 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2600,7 +3012,7 @@
 			)
 		)
 		(property "Value" "CAN"
-			(at 337.82 140.9699 90)
+			(at 322.58 137.1599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2611,7 +3023,7 @@
 			)
 		)
 		(property "Footprint" "691382000003:691382000003"
-			(at 336.55 139.7 0)
+			(at 321.31 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2623,7 +3035,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 336.55 139.7 0)
+			(at 321.31 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2634,7 +3046,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 336.55 139.7 0)
+			(at 321.31 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2654,7 +3066,7 @@
 			(uuid "4499647d-eec5-4551-9b4d-679f389132b1")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "J12")
 					(unit 1)
@@ -2664,7 +3076,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Square")
-		(at 240.03 153.67 0)
+		(at 262.89 151.13 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2674,7 +3086,7 @@
 		(dnp no)
 		(uuid "06d4fcbf-84a7-43bc-863f-7e9739362084")
 		(property "Reference" "TP3"
-			(at 241.046 152.654 0)
+			(at 263.906 150.114 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2685,7 +3097,7 @@
 			)
 		)
 		(property "Value" "TestPoint_Small"
-			(at 241.3 154.9399 0)
+			(at 264.16 152.3999 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2697,7 +3109,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 245.11 153.67 0)
+			(at 267.97 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2708,7 +3120,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 245.11 153.67 0)
+			(at 267.97 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2719,7 +3131,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 240.03 153.67 0)
+			(at 262.89 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2733,7 +3145,7 @@
 			(uuid "856bfc78-e357-4780-91a5-ec79cac25c7d")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "TP3")
 					(unit 1)
@@ -2742,8 +3154,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Square")
-		(at 280.67 130.81 0)
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 316.23 152.4 0)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2751,9 +3164,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "0eb43912-b696-4bec-8ba5-36e915002c3c")
-		(property "Reference" "TP10"
-			(at 281.686 129.794 0)
+		(uuid "0c76ef39-5864-4e77-bec4-1b7a65300d97")
+		(property "Reference" "J14"
+			(at 314.452 155.448 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2763,9 +3176,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint_Small"
-			(at 281.94 132.0799 0)
-			(hide yes)
+		(property "Value" "pin header"
+			(at 311.658 156.972 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2775,8 +3187,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 285.75 130.81 0)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 316.23 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2786,8 +3198,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 285.75 130.81 0)
+		(property "Datasheet" ""
+			(at 316.23 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2797,8 +3209,8 @@
 				)
 			)
 		)
-		(property "Description" "test point"
-			(at 280.67 130.81 0)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 316.23 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2809,12 +3221,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "e57d5140-7be1-4773-9fb6-9204ed6425da")
+			(uuid "b648e54e-2ddf-453b-a89a-6f023c6e870b")
+		)
+		(pin "2"
+			(uuid "58ac2334-a0fc-4053-bbd3-2605941f0b8f")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "TP10")
+					(reference "J14")
 					(unit 1)
 				)
 			)
@@ -2822,86 +3237,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Square")
-		(at 279.4199 173.99 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1364817d-706a-4110-b61a-342b72b84802")
-		(property "Reference" "TP8"
-			(at 280.416 173.228 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint_Small"
-			(at 280.6899 175.2599 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 284.4999 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 284.4999 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 279.4199 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fdb25cf7-1059-4c86-a34e-1be788fd6cb0")
-		)
-		(instances
-			(project "BMU"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "TP8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint_Square")
-		(at 279.4 165.1 0)
+		(at 302.26 162.56 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2911,7 +3247,7 @@
 		(dnp no)
 		(uuid "195ab83c-57ee-47b7-9f3e-71887d413af1")
 		(property "Reference" "TP6"
-			(at 280.416 164.084 0)
+			(at 303.276 161.544 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2922,7 +3258,7 @@
 			)
 		)
 		(property "Value" "TestPoint_Small"
-			(at 280.67 166.3699 0)
+			(at 303.53 163.8299 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2934,7 +3270,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 284.48 165.1 0)
+			(at 307.34 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2945,7 +3281,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 284.48 165.1 0)
+			(at 307.34 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2956,7 +3292,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 279.4 165.1 0)
+			(at 302.26 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2970,7 +3306,7 @@
 			(uuid "7d08b900-7888-4214-a918-5afce7aad3aa")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "TP6")
 					(unit 1)
@@ -2980,89 +3316,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 302.26 173.99 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "24f798c4-1a95-4b58-af4d-b985cc943113")
-		(property "Reference" "J10"
-			(at 304.8 173.9901 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SHUNT"
-			(at 304.546 171.196 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 302.26 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 302.26 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 302.26 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fd735381-2150-4b4d-bb2e-ceb560b2c9b3")
-		)
-		(pin "2"
-			(uuid "2bd42a4d-6748-4bb6-83ca-28e6f8dc1377")
-		)
-		(instances
-			(project "BMU"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x02")
-		(at 279.4 114.3 0)
+		(at 317.5 81.28 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -3073,7 +3327,7 @@
 		(dnp no)
 		(uuid "283d0c74-e13a-4db8-bb3c-4adabdd50ab4")
 		(property "Reference" "J6"
-			(at 281.94 114.3001 0)
+			(at 319.532 78.232 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3084,7 +3338,7 @@
 			)
 		)
 		(property "Value" "5V"
-			(at 281.686 111.506 0)
+			(at 320.04 80.772 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3095,7 +3349,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 279.4 114.3 0)
+			(at 317.5 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3106,7 +3360,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 279.4 114.3 0)
+			(at 317.5 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3117,7 +3371,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 279.4 114.3 0)
+			(at 317.5 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3134,7 +3388,7 @@
 			(uuid "af3e69db-ffa3-4c25-b049-a469805f1ef2")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "J6")
 					(unit 1)
@@ -3143,8 +3397,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Square")
-		(at 280.6355 135.89 0)
+		(lib_id "power:GND")
+		(at 264.16 180.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3152,20 +3406,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "3735071d-a4c4-425a-9596-8a73c571ce2f")
-		(property "Reference" "TP9"
-			(at 281.94 134.874 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint_Small"
-			(at 281.9055 137.1599 0)
+		(uuid "2d29bf1c-6e93-45ab-8255-945f3e2461fb")
+		(property "Reference" "#PWR042"
+			(at 264.16 186.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3173,169 +3416,20 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 285.7155 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 285.7155 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 280.6355 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "da45c838-a0dd-4441-9634-2b48d0bd8b91")
-		)
-		(instances
-			(project "BMU"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "TP9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint_Square")
-		(at 279.4 171.45 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4ba6dee0-084c-4c22-b3c4-f0845a4ccc31")
-		(property "Reference" "TP7"
-			(at 280.416 170.434 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint_Small"
-			(at 280.67 172.7199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 284.48 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 284.48 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 279.4 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c5a112cf-bd48-4c79-802b-58b918897bad")
-		)
-		(instances
-			(project "BMU"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "TP7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 279.4 102.87 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4f574172-ae94-46ee-8030-42d07b094216")
-		(property "Reference" "J5"
-			(at 281.94 102.8699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(property "Value" "GND"
-			(at 281.94 105.4099 0)
+			(at 264.16 183.896 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 279.4 102.87 0)
+		(property "Footprint" ""
+			(at 264.16 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3346,7 +3440,409 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 279.4 102.87 0)
+			(at 264.16 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 264.16 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ec56ab60-8766-4912-8bbe-94d47f5eb535")
+		)
+		(instances
+			(project "Battery Management Unit (BMU)"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
+					(reference "#PWR042")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 334.01 175.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "33678c8e-d2dc-487f-8e99-91af123869eb")
+		(property "Reference" "#PWR040"
+			(at 334.01 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 334.01 178.816 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 334.01 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 334.01 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 334.01 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f8b43823-6efe-4805-aaeb-bb02fafca72a")
+		)
+		(instances
+			(project "Battery Management Unit (BMU)"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
+					(reference "#PWR040")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x05")
+		(at 257.81 173.99 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "39d29c38-548e-4e8d-bb61-b432443ad994")
+		(property "Reference" "J9"
+			(at 258.572 182.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x05"
+			(at 261.874 185.674 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 257.81 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 257.81 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 257.81 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "f2db4339-e937-42f4-8a0b-bb1da74d8248")
+		)
+		(pin "2"
+			(uuid "55e332c6-e47e-4776-bf55-83255f8793c7")
+		)
+		(pin "4"
+			(uuid "6be984c2-5b6c-4754-9de6-5c10f0487b68")
+		)
+		(pin "1"
+			(uuid "9037bb43-4e29-4588-a6ff-b8c6c4f883f0")
+		)
+		(pin "3"
+			(uuid "3ea8888e-b7dd-43d4-9121-27e7d9384a3c")
+		)
+		(instances
+			(project "Battery Management Unit (BMU)"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
+					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 309.88 74.93 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4181d871-9042-4be5-bc38-6661baa49291")
+		(property "Reference" "#PWR046"
+			(at 309.88 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 309.88 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 309.88 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 309.88 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 309.88 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3c2e87b1-0235-4ff4-99cf-10968ac8e4fa")
+		)
+		(instances
+			(project "Battery Management Unit (BMU)"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
+					(reference "#PWR046")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 311.15 104.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4593de40-6a00-4d31-aa10-ed6c454863a0")
+		(property "Reference" "#PWR044"
+			(at 311.15 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 311.15 107.696 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 311.15 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 311.15 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 311.15 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "659f32c2-229c-4c53-b3cf-b337ff4df897")
+		)
+		(instances
+			(project "Battery Management Unit (BMU)"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
+					(reference "#PWR044")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 317.5 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4f574172-ae94-46ee-8030-42d07b094216")
+		(property "Reference" "J5"
+			(at 320.04 96.5199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 320.04 99.0599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 317.5 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 317.5 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3357,7 +3853,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 279.4 102.87 0)
+			(at 317.5 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3380,7 +3876,7 @@
 			(uuid "a47cc886-0c27-4296-8779-acb6278a59a9")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "J5")
 					(unit 1)
@@ -3390,7 +3886,7 @@
 	)
 	(symbol
 		(lib_id "70551-0038:705510038")
-		(at 196.85 140.97 180)
+		(at 210.82 138.43 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3398,10 +3894,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5a08ef83-005e-4e59-b0bd-f4f6c9b5a9d8")
 		(property "Reference" "J1"
-			(at 187.96 125.73 0)
+			(at 202.438 124.206 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3411,7 +3906,7 @@
 			)
 		)
 		(property "Value" "HIGH SIDE"
-			(at 187.96 128.27 0)
+			(at 202.438 126.746 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3421,7 +3916,7 @@
 			)
 		)
 		(property "Footprint" "705510038:CONN_70551-xxxx_04_MOL"
-			(at 196.85 140.97 0)
+			(at 210.82 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3433,7 +3928,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.molex.com/en-us/products/part-detail-pdf/705510038?display=pdf"
-			(at 196.85 140.97 0)
+			(at 210.82 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3445,7 +3940,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 196.85 140.97 0)
+			(at 210.82 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3468,7 +3963,7 @@
 			(uuid "9f6de4c4-d172-45a6-b318-ef063dd6ecbd")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "J1")
 					(unit 1)
@@ -3477,8 +3972,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 240.03 176.53 180)
+		(lib_id "power:GND")
+		(at 308.61 152.4 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3486,9 +3981,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "606c6be2-4970-4455-824e-fea80c7d4d73")
-		(property "Reference" "J4"
-			(at 239.776 181.864 0)
+		(uuid "65a43eac-e4e0-4a70-b16a-a0846886d9f4")
+		(property "Reference" "#PWR039"
+			(at 308.61 158.75 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3497,8 +3993,8 @@
 				)
 			)
 		)
-		(property "Value" "GPIO"
-			(at 239.776 184.15 0)
+		(property "Value" "GND"
+			(at 308.61 155.956 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3507,8 +4003,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 240.03 176.53 0)
+		(property "Footprint" ""
+			(at 308.61 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3519,7 +4015,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 240.03 176.53 0)
+			(at 308.61 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3529,8 +4025,8 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 240.03 176.53 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 308.61 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3539,23 +4035,182 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "4"
-			(uuid "f9e9451d-bacd-465f-bc1e-729f6fa7fbb8")
-		)
-		(pin "3"
-			(uuid "e6780884-71c0-4e92-831f-84bb82cdb67e")
 		)
 		(pin "1"
-			(uuid "09e651f4-12ad-4e19-8e8e-a9f3038bc923")
-		)
-		(pin "2"
-			(uuid "23e564d4-53c3-406a-b2a3-c9c1ed77721e")
+			(uuid "edd27d5a-554c-4f80-90a4-571eb0e04cd6")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J4")
+					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 303.53 82.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "686ecc9a-cb60-40e2-b6c2-e929e61f7dfc")
+		(property "Reference" "#PWR045"
+			(at 303.53 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 303.53 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 303.53 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 303.53 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 303.53 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "152dea03-a28b-4a49-95b2-8a486118d1ad")
+		)
+		(instances
+			(project "Battery Management Unit (BMU)"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
+					(reference "#PWR045")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x05")
+		(at 341.63 167.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "73aa69c9-895d-4469-92e6-e87efad33104")
+		(property "Reference" "J8"
+			(at 340.868 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x05"
+			(at 337.566 179.324 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 341.63 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 341.63 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 341.63 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "41a10e3d-ae95-4720-afbc-b8e98f8c1571")
+		)
+		(pin "2"
+			(uuid "26b930e1-ede5-4a60-97c3-40f82f81834b")
+		)
+		(pin "4"
+			(uuid "a65e75ea-1da7-4cd4-893e-e587ddd9421c")
+		)
+		(pin "1"
+			(uuid "3be01b3d-2eda-4e2a-8aee-056e89d88e56")
+		)
+		(pin "3"
+			(uuid "d2e85df9-a868-4d1b-8581-dbc09949e699")
+		)
+		(instances
+			(project "Battery Management Unit (BMU)"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -3563,7 +4218,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 220.98 110.49 0)
+		(at 248.92 87.63 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -3574,7 +4229,7 @@
 		(dnp no)
 		(uuid "84a10850-4eda-4078-a55e-ead305f02cc0")
 		(property "Reference" "J3"
-			(at 218.44 110.4899 0)
+			(at 249.936 93.2179 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3585,7 +4240,7 @@
 			)
 		)
 		(property "Value" "POWER"
-			(at 218.694 113.284 0)
+			(at 250.19 96.012 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3596,7 +4251,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 220.98 110.49 0)
+			(at 248.92 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3607,7 +4262,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 110.49 0)
+			(at 248.92 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3618,7 +4273,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 220.98 110.49 0)
+			(at 248.92 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3635,7 +4290,7 @@
 			(uuid "5f111a0d-cda6-4051-a64b-59563698df87")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "J3")
 					(unit 1)
@@ -3645,7 +4300,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Square")
-		(at 279.3877 167.64 0)
+		(at 302.26 172.72 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3653,9 +4308,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "958a0466-b847-4e62-9c3c-af9e155b8004")
-		(property "Reference" "TP5"
-			(at 280.416 166.624 0)
+		(uuid "91af25c9-a923-4e61-b79e-392782bf32a6")
+		(property "Reference" "TP7"
+			(at 303.2883 171.704 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3666,7 +4321,7 @@
 			)
 		)
 		(property "Value" "TestPoint_Small"
-			(at 280.6577 168.9099 0)
+			(at 303.53 173.9899 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3678,7 +4333,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 284.4677 167.64 0)
+			(at 307.34 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3689,7 +4344,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 284.4677 167.64 0)
+			(at 307.34 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3700,7 +4355,86 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 279.3877 167.64 0)
+			(at 302.26 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "97a92624-5e6f-4737-b0a8-5841334bdf6e")
+		)
+		(instances
+			(project "Battery Management Unit (BMU)"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Square")
+		(at 302.26 165.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "958a0466-b847-4e62-9c3c-af9e155b8004")
+		(property "Reference" "TP5"
+			(at 303.2883 164.084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 303.53 166.3699 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 307.34 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 307.34 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 302.26 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3714,7 +4448,7 @@
 			(uuid "300a96b6-cbe3-4312-b538-e554c42cb5cf")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "TP5")
 					(unit 1)
@@ -3724,7 +4458,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 279.4 120.65 0)
+		(at 317.5 88.9 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -3735,7 +4469,7 @@
 		(dnp no)
 		(uuid "97ac4eaf-9b39-4520-b005-ed1cf5c7d00e")
 		(property "Reference" "J7"
-			(at 281.94 120.6501 0)
+			(at 320.294 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3746,7 +4480,7 @@
 			)
 		)
 		(property "Value" "3V3"
-			(at 281.686 117.856 0)
+			(at 320.04 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3757,7 +4491,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 279.4 120.65 0)
+			(at 317.5 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3768,7 +4502,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 279.4 120.65 0)
+			(at 317.5 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3779,7 +4513,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 279.4 120.65 0)
+			(at 317.5 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3796,7 +4530,7 @@
 			(uuid "3fa726ca-288c-402e-acaf-21db22e41347")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "J7")
 					(unit 1)
@@ -3806,7 +4540,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Square")
-		(at 240.03 144.78 0)
+		(at 262.89 142.24 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3816,7 +4550,7 @@
 		(dnp no)
 		(uuid "ab5c6a96-f5cd-418f-9917-896b00868c9e")
 		(property "Reference" "TP2"
-			(at 241.3 143.764 0)
+			(at 264.16 141.224 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3827,7 +4561,7 @@
 			)
 		)
 		(property "Value" "TestPoint_Small"
-			(at 241.3 146.0499 0)
+			(at 264.16 143.5099 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3839,7 +4573,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 245.11 144.78 0)
+			(at 267.97 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3850,7 +4584,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 245.11 144.78 0)
+			(at 267.97 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3861,7 +4595,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 240.03 144.78 0)
+			(at 262.89 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3875,7 +4609,7 @@
 			(uuid "8fddacf6-5cb7-42d9-bacf-c0fdd8307656")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "TP2")
 					(unit 1)
@@ -3884,169 +4618,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Square")
-		(at 280.67 133.35 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b1f31ab5-92c5-40dd-8dd2-145cc73e7bc0")
-		(property "Reference" "TP11"
-			(at 281.686 132.334 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint_Small"
-			(at 281.94 134.6199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 285.75 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 285.75 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 280.67 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dae4dc23-636b-4efa-be89-1f29b8c4721a")
-		)
-		(instances
-			(project "BMU"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "TP11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x02")
-		(at 302.26 167.64 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c6266558-d6b3-4291-9db8-e89f923ca79f")
-		(property "Reference" "J9"
-			(at 304.8 167.6401 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "I2C"
-			(at 304.546 164.846 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 302.26 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 302.26 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 302.26 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "51adcb7f-da72-4234-ad23-25a1c5e37fa3")
-		)
-		(pin "2"
-			(uuid "40ebca06-8c24-4a79-b175-8411bd021896")
-		)
-		(instances
-			(project "BMU"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x01")
-		(at 302.26 177.8 0)
+		(lib_id "power:+3V3")
+		(at 334.01 160.02 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4055,31 +4628,30 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d1c49ea8-6cb0-47a6-b988-de93282fa878")
-		(property "Reference" "J11"
-			(at 304.8 176.5299 0)
+		(uuid "ac8c18cb-1d6a-49cf-b80f-e5fddae6338f")
+		(property "Reference" "#PWR041"
+			(at 334.01 163.83 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "ALERT"
-			(at 304.8 179.0699 0)
+		(property "Value" "+3V3"
+			(at 334.01 154.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 302.26 177.8 0)
+		(property "Footprint" ""
+			(at 334.01 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4090,7 +4662,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 302.26 177.8 0)
+			(at 334.01 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4100,8 +4672,8 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 302.26 177.8 0)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 334.01 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4112,12 +4684,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a1ee0cb5-31b0-4f10-94da-dc33096c80ea")
+			(uuid "870bc983-67ff-478a-b3ae-71581e30275b")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J11")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -4125,7 +4697,7 @@
 	)
 	(symbol
 		(lib_id "70551-0038:705510038")
-		(at 196.85 160.02 180)
+		(at 210.82 157.48 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4133,10 +4705,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "d79078b3-8d9f-46f4-9f9e-cf0fb23cd642")
 		(property "Reference" "J2"
-			(at 187.96 144.78 0)
+			(at 202.184 143.764 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4146,7 +4717,7 @@
 			)
 		)
 		(property "Value" "LOW SIDE"
-			(at 187.96 147.32 0)
+			(at 202.184 146.304 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4156,7 +4727,7 @@
 			)
 		)
 		(property "Footprint" "705510038:CONN_70551-xxxx_04_MOL"
-			(at 196.85 160.02 0)
+			(at 210.82 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4168,7 +4739,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.molex.com/en-us/products/part-detail-pdf/705510038?display=pdf"
-			(at 196.85 160.02 0)
+			(at 210.82 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4180,7 +4751,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 196.85 160.02 0)
+			(at 210.82 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4203,7 +4774,7 @@
 			(uuid "9ee5cd88-766c-4e52-8cce-d0aab76dc497")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "J2")
 					(unit 1)
@@ -4212,87 +4783,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x01")
-		(at 293.37 156.21 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d83f43a6-15c9-4c6b-a784-9854b3abae62")
-		(property "Reference" "J8"
-			(at 295.91 154.9399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "FAULT"
-			(at 295.91 157.4799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 293.37 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 293.37 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 293.37 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "81afde07-d177-490e-9949-93a91b67dd45")
-		)
-		(instances
-			(project "BMU"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint_Square")
-		(at 240.03 142.24 0)
+		(at 262.89 139.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4302,7 +4794,7 @@
 		(dnp no)
 		(uuid "d8c1ce57-47ce-4164-a2a5-219a999caf04")
 		(property "Reference" "TP1"
-			(at 241.3 140.97 0)
+			(at 264.16 138.43 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4313,7 +4805,7 @@
 			)
 		)
 		(property "Value" "TestPoint_Small"
-			(at 241.3 143.5099 0)
+			(at 264.16 140.9699 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4325,7 +4817,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 245.11 142.24 0)
+			(at 267.97 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4336,7 +4828,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 245.11 142.24 0)
+			(at 267.97 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4347,7 +4839,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 240.03 142.24 0)
+			(at 262.89 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4361,7 +4853,7 @@
 			(uuid "cb0289cd-0770-4cc8-b4f1-f88829c5f3e2")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "TP1")
 					(unit 1)
@@ -4370,87 +4862,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Square")
-		(at 279.3064 177.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d98d696b-45e8-4102-a32e-228b9077dbeb")
-		(property "Reference" "TP4"
-			(at 280.162 176.784 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint_Small"
-			(at 280.5764 179.0699 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 284.3864 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 284.3864 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 279.3064 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dd583653-ea61-4539-8620-7e95cbbd8fad")
-		)
-		(instances
-			(project "BMU"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "TP4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 236.22 116.84 0)
+		(at 264.16 93.98 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4461,7 +4874,7 @@
 		(fields_autoplaced yes)
 		(uuid "e17338c0-9c25-4b3e-8264-3b55a55f0674")
 		(property "Reference" "#PWR02"
-			(at 236.22 123.19 0)
+			(at 264.16 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4472,7 +4885,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 236.22 121.92 0)
+			(at 264.16 99.06 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4482,7 +4895,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 236.22 116.84 0)
+			(at 264.16 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4493,7 +4906,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 236.22 116.84 0)
+			(at 264.16 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4504,7 +4917,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 236.22 116.84 0)
+			(at 264.16 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4518,7 +4931,7 @@
 			(uuid "0bf9a893-0486-4441-8cf7-a562132dc4fd")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "#PWR02")
 					(unit 1)
@@ -4526,14 +4939,90 @@
 			)
 		)
 	)
+	(symbol
+		(lib_id "power:GND")
+		(at 309.88 139.7 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f47eb758-d8d3-48fb-ad9e-e436fc9f2e64")
+		(property "Reference" "#PWR043"
+			(at 309.88 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 309.88 143.256 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 309.88 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 309.88 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 309.88 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "99a82989-ac4b-4247-a2c3-0205ee00757d")
+		)
+		(instances
+			(project "Battery Management Unit (BMU)"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
+					(reference "#PWR043")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(sheet
-		(at 242.57 102.87)
+		(at 270.51 80.01)
 		(size 27.94 17.78)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -4543,18 +5032,20 @@
 		)
 		(uuid "72276164-1341-4c36-b4e6-9b9f0edc7f8e")
 		(property "Sheetname" "BMU-POWER"
-			(at 242.57 102.1584 0)
+			(at 278.13 90.17 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.254)
+					(bold yes)
 				)
 				(justify left bottom)
 			)
 		)
 		(property "Sheetfile" "BMU-POWER.kicad_sch"
-			(at 242.57 121.2346 0)
+			(at 270.51 98.3746 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4564,38 +5055,8 @@
 				(justify left top)
 			)
 		)
-		(pin "3V3" output
-			(at 270.51 118.11 0)
-			(uuid "40a1fe2f-5e1c-4cc6-96f3-f5af2efbfac0")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "5V" output
-			(at 270.51 114.3 0)
-			(uuid "425d163b-13ea-4889-b975-93f8abaa0675")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GND" output
-			(at 270.51 107.95 0)
-			(uuid "7acae679-bf3a-4f64-9da4-6c897eb87a5a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(page "2")
 				)
@@ -4603,13 +5064,12 @@
 		)
 	)
 	(sheet
-		(at 212.09 130.81)
+		(at 229.87 128.27)
 		(size 25.4 31.75)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -4619,18 +5079,20 @@
 		)
 		(uuid "e6a80062-bf71-493b-b7d1-d8d35ceb29fd")
 		(property "Sheetname" "BMU-COM Bridge"
-			(at 212.09 130.0984 0)
+			(at 233.934 146.812 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.254)
+					(bold yes)
 				)
 				(justify left bottom)
 			)
 		)
 		(property "Sheetfile" "BMU-COM Bridge.kicad_sch"
-			(at 212.09 163.1446 0)
+			(at 229.87 160.6046 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4641,7 +5103,7 @@
 			)
 		)
 		(pin "MISO{slash}TX" output
-			(at 237.49 144.78 0)
+			(at 255.27 142.24 0)
 			(uuid "76a9a422-58ec-49fd-99f6-658fe6543b4d")
 			(effects
 				(font
@@ -4651,7 +5113,7 @@
 			)
 		)
 		(pin "MOSI{slash}RX" input
-			(at 237.49 142.24 0)
+			(at 255.27 139.7 0)
 			(uuid "00af6a5b-4e13-4093-9f54-70a531e75b67")
 			(effects
 				(font
@@ -4661,7 +5123,7 @@
 			)
 		)
 		(pin "FAULT_N" output
-			(at 237.49 153.67 0)
+			(at 255.27 151.13 0)
 			(uuid "405dd339-db53-4c97-8cc2-d581e010523c")
 			(effects
 				(font
@@ -4671,7 +5133,7 @@
 			)
 		)
 		(pin "COMHN_1" bidirectional
-			(at 212.09 133.35 180)
+			(at 229.87 130.81 180)
 			(uuid "23e0cc74-9cab-46db-b77c-39d0551ba1cf")
 			(effects
 				(font
@@ -4681,7 +5143,7 @@
 			)
 		)
 		(pin "COMHP_1" bidirectional
-			(at 212.09 135.89 180)
+			(at 229.87 133.35 180)
 			(uuid "65d0ca73-483b-4cff-b894-4ef0431b09b5")
 			(effects
 				(font
@@ -4691,7 +5153,7 @@
 			)
 		)
 		(pin "COMLN_2" bidirectional
-			(at 212.09 160.02 180)
+			(at 229.87 157.48 180)
 			(uuid "53241722-88dd-43c6-a51e-76d12143efb3")
 			(effects
 				(font
@@ -4701,7 +5163,7 @@
 			)
 		)
 		(pin "COMLP_2" bidirectional
-			(at 212.09 157.48 180)
+			(at 229.87 154.94 180)
 			(uuid "5bc92c82-5144-442e-967c-5c088749e05a")
 			(effects
 				(font
@@ -4711,7 +5173,7 @@
 			)
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(page "3")
 				)
@@ -4719,113 +5181,7 @@
 		)
 	)
 	(sheet
-		(at 288.29 125.73)
-		(size 27.94 19.05)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "ebb995bd-0019-4c04-a0dd-2962c6aaae17")
-		(property "Sheetname" "BMU-CAN"
-			(at 288.29 125.0184 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "BMU-CAN.kicad_sch"
-			(at 288.29 145.3646 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "CANH" bidirectional
-			(at 316.23 137.16 0)
-			(uuid "6c8015a0-9593-487a-9337-45d66e13d7dd")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "CANL" bidirectional
-			(at 316.23 139.7 0)
-			(uuid "beddd815-f711-41c4-827b-090c4cb95b7d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "CAN_GND" bidirectional
-			(at 316.23 142.24 0)
-			(uuid "9c95d1be-ac4d-43c1-8a99-e1956d66b5ad")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "CAN_STBY" bidirectional
-			(at 288.29 135.89 180)
-			(uuid "8754f331-40fd-4276-a2dd-3b5d30a9bbab")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "CAN_TX" bidirectional
-			(at 288.29 133.35 180)
-			(uuid "8ec0cfa7-b8e7-4d7e-8349-c64d3d53a24b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "CAN_RX" bidirectional
-			(at 288.29 130.81 180)
-			(uuid "a1c451ce-d976-468f-991c-2531cbb72cde")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(instances
-			(project "BMU"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(page "5")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 246.38 128.27)
+		(at 269.24 125.73)
 		(size 30.48 53.34)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4841,18 +5197,20 @@
 		)
 		(uuid "f115f1df-fd74-4b87-bcb3-90c9dd231c01")
 		(property "Sheetname" "BMU-MCU"
-			(at 246.38 127.5584 0)
+			(at 269.24 125.0184 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.254)
+					(bold yes)
 				)
 				(justify left bottom)
 			)
 		)
 		(property "Sheetfile" "BMU-MCU.kicad_sch"
-			(at 246.38 182.1946 0)
+			(at 269.24 179.6546 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4862,8 +5220,8 @@
 				(justify left top)
 			)
 		)
-		(pin "I2C_SCL" bidirectional
-			(at 276.86 165.1 0)
+		(pin "I2C_SCL" output
+			(at 299.72 162.56 0)
 			(uuid "c474c2cc-e935-41f2-a8b3-f3fc428b6cfe")
 			(effects
 				(font
@@ -4873,7 +5231,7 @@
 			)
 		)
 		(pin "I2C_SDA" bidirectional
-			(at 276.86 167.64 0)
+			(at 299.72 165.1 0)
 			(uuid "e20cd729-4c94-4d43-a9a1-519b12ec8574")
 			(effects
 				(font
@@ -4882,38 +5240,8 @@
 				(justify right)
 			)
 		)
-		(pin "CAN_RX" bidirectional
-			(at 276.86 130.81 0)
-			(uuid "13f048c1-dc77-4897-b0d4-ec550b173780")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "CAN_STBY" bidirectional
-			(at 276.86 135.89 0)
-			(uuid "8a20cd47-682e-4f2e-9292-f74b3ca2f693")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "CAN_TX" bidirectional
-			(at 276.86 133.35 0)
-			(uuid "84e84a61-affd-4cf1-b4a6-a3e9d8c56e1c")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "ALERT_SHUNT" bidirectional
-			(at 276.86 177.8 0)
+		(pin "ALERT_SHUNT" input
+			(at 299.72 172.72 0)
 			(uuid "3c25e418-52e6-4c51-904e-2ac7cbe18033")
 			(effects
 				(font
@@ -4922,18 +5250,8 @@
 				(justify right)
 			)
 		)
-		(pin "GND_SHUNT" bidirectional
-			(at 276.86 173.99 0)
-			(uuid "73788e98-b07b-42c3-99b8-4d0a33aa55ec")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "BQ_FAULT_N" input
-			(at 246.38 153.67 180)
+			(at 269.24 151.13 180)
 			(uuid "d9ec7d72-42bd-4e04-b978-7ea4f83c92d0")
 			(effects
 				(font
@@ -4943,7 +5261,7 @@
 			)
 		)
 		(pin "SHUTDOWN" output
-			(at 246.38 179.07 180)
+			(at 269.24 176.53 180)
 			(uuid "c26ae3fc-21da-4227-9dd1-c9a7dce71663")
 			(effects
 				(font
@@ -4952,18 +5270,8 @@
 				(justify left)
 			)
 		)
-		(pin "3V3_SHUNT" output
-			(at 276.86 171.45 0)
-			(uuid "e476d32f-3c91-45da-9d82-9deb3329892d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "UART1_RX" input
-			(at 246.38 144.78 180)
+			(at 269.24 142.24 180)
 			(uuid "adca6592-0a18-400e-995a-5ee3d1b1d955")
 			(effects
 				(font
@@ -4973,7 +5281,7 @@
 			)
 		)
 		(pin "UART1_TX" output
-			(at 246.38 142.24 180)
+			(at 269.24 139.7 180)
 			(uuid "59876186-44d4-4cf0-b6c5-c0649c798a3f")
 			(effects
 				(font
@@ -4983,7 +5291,7 @@
 			)
 		)
 		(pin "GPIO_SPARE1" output
-			(at 246.38 171.45 180)
+			(at 269.24 168.91 180)
 			(uuid "81a5a9c1-afe7-4c46-856d-850185f4eacc")
 			(effects
 				(font
@@ -4993,7 +5301,7 @@
 			)
 		)
 		(pin "GPIO_SPARE3" output
-			(at 246.38 176.53 180)
+			(at 269.24 173.99 180)
 			(uuid "7e545c27-f21b-41f4-99b8-12ced3205363")
 			(effects
 				(font
@@ -5003,7 +5311,7 @@
 			)
 		)
 		(pin "GPIO_SPARE2" output
-			(at 246.38 173.99 180)
+			(at 269.24 171.45 180)
 			(uuid "07c77eeb-df2a-4e70-b1a5-8421646f61f1")
 			(effects
 				(font
@@ -5013,7 +5321,7 @@
 			)
 		)
 		(pin "FAULT_LED" output
-			(at 276.86 156.21 0)
+			(at 299.72 149.86 0)
 			(uuid "ec11887d-6e8b-410b-b418-f2aa58de7df0")
 			(effects
 				(font
@@ -5022,8 +5330,28 @@
 				(justify right)
 			)
 		)
+		(pin "CANH" bidirectional
+			(at 299.72 133.35 0)
+			(uuid "47edb51b-823b-488b-b1ad-94b68d56e1ba")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CANL" bidirectional
+			(at 299.72 135.89 0)
+			(uuid "9ff47208-ada9-4e1e-8d7b-635cbfe8d0ce")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(page "4")
 				)

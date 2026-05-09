@@ -2283,8 +2283,8 @@
 		)
 	)
 	(rectangle
-		(start 232.41 122.936)
-		(end 303.53 135.636)
+		(start 278.13 89.916)
+		(end 349.25 102.616)
 		(stroke
 			(width 0)
 			(type default)
@@ -2308,7 +2308,7 @@
 	)
 	(text "Differential daisy-chain communication pair (H side)"
 		(exclude_from_sim no)
-		(at 266.446 125.984 0)
+		(at 312.166 92.964 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2318,7 +2318,7 @@
 	)
 	(text "Tranformer Isolation For BQ79600\n"
 		(exclude_from_sim no)
-		(at 83.566 148.59 0)
+		(at 218.694 147.066 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -2328,7 +2328,7 @@
 	)
 	(text "Differential daisy-chain communication pair (L side)"
 		(exclude_from_sim no)
-		(at 266.446 129.794 0)
+		(at 312.166 96.774 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2348,7 +2348,7 @@
 	)
 	(text "Ring architecture reserved: both COMH and COML pairs are routed out"
 		(exclude_from_sim no)
-		(at 267.97 133.35 0)
+		(at 313.69 100.33 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2356,9 +2356,9 @@
 		)
 		(uuid "85c06c00-fbc1-4022-859f-2580a16465c7")
 	)
-	(text "nUART/SPI: Mode select pin; tied to GND for UART mode"
+	(text "nUART/SPI: Mode \nselect pin; tied \nto GND for UART mode"
 		(exclude_from_sim no)
-		(at 180.848 114.3 0)
+		(at 179.324 106.934 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2368,7 +2368,7 @@
 	)
 	(text "FAULT_N: active-low fault output from BQ79600 to MCU"
 		(exclude_from_sim no)
-		(at 181.61 109.982 0)
+		(at 112.014 98.806 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2376,9 +2376,9 @@
 		)
 		(uuid "d4a08ba6-a13c-4bf8-a9f6-ca6fc365fe0a")
 	)
-	(text "nCS+SCLK: Tied to GND in UART mode"
+	(text "nCS+SCLK: Tied \nto GND in UART \nmode"
 		(exclude_from_sim no)
-		(at 171.958 118.364 0)
+		(at 180.34 115.57 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2397,6 +2397,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "117038f9-1c38-42e4-8d19-20817000502c")
+	)
+	(junction
+		(at 250.19 180.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "203f473b-b385-4c48-832d-b4b1fecf484c")
 	)
 	(junction
 		(at 240.03 69.85)
@@ -2423,16 +2429,16 @@
 		(uuid "3bc4e2da-4780-41e2-8f33-4734b0671424")
 	)
 	(junction
-		(at 190.5 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4c5d5598-7c8a-47b8-90d7-d17b351a3259")
-	)
-	(junction
 		(at 196.85 170.18)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4cf7bdf6-a2ee-445a-a19b-34f140612de3")
+	)
+	(junction
+		(at 195.58 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e4e29b2-49f8-4369-a48e-3fdaf809c4e2")
 	)
 	(junction
 		(at 337.82 163.83)
@@ -2453,16 +2459,22 @@
 		(uuid "6189c043-a43c-4967-a254-226274303a0a")
 	)
 	(junction
+		(at 168.91 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "698df212-4f7e-41da-b2b7-e4a774bcce87")
+	)
+	(junction
 		(at 173.99 180.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6d471c8e-7bd5-4934-a374-c7f5a2d6bbd5")
 	)
 	(junction
-		(at 250.19 179.07)
+		(at 161.29 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "831276e0-0c26-45d4-841f-6bdab57d20f5")
+		(uuid "73211eb3-c6ed-419c-b637-0e559a6d1cc0")
 	)
 	(junction
 		(at 260.35 160.02)
@@ -2475,12 +2487,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "84d007a8-1453-48c0-8726-fabe05ab41e3")
-	)
-	(junction
-		(at 157.48 95.25)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9c3251d8-e90a-406d-9f3b-a31e4dd56a6c")
 	)
 	(junction
 		(at 196.85 160.02)
@@ -2501,16 +2507,22 @@
 		(uuid "c46984bb-8aa9-4b2f-acee-08a690a237d6")
 	)
 	(junction
-		(at 196.85 179.07)
+		(at 154.94 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d1403645-e5b8-41a4-9f94-1aeb62dc9b99")
+		(uuid "c6134cf1-d328-4e8e-97b7-bae8affe7812")
 	)
 	(junction
 		(at 223.52 170.18)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d1d26db3-0ba2-4fe9-bea6-b4a7fdef935b")
+	)
+	(junction
+		(at 161.29 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d6731490-ed79-4023-bf1a-9d187fe39b27")
 	)
 	(junction
 		(at 180.34 203.2)
@@ -2537,7 +2549,7 @@
 		(uuid "e989373d-ed1f-4d17-9352-727d93bc8eec")
 	)
 	(junction
-		(at 190.5 90.17)
+		(at 195.58 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ed0a178f-32d6-446e-a7af-f728d6e9668c")
@@ -2549,10 +2561,10 @@
 		(uuid "f1c976e8-d827-47c7-bcf2-366c41abadda")
 	)
 	(junction
-		(at 157.48 86.36)
+		(at 196.85 180.34)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f44b0215-ba28-4e47-b60d-59980bb5d241")
+		(uuid "faa79047-2256-4f07-84f4-e3ee8a245ff0")
 	)
 	(junction
 		(at 109.22 163.83)
@@ -2599,26 +2611,6 @@
 			(type default)
 		)
 		(uuid "05b98671-3032-48e0-93c7-bd135bad325b")
-	)
-	(wire
-		(pts
-			(xy 176.53 104.14) (xy 194.31 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "07e8feb8-1de3-44fc-91e0-5c39fe2d856a")
-	)
-	(wire
-		(pts
-			(xy 196.85 83.82) (xy 196.85 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09f9d350-4de7-4cd5-9992-1e88f722b975")
 	)
 	(wire
 		(pts
@@ -2682,23 +2674,13 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 104.14) (xy 171.45 104.14)
+			(xy 154.94 71.12) (xy 154.94 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "27165a2f-0007-4be4-9006-7140399a59d2")
-	)
-	(wire
-		(pts
-			(xy 168.91 95.25) (xy 179.07 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "29172c8b-ffd9-4b3f-b5fa-b3e571c26c95")
+		(uuid "2848a4c2-4386-490e-b733-b0dd81e1f4e0")
 	)
 	(wire
 		(pts
@@ -2732,13 +2714,13 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 82.55) (xy 198.12 82.55)
+			(xy 161.29 85.09) (xy 151.13 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "327e50f5-e787-4476-84fb-1295faa81fb2")
+		(uuid "33c985f8-b2a7-4c5e-a409-d44e6cd98323")
 	)
 	(wire
 		(pts
@@ -2752,23 +2734,13 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 81.28) (xy 176.53 86.36)
+			(xy 161.29 71.12) (xy 168.91 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "353b7167-0a54-42e6-91df-612279ec1904")
-	)
-	(wire
-		(pts
-			(xy 157.48 104.14) (xy 157.48 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3645a52c-b4a7-4f1b-b48e-c1ad3fff2d70")
+		(uuid "3b02342a-311d-40b2-a756-55c6a6525e87")
 	)
 	(wire
 		(pts
@@ -2782,7 +2754,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 81.28) (xy 196.85 81.28)
+			(xy 151.13 82.55) (xy 154.94 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2842,6 +2814,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 99.06) (xy 198.12 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42c8a031-5644-4405-b8f7-062df23fb61f")
+	)
+	(wire
+		(pts
 			(xy 250.19 168.91) (xy 250.19 170.18)
 		)
 		(stroke
@@ -2849,16 +2831,6 @@
 			(type default)
 		)
 		(uuid "4393e95b-9e1c-4382-abe1-b370ddf405fa")
-	)
-	(wire
-		(pts
-			(xy 196.85 85.09) (xy 198.12 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44e4ed76-04b5-4ab8-8cd4-a6aceb9383c3")
 	)
 	(wire
 		(pts
@@ -2952,6 +2924,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 78.74) (xy 168.91 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62f41472-dced-4ab3-8130-0cf93d45656d")
+	)
+	(wire
+		(pts
 			(xy 250.19 180.34) (xy 273.05 180.34)
 		)
 		(stroke
@@ -2989,6 +2971,26 @@
 			(type default)
 		)
 		(uuid "6576c205-8cdd-42c3-bd6d-18b7c4525d31")
+	)
+	(wire
+		(pts
+			(xy 151.13 99.06) (xy 168.91 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "658a7320-f46c-4344-9380-b28e053ab9ab")
+	)
+	(wire
+		(pts
+			(xy 161.29 73.66) (xy 161.29 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "663e80a0-15c9-4c25-a5c6-ab149211dc3a")
 	)
 	(wire
 		(pts
@@ -3112,16 +3114,6 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 86.36) (xy 160.02 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9614ed11-1405-4365-b916-3c0c3a9708eb")
-	)
-	(wire
-		(pts
 			(xy 238.76 81.28) (xy 262.89 81.28)
 		)
 		(stroke
@@ -3129,6 +3121,16 @@
 			(type default)
 		)
 		(uuid "966c2c0e-a424-43f5-9430-2e94aa406aaa")
+	)
+	(polyline
+		(pts
+			(xy 181.61 101.6) (xy 193.04 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97a8ab3d-3fb9-4c4b-a95b-5717599eb2da")
 	)
 	(wire
 		(pts
@@ -3162,16 +3164,6 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 80.01) (xy 157.48 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a110f726-6bf0-4228-95e6-8f26566a62ba")
-	)
-	(wire
-		(pts
 			(xy 361.95 162.56) (xy 361.95 165.1)
 		)
 		(stroke
@@ -3179,16 +3171,6 @@
 			(type default)
 		)
 		(uuid "a1196dd6-5bb6-4c0e-ac04-85e750285b2a")
-	)
-	(wire
-		(pts
-			(xy 194.31 99.06) (xy 198.12 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a33a2f35-5647-4552-8e15-24cb7cb11ed5")
 	)
 	(wire
 		(pts
@@ -3222,7 +3204,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 92.71) (xy 198.12 92.71)
+			(xy 195.58 92.71) (xy 198.12 92.71)
 		)
 		(stroke
 			(width 0)
@@ -3262,6 +3244,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 82.55) (xy 198.12 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab72fe65-3813-4ede-829e-a90da362894e")
+	)
+	(wire
+		(pts
 			(xy 109.22 163.83) (xy 109.22 165.1)
 		)
 		(stroke
@@ -3272,7 +3264,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 90.17) (xy 198.12 90.17)
+			(xy 195.58 90.17) (xy 198.12 90.17)
 		)
 		(stroke
 			(width 0)
@@ -3322,6 +3314,26 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 71.12) (xy 161.29 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b31b7092-db3b-407e-8624-4d82f2b9cbca")
+	)
+	(wire
+		(pts
+			(xy 161.29 69.85) (xy 161.29 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b35c554f-7c1a-4285-9d02-1113d9ae4ec6")
+	)
+	(wire
+		(pts
 			(xy 196.85 161.29) (xy 196.85 160.02)
 		)
 		(stroke
@@ -3342,16 +3354,6 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 95.25) (xy 163.83 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b798c6dd-ca23-4cd9-bdbd-d60bd0b5cc15")
-	)
-	(wire
-		(pts
 			(xy 337.82 163.83) (xy 337.82 165.1)
 		)
 		(stroke
@@ -3359,16 +3361,6 @@
 			(type default)
 		)
 		(uuid "b8342bfa-9387-44ee-a0dd-dc73bd98d09d")
-	)
-	(wire
-		(pts
-			(xy 179.07 83.82) (xy 196.85 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "baaa99d3-9d79-486e-ac7f-6845a05d69a1")
 	)
 	(wire
 		(pts
@@ -3452,13 +3444,13 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 86.36) (xy 165.1 86.36)
+			(xy 161.29 85.09) (xy 198.12 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cb6ccf48-9412-41be-934d-a1047149d4ba")
+		(uuid "c9e7d0d0-d395-452d-82ef-2017d0d4e944")
 	)
 	(wire
 		(pts
@@ -3512,7 +3504,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 179.07) (xy 205.74 179.07)
+			(xy 196.85 180.34) (xy 205.74 180.34)
 		)
 		(stroke
 			(width 0)
@@ -3529,16 +3521,6 @@
 			(type default)
 		)
 		(uuid "d9c5bc47-c5a6-44f4-b762-dace798eb84b")
-	)
-	(wire
-		(pts
-			(xy 194.31 99.06) (xy 194.31 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "da74fa17-f179-40b0-bbb4-6c4353d6f914")
 	)
 	(wire
 		(pts
@@ -3642,13 +3624,13 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 81.28) (xy 196.85 82.55)
+			(xy 154.94 78.74) (xy 154.94 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e6dd635d-c086-4fd8-bb2f-d72098a9a1da")
+		(uuid "e819b051-f399-4c6f-93cb-f10d360b4a0a")
 	)
 	(wire
 		(pts
@@ -3712,7 +3694,17 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 87.63) (xy 190.5 90.17)
+			(xy 161.29 78.74) (xy 161.29 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebc867d1-7e91-40bc-abf8-b2565ef96dfa")
+	)
+	(wire
+		(pts
+			(xy 195.58 87.63) (xy 195.58 90.17)
 		)
 		(stroke
 			(width 0)
@@ -3722,7 +3714,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 90.17) (xy 190.5 92.71)
+			(xy 195.58 90.17) (xy 195.58 92.71)
 		)
 		(stroke
 			(width 0)
@@ -3732,7 +3724,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 179.07) (xy 241.3 179.07)
+			(xy 250.19 180.34) (xy 241.3 180.34)
 		)
 		(stroke
 			(width 0)
@@ -3772,7 +3764,17 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 87.63) (xy 190.5 87.63)
+			(xy 195.58 102.87) (xy 195.58 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f21dd4ee-aa7a-4098-95ed-684c546e0664")
+	)
+	(wire
+		(pts
+			(xy 198.12 87.63) (xy 195.58 87.63)
 		)
 		(stroke
 			(width 0)
@@ -3799,6 +3801,16 @@
 			(type default)
 		)
 		(uuid "f6a80b10-e938-4a2f-959e-257f85c228f6")
+	)
+	(wire
+		(pts
+			(xy 168.91 71.12) (xy 168.91 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6d694ae-4289-49c6-8290-9df26938ff0c")
 	)
 	(wire
 		(pts
@@ -3832,16 +3844,6 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 83.82) (xy 179.07 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fb9559c2-017e-4635-88b6-dea15537a087")
-	)
-	(wire
-		(pts
 			(xy 196.85 160.02) (xy 205.74 160.02)
 		)
 		(stroke
@@ -3849,26 +3851,6 @@
 			(type default)
 		)
 		(uuid "fc54ed37-0641-4c3c-9663-971134cf6d92")
-	)
-	(label "ISO COMLN"
-		(at 64.77 167.64 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2194292a-5e57-45b8-8a2f-f29604236444")
-	)
-	(label "ISO COMHN"
-		(at 382.27 167.64 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "560aeb08-ed5b-49f2-8ece-60f2b1c936eb")
 	)
 	(label "COMHN_OPT"
 		(at 313.69 180.34 180)
@@ -3890,16 +3872,6 @@
 		)
 		(uuid "7bc4629b-fa08-44dd-84d9-573a7d356998")
 	)
-	(label "ISO COMHP"
-		(at 382.27 160.02 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "7d855669-1733-49ab-8e93-8d14296300b5")
-	)
 	(label "COMLN_OPT"
 		(at 129.54 180.34 0)
 		(effects
@@ -3909,16 +3881,6 @@
 			(justify left bottom)
 		)
 		(uuid "81b45f86-ce27-4783-889a-c08f4010034d")
-	)
-	(label "ISO COMLP"
-		(at 64.77 160.02 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d477d8ef-8b55-4823-ab84-c2a28109c400")
 	)
 	(label "COMLP_OPT"
 		(at 128.27 160.02 0)
@@ -4028,7 +3990,7 @@
 	)
 	(global_label "COMLN"
 		(shape input)
-		(at 205.74 179.07 0)
+		(at 205.74 180.34 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4038,7 +4000,7 @@
 		)
 		(uuid "8896abb5-68e3-4bee-b980-0bc757cc209e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 215.1357 179.07 0)
+			(at 215.1357 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4100,7 +4062,7 @@
 	)
 	(global_label "COMHN"
 		(shape input)
-		(at 241.3 179.07 180)
+		(at 241.3 180.34 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4110,7 +4072,7 @@
 		)
 		(uuid "cddb0aed-0fa5-4410-acd9-4953ff1837b3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 231.6019 179.07 0)
+			(at 231.6019 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4124,7 +4086,7 @@
 	)
 	(hierarchical_label "MISO{slash}TX"
 		(shape output)
-		(at 179.07 92.71 180)
+		(at 151.13 85.09 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4179,7 +4141,7 @@
 	)
 	(hierarchical_label "MOSI{slash}RX"
 		(shape input)
-		(at 176.53 83.82 180)
+		(at 151.13 82.55 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4190,7 +4152,7 @@
 	)
 	(hierarchical_label "FAULT_N"
 		(shape output)
-		(at 194.31 101.6 180)
+		(at 151.13 99.06 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4277,7 +4239,7 @@
 			(uuid "9221bbb2-b08b-43ae-9e3b-e27612e50ef1")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "U3")
 					(unit 1)
@@ -4355,7 +4317,7 @@
 			(uuid "8dfd0026-bc06-4a44-88dc-fc7a01beac0e")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "#PWR019")
 					(unit 1)
@@ -4435,7 +4397,7 @@
 			(uuid "0a2ac5c7-589e-4198-86fe-b5ca92a12b3e")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R17")
 					(unit 1)
@@ -4517,7 +4479,7 @@
 			(uuid "c22123e6-e59b-4ade-9272-82d1964b4414")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "C4")
 					(unit 1)
@@ -4596,7 +4558,7 @@
 			(uuid "b6132674-0a3c-4a16-bfb5-523048ff78f3")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R10")
 					(unit 1)
@@ -4676,7 +4638,7 @@
 			(uuid "fb472979-479a-4777-84fb-95664f0083a3")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R21")
 					(unit 1)
@@ -4755,7 +4717,7 @@
 			(uuid "c07c37ca-4150-4195-a937-3929cbb97e38")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "#PWR024")
 					(unit 1)
@@ -4835,7 +4797,7 @@
 			(uuid "e8778b3f-3f0d-479b-90d6-1af24596e7d0")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R22")
 					(unit 1)
@@ -4914,7 +4876,7 @@
 			(uuid "4c778f53-c5d1-4f89-adf8-21dad4cc5238")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R15")
 					(unit 1)
@@ -4992,7 +4954,7 @@
 			(uuid "e0ff51f5-c7ee-4f7d-b934-dca05bfbcd68")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "#PWR011")
 					(unit 1)
@@ -5072,7 +5034,7 @@
 			(uuid "527eef1d-b146-4d74-bee5-2021b48560f4")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R23")
 					(unit 1)
@@ -5151,7 +5113,7 @@
 			(uuid "00d3903c-69f5-43cf-8bb5-112ec1bda854")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "#PWR022")
 					(unit 1)
@@ -5234,7 +5196,7 @@
 			(uuid "d93061ab-bcc5-4326-9294-2dc384614cb0")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "C8")
 					(unit 1)
@@ -5312,7 +5274,7 @@
 			(uuid "f2b2fae0-4787-41a6-9999-b41d15e17d67")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "#PWR017")
 					(unit 1)
@@ -5322,7 +5284,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 157.48 80.01 0)
+		(at 161.29 69.85 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5330,10 +5292,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "4d7582e3-f9fc-4953-aea9-ceb074eedd71")
 		(property "Reference" "#PWR013"
-			(at 157.48 83.82 0)
+			(at 161.29 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5344,7 +5305,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 157.48 74.93 0)
+			(at 161.29 66.294 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5354,7 +5315,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 157.48 80.01 0)
+			(at 161.29 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5365,7 +5326,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 157.48 80.01 0)
+			(at 161.29 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5376,7 +5337,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 157.48 80.01 0)
+			(at 161.29 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5390,7 +5351,7 @@
 			(uuid "71fe9fcf-2b8a-40e0-844c-6f799e87cbfd")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "#PWR013")
 					(unit 1)
@@ -5477,7 +5438,7 @@
 			(uuid "bd178d55-e86b-4bf6-a6f8-a28ecc3e9fd9")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "U5")
 					(unit 1)
@@ -5560,7 +5521,7 @@
 			(uuid "1af436cf-1d85-43c2-a592-76a08cb77e0c")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "C11")
 					(unit 1)
@@ -5642,7 +5603,7 @@
 			(uuid "58bc8cef-cde6-445e-a1c9-6eafeeb0c935")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "C5")
 					(unit 1)
@@ -5722,7 +5683,7 @@
 			(uuid "9b676b12-3ebf-4ab4-bef8-7442fb4c8103")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R18")
 					(unit 1)
@@ -5800,7 +5761,7 @@
 			(uuid "de85a903-a0aa-4c31-9c15-2e959c4e393d")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "#PWR018")
 					(unit 1)
@@ -5879,7 +5840,7 @@
 			(uuid "2fbec07a-4dbd-4872-b93e-19ef5a902ac7")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "#PWR023")
 					(unit 1)
@@ -5958,7 +5919,7 @@
 			(uuid "444ae171-71b6-49ef-8c0d-481fb2e117f1")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R6")
 					(unit 1)
@@ -6038,7 +5999,7 @@
 			(uuid "bc253e43-03ec-4c68-b737-636f8c3b6216")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R20")
 					(unit 1)
@@ -6118,7 +6079,7 @@
 			(uuid "7e155a66-3116-43db-b723-8d730faccb42")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R19")
 					(unit 1)
@@ -6128,7 +6089,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
-		(at 162.56 86.36 90)
+		(at 154.94 76.2 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6138,7 +6099,7 @@
 		(dnp no)
 		(uuid "789fa5a3-6d33-4bb4-834f-0eeb3c71ccc8")
 		(property "Reference" "R8"
-			(at 162.306 83.82 90)
+			(at 152.908 77.724 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6148,7 +6109,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 163.068 88.646 90)
+			(at 153.162 73.406 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6158,7 +6119,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 162.56 86.36 0)
+			(at 154.94 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6169,7 +6130,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 86.36 0)
+			(at 154.94 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6180,7 +6141,7 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 162.56 86.36 0)
+			(at 154.94 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6197,7 +6158,7 @@
 			(uuid "9749bba0-bef9-4c7f-a11d-6eedee132045")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R8")
 					(unit 1)
@@ -6274,7 +6235,7 @@
 			(uuid "8884de44-4bd3-4879-8557-302447d04e99")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "#PWR014")
 					(unit 1)
@@ -6352,7 +6313,7 @@
 			(uuid "230b8a08-6670-4fad-b68c-5ef5dcf1f31b")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "#PWR012")
 					(unit 1)
@@ -6512,7 +6473,7 @@
 			(uuid "4443384a-d0aa-4f9c-ba65-1783f47bb2d9")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "T2")
 					(unit 1)
@@ -6591,7 +6552,7 @@
 			(uuid "72f8619e-1494-47b5-8672-177c8550c28a")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R13")
 					(unit 1)
@@ -6751,7 +6712,7 @@
 			(uuid "0aa098ef-d604-4829-adda-b396b890a83d")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "T1")
 					(unit 1)
@@ -6831,7 +6792,7 @@
 			(uuid "404c4b30-2a9f-424e-acd2-312e1c1975b0")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R16")
 					(unit 1)
@@ -6913,7 +6874,7 @@
 			(uuid "89dcf616-e42e-4d20-9421-cd24489f310f")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "C12")
 					(unit 1)
@@ -6923,7 +6884,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 190.5 92.71 0)
+		(at 195.58 102.87 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6933,7 +6894,7 @@
 		(dnp no)
 		(uuid "a331b131-566c-4573-9acd-39880f1b60d3")
 		(property "Reference" "#PWR016"
-			(at 190.5 99.06 0)
+			(at 195.58 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6944,7 +6905,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 187.198 92.456 0)
+			(at 195.58 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6954,7 +6915,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 190.5 92.71 0)
+			(at 195.58 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6965,7 +6926,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 92.71 0)
+			(at 195.58 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6976,7 +6937,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 190.5 92.71 0)
+			(at 195.58 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6990,7 +6951,7 @@
 			(uuid "62d1a06d-7d98-4417-9558-c04635164e75")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "#PWR016")
 					(unit 1)
@@ -7071,7 +7032,7 @@
 			(uuid "a6b40fd0-733f-4140-9b14-7018e60ec8ea")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "C7")
 					(unit 1)
@@ -7150,7 +7111,7 @@
 			(uuid "6dbcd947-62e5-46fe-b01d-9df0f8079851")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R14")
 					(unit 1)
@@ -7231,7 +7192,7 @@
 			(uuid "ca43f92e-8e18-423a-a7c2-c6dc6990fe7e")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "C6")
 					(unit 1)
@@ -7358,7 +7319,7 @@
 			(uuid "a392809a-36dd-437f-adcb-94b46085d627")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "U4")
 					(unit 1)
@@ -7368,7 +7329,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
-		(at 166.37 95.25 90)
+		(at 161.29 76.2 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7378,7 +7339,7 @@
 		(dnp no)
 		(uuid "ba3f10c3-ae98-4a59-8088-7c049e781afe")
 		(property "Reference" "R11"
-			(at 166.116 92.71 90)
+			(at 159.258 77.724 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7388,7 +7349,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 166.878 97.536 90)
+			(at 159.258 73.914 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7398,7 +7359,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 166.37 95.25 0)
+			(at 161.29 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7409,7 +7370,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 166.37 95.25 0)
+			(at 161.29 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7420,7 +7381,7 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 166.37 95.25 0)
+			(at 161.29 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7437,7 +7398,7 @@
 			(uuid "5c573e3c-6647-4923-9fa6-2bc520eb73e1")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R11")
 					(unit 1)
@@ -7515,7 +7476,7 @@
 			(uuid "83ec3f55-4249-442e-9490-e1982d237672")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "#PWR020")
 					(unit 1)
@@ -7593,7 +7554,7 @@
 			(uuid "3f0b56e0-3598-4905-8f89-1f7fc8e75061")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "#PWR021")
 					(unit 1)
@@ -7671,7 +7632,7 @@
 			(uuid "7efd974b-b144-4092-800d-bc18cf3922e4")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "#PWR015")
 					(unit 1)
@@ -7750,7 +7711,7 @@
 			(uuid "688095fc-271f-43f5-b591-181586c9cc96")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R7")
 					(unit 1)
@@ -7831,7 +7792,7 @@
 			(uuid "417e7d1f-0ab4-42a4-8293-5e6dab705a01")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "C10")
 					(unit 1)
@@ -7910,7 +7871,7 @@
 			(uuid "019db29e-5bf0-4ed0-8624-c7a48e895ecb")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R4")
 					(unit 1)
@@ -7992,7 +7953,7 @@
 			(uuid "a6ffcc38-d857-4451-b60f-ba3170a3c973")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "C3")
 					(unit 1)
@@ -8071,7 +8032,7 @@
 			(uuid "6e63501b-3dc7-41be-ae1d-ee0511ee6265")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R9")
 					(unit 1)
@@ -8081,7 +8042,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
-		(at 173.99 104.14 90)
+		(at 168.91 76.2 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8091,7 +8052,7 @@
 		(dnp no)
 		(uuid "dde2db36-0b9f-4d84-a26a-d2860398da93")
 		(property "Reference" "R12"
-			(at 173.736 101.6 90)
+			(at 166.624 77.978 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8101,7 +8062,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 174.498 106.426 90)
+			(at 166.878 74.168 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8111,7 +8072,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 173.99 104.14 0)
+			(at 168.91 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8122,7 +8083,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 104.14 0)
+			(at 168.91 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8133,7 +8094,7 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 173.99 104.14 0)
+			(at 168.91 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8150,7 +8111,7 @@
 			(uuid "20201995-fbf4-4d91-b1ea-dea7cffb06b1")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R12")
 					(unit 1)
@@ -8229,7 +8190,7 @@
 			(uuid "d93bfeee-b474-488b-a9cf-3b740b0f00e4")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R5")
 					(unit 1)
@@ -8311,7 +8272,7 @@
 			(uuid "e840fd44-1441-489c-9a41-eb454640dd89")
 		)
 		(instances
-			(project "BMU"
+			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "C9")
 					(unit 1)

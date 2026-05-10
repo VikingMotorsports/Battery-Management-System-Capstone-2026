@@ -6827,7 +6827,7 @@
 		(uuid "1d6519b0-7c9c-4dcc-8e43-a570c869748b")
 	)
 	(rectangle
-		(start 46.99 53.34)
+		(start 46.99 46.99)
 		(end 303.53 293.37)
 		(stroke
 			(width 0)
@@ -6839,8 +6839,8 @@
 		(uuid "44bacdcf-dd4c-4fce-baca-e270f81b2523")
 	)
 	(rectangle
-		(start 331.47 78.74)
-		(end 403.86 123.19)
+		(start 331.47 71.12)
+		(end 415.29 125.73)
 		(stroke
 			(width 0)
 			(type default)
@@ -6849,6 +6849,18 @@
 			(type none)
 		)
 		(uuid "857a6e5f-00b3-4109-802a-dcff7d1136af")
+	)
+	(rectangle
+		(start 62.23 311.15)
+		(end 471.17 388.62)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "d65d7cc0-59dd-4055-b078-14c1de689bf9")
 	)
 	(text "Middle module: use both COMH and COML.\nEnd module: use one side and terminate the unused side.\nRing: use both sides and terminate chain ends."
 		(exclude_from_sim no)
@@ -6873,6 +6885,46 @@
 		)
 		(uuid "18d4a72e-9026-41e7-8e06-3a9b8f39e953")
 	)
+	(text "VC inputs use 100Ω series resistors and 0.47uF capacitors to CELL0 for filtering."
+		(exclude_from_sim no)
+		(at 113.538 65.532 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "1a193cec-250b-42ff-9e22-7885bbfa9c4e")
+	)
+	(text "BQ79616 External NPN Power Path"
+		(exclude_from_sim no)
+		(at 373.888 77.47 0)
+		(effects
+			(font
+				(size 3.048 3.048)
+			)
+		)
+		(uuid "3a8ade14-e6db-406d-bf3f-d29b30005ce0")
+	)
+	(text "BAT_TOP provides the stack-powered input for the BQ79616."
+		(exclude_from_sim no)
+		(at 339.852 203.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4198f403-d6e6-490a-a189-b353be33a685")
+	)
+	(text "TSREF provides the NTC bias reference."
+		(exclude_from_sim no)
+		(at 337.312 151.384 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "420da059-75ba-4cc7-a8ef-f5bb917dd726")
+	)
 	(text "GPIOs Temperature Sensing\n\n"
 		(exclude_from_sim no)
 		(at 451.866 50.292 0)
@@ -6884,9 +6936,40 @@
 		)
 		(uuid "554cd45a-d33f-44be-8189-4bcf441a5c42")
 	)
+	(text "Cell connector follows the TI EVM-style sensing structure.\nCELL0/CELL16 are stack endpoints; CELL0S/CELL16S are sense lines."
+		(exclude_from_sim no)
+		(at 73.406 58.674 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "755be40f-25b6-4ada-b557-d4a9bdc68700")
+	)
+	(text "GPIO1–GPIO8 are routed to NTC headers for external temperature sensing."
+		(exclude_from_sim no)
+		(at 460.502 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "867b5f64-9817-4ad1-a0e7-121ab920f6f4")
+	)
+	(text "CELL0 is the local cell-stack reference for the CMU, not chassis ground."
+		(exclude_from_sim no)
+		(at 204.978 58.928 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8b600de9-af6f-4f5e-9ad7-981a44110b05")
+	)
 	(text "VB / CB\n"
 		(exclude_from_sim no)
-		(at 59.182 58.928 0)
+		(at 58.42 52.832 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -6905,6 +6988,16 @@
 		)
 		(uuid "af8529d2-9fe6-4764-9ed4-b53c09e10f2b")
 	)
+	(text "Tranformer Isolation For COM Communication"
+		(exclude_from_sim no)
+		(at 267.462 314.452 0)
+		(effects
+			(font
+				(size 3.048 3.048)
+			)
+		)
+		(uuid "b19f22d5-926b-4ce2-ad14-cbb537037f7b")
+	)
 	(text "CELLS\n"
 		(exclude_from_sim no)
 		(at 272.796 179.324 0)
@@ -6916,27 +7009,6 @@
 			)
 		)
 		(uuid "b6918618-a34c-4aaa-ad70-8ebb19bf0fac")
-	)
-	(text_box "Tranformer Isolation For COM Communication"
-		(exclude_from_sim no)
-		(at 57.15 306.07 0)
-		(size 414.02 85.725)
-		(margins 0.9525 0.9525 0.9525 0.9525)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 3.81 3.81)
-				(thickness 0.4763)
-			)
-			(justify left top)
-		)
-		(uuid "b80ddda4-0923-4f58-b212-bad60fb95f9a")
 	)
 	(junction
 		(at 83.82 271.78)
@@ -16244,7 +16316,7 @@
 			(uuid "5edbcfdf-51c9-4afc-99e5-9d31157ae27b")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C15")
 					(unit 1)
@@ -16323,7 +16395,7 @@
 			(uuid "de02650f-794a-4236-a20b-46c9a983ef03")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R22")
 					(unit 1)
@@ -16405,7 +16477,7 @@
 			(uuid "85270493-cc0b-4a74-8002-9831656deb27")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R30")
 					(unit 1)
@@ -16482,7 +16554,7 @@
 			(uuid "82a6f742-6e66-4038-b529-0629b1da10d9")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR024")
 					(unit 1)
@@ -16562,7 +16634,7 @@
 			(uuid "67fc02ff-fed6-4393-8dd3-f9d26b1fe93a")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R13")
 					(unit 1)
@@ -16644,7 +16716,7 @@
 			(uuid "a5946c2d-fcfc-4a3c-9675-2aee9217123f")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C48")
 					(unit 1)
@@ -16724,7 +16796,7 @@
 			(uuid "588d9d2c-6ce5-4448-9dc0-89b147800880")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "J1")
 					(unit 1)
@@ -16803,7 +16875,7 @@
 			(uuid "645d513d-a0ef-4f58-aa62-85b8653c75bd")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP12")
 					(unit 1)
@@ -16823,7 +16895,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "09a7beeb-71c8-4afe-8ea2-9aa190328276")
-		(property "Reference" "R53"
+		(property "Reference" "R51"
 			(at 377.19 100.33 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16883,9 +16955,9 @@
 			(uuid "05fcfb86-dbf3-46fb-978f-4eb1a9defd03")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "R53")
+					(reference "R51")
 					(unit 1)
 				)
 			)
@@ -16963,7 +17035,7 @@
 			(uuid "b176b0ee-3009-4e5e-808d-a8827f923227")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R14")
 					(unit 1)
@@ -17045,7 +17117,7 @@
 			(uuid "1be6cc75-ee66-4528-a7cb-9cdb7afca7fb")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C16")
 					(unit 1)
@@ -17125,7 +17197,7 @@
 			(uuid "db281b76-c9c6-48d2-958f-8c9cc2549dff")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R58")
 					(unit 1)
@@ -17207,7 +17279,7 @@
 			(uuid "2659c49f-7831-4dcb-b737-92f01e98f82e")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "J7")
 					(unit 1)
@@ -17286,7 +17358,7 @@
 			(uuid "7e1d3d6c-521b-4220-a26d-e26bcd08272a")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP17")
 					(unit 1)
@@ -17368,7 +17440,7 @@
 			(uuid "bc33a605-bfdd-40a4-896e-dd33c0ef1df1")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C31")
 					(unit 1)
@@ -17446,7 +17518,7 @@
 			(uuid "021d6f5d-7da2-479a-bc76-1769bf31c325")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR016")
 					(unit 1)
@@ -17525,7 +17597,7 @@
 			(uuid "59add373-a7e7-4ba0-9e33-cc9ec61923ca")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP8")
 					(unit 1)
@@ -17605,7 +17677,7 @@
 			(uuid "451c4299-5ecf-417c-8759-74107ddb9541")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP22")
 					(unit 1)
@@ -17684,7 +17756,7 @@
 			(uuid "354edfd8-893e-4a4a-81a8-ac02499d5215")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R12")
 					(unit 1)
@@ -17766,7 +17838,7 @@
 			(uuid "5071af2f-66b4-4452-851e-e2a9f6033857")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R24")
 					(unit 1)
@@ -17845,7 +17917,7 @@
 			(uuid "5dc9ba52-397c-447e-8cf9-9bedff9b4468")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R32")
 					(unit 1)
@@ -17927,7 +17999,7 @@
 			(uuid "db645c6b-fafe-434b-86ab-01a7e6f26c22")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "J8")
 					(unit 1)
@@ -18009,7 +18081,7 @@
 			(uuid "b604e075-9835-4370-8254-da6e697bf0c4")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C20")
 					(unit 1)
@@ -18088,7 +18160,7 @@
 			(uuid "90e68005-c887-4073-b820-8cbede952e86")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C54")
 					(unit 1)
@@ -18167,7 +18239,7 @@
 			(uuid "dfd83e6c-fc12-438e-a7e5-8bb510be53bb")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP3")
 					(unit 1)
@@ -18187,7 +18259,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1be23ea3-2860-4146-9b74-f1f003186e80")
-		(property "Reference" "C43"
+		(property "Reference" "C42"
 			(at 327.66 168.9165 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18249,9 +18321,9 @@
 			(uuid "538dfb21-13b9-4e6b-9cc7-531fcd3c3029")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "C43")
+					(reference "C42")
 					(unit 1)
 				)
 			)
@@ -18269,7 +18341,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ca769d0-0a3e-4d57-b298-17a75ad97cff")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR015"
 			(at 372.11 345.44 0)
 			(hide yes)
 			(show_name no)
@@ -18327,9 +18399,9 @@
 			(uuid "cd6d76d9-7cad-48bb-acf0-317a22e8f1fb")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "#PWR010")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -18409,7 +18481,7 @@
 			(uuid "f30befcc-1b52-4c69-9ac1-617623211c1c")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C37")
 					(unit 1)
@@ -18488,7 +18560,7 @@
 			(uuid "49ed2c31-1ea9-44f0-ab30-2d92aef59e8c")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R31")
 					(unit 1)
@@ -18568,7 +18640,7 @@
 			(uuid "a956c1b3-b9b7-434a-96f1-c7c4481eac8b")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R39")
 					(unit 1)
@@ -18650,7 +18722,7 @@
 			(uuid "66c69505-9a90-4d91-8727-3ac5771d3f88")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R2")
 					(unit 1)
@@ -18732,7 +18804,7 @@
 			(uuid "f6614b32-df7a-4587-9d58-5110b3c45d90")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "J12")
 					(unit 1)
@@ -18814,7 +18886,7 @@
 			(uuid "149672de-4f79-4771-8edb-ca7cef6c0519")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C9")
 					(unit 1)
@@ -18893,7 +18965,7 @@
 			(uuid "ddf6111c-2b75-45c3-9c70-284e6071c25d")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP4")
 					(unit 1)
@@ -18973,7 +19045,7 @@
 			(uuid "db576748-72ac-4677-b88c-a4c7441d0ef0")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R16")
 					(unit 1)
@@ -19053,7 +19125,7 @@
 			(uuid "01a588a0-e914-49e2-a6ae-44133273f3ad")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R20")
 					(unit 1)
@@ -19135,7 +19207,7 @@
 			(uuid "79633caf-4757-403c-8f28-5c7374bb9957")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C50")
 					(unit 1)
@@ -19156,7 +19228,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "28807d2c-543d-48c7-bdd6-f94bbfd8c78e")
-		(property "Reference" "C42"
+		(property "Reference" "C47"
 			(at 375.92 334.0099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19218,9 +19290,9 @@
 			(uuid "134d86bd-03ec-431a-86ea-e2049cd7552a")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "C42")
+					(reference "C47")
 					(unit 1)
 				)
 			)
@@ -19298,7 +19370,7 @@
 			(uuid "30abd4ea-2771-450a-b53c-ead7c6ebd4aa")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R46")
 					(unit 1)
@@ -19318,7 +19390,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2944696f-e6b7-4b6d-9605-fbd5fcbbcfb8")
-		(property "Reference" "R49"
+		(property "Reference" "R47"
 			(at 354.33 180.34 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19378,9 +19450,9 @@
 			(uuid "4decd2b2-df0c-4122-9316-ae216284c313")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "R49")
+					(reference "R47")
 					(unit 1)
 				)
 			)
@@ -19398,7 +19470,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2a0caee1-affb-437a-834c-44e1499ed48a")
-		(property "Reference" "R52"
+		(property "Reference" "R50"
 			(at 368.3 100.33 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19458,9 +19530,9 @@
 			(uuid "1f0dbcd2-7e90-47c3-8b8d-e4b47d0b14ee")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "R52")
+					(reference "R50")
 					(unit 1)
 				)
 			)
@@ -19540,7 +19612,7 @@
 			(uuid "67dcb482-7ae9-45c3-b718-203a4265de71")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C49")
 					(unit 1)
@@ -19619,7 +19691,7 @@
 			(uuid "cf1a2101-53a8-4fd6-8cb0-dbfa21d5c3bb")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R42")
 					(unit 1)
@@ -19701,7 +19773,7 @@
 			(uuid "68fc309b-c93d-4af8-8d50-036e5d2f28ae")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C17")
 					(unit 1)
@@ -19741,7 +19813,7 @@
 				)
 			)
 		)
-		(property "Footprint" "CEP99-102:CEP99102"
+		(property "Footprint" "Footprints:CEP99102"
 			(at 402.59 239.09 0)
 			(hide yes)
 			(show_name no)
@@ -19861,7 +19933,7 @@
 			(uuid "8a76d3a0-0c2d-4c42-b8c5-af4448fe335c")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "T2")
 					(unit 1)
@@ -19941,7 +20013,7 @@
 			(uuid "1755fa5f-9ed3-4f04-a958-b83882c0b8de")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R35")
 					(unit 1)
@@ -20023,7 +20095,7 @@
 			(uuid "6937857b-1715-4848-afa4-908bf5ddf51f")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C10")
 					(unit 1)
@@ -20100,7 +20172,7 @@
 			(uuid "ee4ec4b2-4643-4d11-b1ed-728de095d9dc")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR023")
 					(unit 1)
@@ -20141,7 +20213,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PESD5V0L2BT:SOT23_NEX"
+		(property "Footprint" "Footprints:SOT23_NEX"
 			(at 341.63 354.33 0)
 			(hide yes)
 			(show_name no)
@@ -20186,7 +20258,7 @@
 			(uuid "32867f12-00ce-4208-9de1-d313295b39d0")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "U2")
 					(unit 1)
@@ -20266,7 +20338,7 @@
 			(uuid "3b7662ad-02d8-4ef5-aa25-975c49a4d178")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R37")
 					(unit 1)
@@ -20344,7 +20416,7 @@
 			(uuid "3d0dc879-b002-4a0f-9c10-5143e8d0fd85")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR017")
 					(unit 1)
@@ -20423,7 +20495,7 @@
 			(uuid "3287cbb4-643a-49bf-83d2-19d618f6ae80")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R61")
 					(unit 1)
@@ -20505,7 +20577,7 @@
 			(uuid "3110ed84-f113-461d-b68e-618a4c9e293c")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C13")
 					(unit 1)
@@ -20585,7 +20657,7 @@
 			(uuid "d8e0edc3-51da-4a33-ad4e-5a992f35e3ef")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP21")
 					(unit 1)
@@ -20667,7 +20739,7 @@
 			(uuid "7e2dc3b7-11f1-49ea-8c6d-aa51c49ccf48")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C5")
 					(unit 1)
@@ -20747,7 +20819,7 @@
 			(uuid "b677b586-f6ea-4112-977a-801a58ed71d7")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP25")
 					(unit 1)
@@ -20826,7 +20898,7 @@
 			(uuid "23fba87c-d4b4-4856-9c19-f40151270b37")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP2")
 					(unit 1)
@@ -20906,7 +20978,7 @@
 			(uuid "d7b75886-55af-4d70-b305-a31a527ab0f5")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R34")
 					(unit 1)
@@ -20984,7 +21056,7 @@
 			(uuid "6845430e-f2f8-4084-908b-a257259f0e43")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR07")
 					(unit 1)
@@ -21004,7 +21076,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4354cf51-e4fa-42ac-a77d-ac2e4149d755")
-		(property "Reference" "R47"
+		(property "Reference" "R48"
 			(at 359.41 324.104 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21064,9 +21136,9 @@
 			(uuid "81bcbd34-3f53-4d29-a3a5-a354d97cc620")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "R47")
+					(reference "R48")
 					(unit 1)
 				)
 			)
@@ -21146,7 +21218,7 @@
 			(uuid "9791ae42-1752-48f0-b48e-fbe4233ef495")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C14")
 					(unit 1)
@@ -21226,7 +21298,7 @@
 			(uuid "71f73120-169b-4564-96ec-c7db0786a04b")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R59")
 					(unit 1)
@@ -21308,7 +21380,7 @@
 			(uuid "61813c77-2d4a-48b0-b958-1da4d584607d")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C12")
 					(unit 1)
@@ -21390,7 +21462,7 @@
 			(uuid "517c3d7c-e59d-4a0b-8bdc-73db43d20412")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C22")
 					(unit 1)
@@ -21469,7 +21541,7 @@
 			(uuid "d3237313-0bb5-413b-8f6a-5b862e02d17e")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R11")
 					(unit 1)
@@ -21551,7 +21623,7 @@
 			(uuid "0564486d-5df8-4dd0-9dbd-61b0e44845a3")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C35")
 					(unit 1)
@@ -21631,7 +21703,7 @@
 			(uuid "1a3a4b56-138f-4643-ba26-0690ffee0c6e")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP19")
 					(unit 1)
@@ -21709,7 +21781,7 @@
 			(uuid "9f08a845-7ab5-4243-945d-6f46dd017aec")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR02")
 					(unit 1)
@@ -21789,7 +21861,7 @@
 			(uuid "fec38d6d-cafc-4918-a5d9-15aae634873e")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP26")
 					(unit 1)
@@ -21867,7 +21939,7 @@
 			(uuid "efce281a-b149-4350-ba9d-95366ecfb66d")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#FLG01")
 					(unit 1)
@@ -21947,7 +22019,7 @@
 			(uuid "9edbc89e-1f3b-4a5c-8d48-820cc4a659dc")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R17")
 					(unit 1)
@@ -22029,7 +22101,7 @@
 			(uuid "0d5e4e37-21db-402d-91fd-4addc180f741")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C26")
 					(unit 1)
@@ -22111,7 +22183,7 @@
 			(uuid "ec6e3fc7-1c83-40cf-b320-276b7f1d851a")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "J9")
 					(unit 1)
@@ -22190,7 +22262,7 @@
 			(uuid "75079c38-9986-4245-ba57-5c76a1f834b2")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP16")
 					(unit 1)
@@ -22210,7 +22282,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "54bd0a10-6168-4e1e-839c-817cb0a93437")
-		(property "Reference" "C46"
+		(property "Reference" "C45"
 			(at 365.76 191.7765 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22272,9 +22344,9 @@
 			(uuid "fbef0423-0e3d-42e0-aec8-c8b6ac0b951f")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "C46")
+					(reference "C45")
 					(unit 1)
 				)
 			)
@@ -22354,7 +22426,7 @@
 			(uuid "700fe8a2-12a1-4570-a6e0-ed7aab9578a2")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C33")
 					(unit 1)
@@ -22436,7 +22508,7 @@
 			(uuid "994a7efd-136c-4695-bb55-3a4683d23904")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R28")
 					(unit 1)
@@ -22514,7 +22586,7 @@
 			(uuid "20fd4903-a344-4d9b-b068-dec76e45eb7f")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR019")
 					(unit 1)
@@ -22534,7 +22606,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "56fdd707-1f19-442e-8214-297b9b79e953")
-		(property "Reference" "C47"
+		(property "Reference" "C46"
 			(at 374.65 220.9865 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22596,9 +22668,9 @@
 			(uuid "2bbdd671-6d9b-49de-b11d-3d969a2751ed")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "C47")
+					(reference "C46")
 					(unit 1)
 				)
 			)
@@ -22616,7 +22688,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "575b44ba-63b4-4892-a7e8-3aa9de5b081e")
-		(property "Reference" "R54"
+		(property "Reference" "R52"
 			(at 384.81 246.3799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22678,9 +22750,9 @@
 			(uuid "e0355052-faba-4f35-aff2-e05ff604778f")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "R54")
+					(reference "R52")
 					(unit 1)
 				)
 			)
@@ -22760,7 +22832,7 @@
 			(uuid "7e91595c-de2c-4df2-8e87-b4d9eb137937")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C28")
 					(unit 1)
@@ -22780,7 +22852,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5bc48ab3-4965-427b-b301-c3d27a3486a0")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR010"
 			(at 335.28 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -22838,9 +22910,9 @@
 			(uuid "db96d369-ea1a-4f8d-9118-579a73badd1f")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "#PWR012")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -22921,7 +22993,7 @@
 			(uuid "8824037c-b7d0-4c66-8bd0-37791606e81f")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C40")
 					(unit 1)
@@ -23000,7 +23072,7 @@
 			(uuid "53aaa733-d2b4-4e7a-b980-39a2a63f3798")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R21")
 					(unit 1)
@@ -23080,7 +23152,7 @@
 			(uuid "5f0302ba-03bc-4825-9c88-d8eb7e8b8021")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R62")
 					(unit 1)
@@ -23162,7 +23234,7 @@
 			(uuid "92890022-d179-4989-a201-aacf71055393")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C18")
 					(unit 1)
@@ -23241,7 +23313,7 @@
 			(uuid "b5abc5a1-42df-4bfc-9072-153e854e71f3")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP5")
 					(unit 1)
@@ -23321,7 +23393,7 @@
 			(uuid "42a8f428-1902-4d33-8b00-269f8ae6102d")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP23")
 					(unit 1)
@@ -23400,7 +23472,7 @@
 			(uuid "5147d212-37a0-4c44-8cde-8e25bb125a20")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP9")
 					(unit 1)
@@ -23440,7 +23512,7 @@
 				)
 			)
 		)
-		(property "Footprint" "BQ79616PAPRQ1:PAP0064F-IPC_A"
+		(property "Footprint" "Footprints:PAP0064F-IPC_A"
 			(at 435.61 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -23669,7 +23741,7 @@
 			(uuid "e877a864-df2b-462d-b061-05cd5a73cb05")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "U4")
 					(unit 1)
@@ -23746,7 +23818,7 @@
 			(uuid "d18e2804-0a41-4959-844d-fcf3db7ed0e1")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR021")
 					(unit 1)
@@ -23828,7 +23900,7 @@
 			(uuid "74cc7526-883b-426d-9195-2c332e322bbd")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C4")
 					(unit 1)
@@ -23910,7 +23982,7 @@
 			(uuid "71c3a562-6d45-4894-bbf9-1b0b26ba820a")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C34")
 					(unit 1)
@@ -23950,7 +24022,7 @@
 				)
 			)
 		)
-		(property "Footprint" "705510038:CONN_70551-xxxx_04_MOL"
+		(property "Footprint" "Footprints:705510038"
 			(at 82.55 331.47 0)
 			(hide yes)
 			(show_name no)
@@ -23998,7 +24070,7 @@
 			(uuid "f2ed7db9-e4bb-4ed0-bf13-44d36c5630ea")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "J2")
 					(unit 1)
@@ -24040,7 +24112,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ZXTN4004KTC:DPAK_04KQTC_DIO"
+		(property "Footprint" "Footprints:DPAK_04KQTC_DIO"
 			(at 363.22 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -24085,7 +24157,7 @@
 			(uuid "594a695a-0688-4ff7-8c81-ec6194018890")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "U3")
 					(unit 1)
@@ -24162,7 +24234,7 @@
 			(uuid "a7224353-1a6a-4ccc-9239-8fa4857540e3")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR020")
 					(unit 1)
@@ -24244,7 +24316,7 @@
 			(uuid "ded40d67-d9ba-45be-8544-10c99b1dd9d7")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C11")
 					(unit 1)
@@ -24327,7 +24399,7 @@
 			(uuid "84897299-70c8-49df-a0b9-8f2338a02559")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C39")
 					(unit 1)
@@ -24409,7 +24481,7 @@
 			(uuid "3476ec45-2333-4749-84eb-aa4ffd315135")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C1")
 					(unit 1)
@@ -24488,7 +24560,7 @@
 			(uuid "dd4ae010-58bf-4d22-897f-159a2693974a")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP1")
 					(unit 1)
@@ -24567,7 +24639,7 @@
 			(uuid "5c2d80dc-1438-4711-a9f3-8ccad1b11499")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R10")
 					(unit 1)
@@ -24587,7 +24659,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "780eebbc-2f45-4df4-aef9-3cbc0cf9cdb6")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR08"
 			(at 317.5 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -24645,9 +24717,9 @@
 			(uuid "b1627419-3d21-47e9-b79b-a77b3a5816a4")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "#PWR09")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -24724,7 +24796,7 @@
 			(uuid "d25f9560-07c8-4fb7-a34e-73d81caa1df2")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP14")
 					(unit 1)
@@ -24806,7 +24878,7 @@
 			(uuid "d3eb2ea8-a28e-461a-a357-616312126e18")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R25")
 					(unit 1)
@@ -24886,7 +24958,7 @@
 			(uuid "bc618ff9-ff88-4c5d-b5fc-3aef18377c48")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R55")
 					(unit 1)
@@ -24965,7 +25037,7 @@
 			(uuid "917dc4b1-a592-420f-b9d9-13f1b50c19b2")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP11")
 					(unit 1)
@@ -25047,7 +25119,7 @@
 			(uuid "1de5326e-b7f7-4e35-a382-2e25d0aed6c2")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C30")
 					(unit 1)
@@ -25129,7 +25201,7 @@
 			(uuid "39bed640-2ca0-4dd1-9b3b-991dd8a8cc5e")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R5")
 					(unit 1)
@@ -25209,7 +25281,7 @@
 			(uuid "4c0ee915-823e-42d6-be91-3ede8eb74e04")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R56")
 					(unit 1)
@@ -25291,7 +25363,7 @@
 			(uuid "43385c05-4042-46f5-ae31-476dc52774fb")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C8")
 					(unit 1)
@@ -25373,7 +25445,7 @@
 			(uuid "4ec8170a-fcc4-45a0-9617-a4415ea3d035")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R1")
 					(unit 1)
@@ -25393,7 +25465,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "848d8355-3dfd-4a43-a463-a4847df25012")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR011"
 			(at 336.55 383.54 0)
 			(hide yes)
 			(show_name no)
@@ -25451,9 +25523,9 @@
 			(uuid "fd04f321-d274-496d-8bbf-c021ad5b111b")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "#PWR08")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -25471,7 +25543,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "84db9161-54db-492b-abec-cdb9946094b0")
-		(property "Reference" "R51"
+		(property "Reference" "R54"
 			(at 415.29 331.724 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25531,9 +25603,9 @@
 			(uuid "69d499f6-2a8f-48c5-964b-a4475d131bc4")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "R51")
+					(reference "R54")
 					(unit 1)
 				)
 			)
@@ -25613,7 +25685,7 @@
 			(uuid "55a2221e-f070-4572-80b8-0d43def83a3e")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C36")
 					(unit 1)
@@ -25695,7 +25767,7 @@
 			(uuid "d72d6c58-d1fd-40da-b8df-78cc5a72cacc")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C27")
 					(unit 1)
@@ -25775,7 +25847,7 @@
 			(uuid "f097946c-4732-4d07-8f0d-357bb7d249d9")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R57")
 					(unit 1)
@@ -25853,7 +25925,7 @@
 			(uuid "ee4963d6-6411-434f-8e14-5fbc156ff837")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR04")
 					(unit 1)
@@ -25931,7 +26003,7 @@
 			(uuid "d87f7a5b-0036-4f3f-8227-41d1070d86ac")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR05")
 					(unit 1)
@@ -26009,7 +26081,7 @@
 			(uuid "3408d616-c3e1-4235-a631-137dedfa00eb")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR028")
 					(unit 1)
@@ -26086,7 +26158,7 @@
 			(uuid "8246bd77-28f0-46fb-a4ff-e013a0c33ca1")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR027")
 					(unit 1)
@@ -26166,7 +26238,7 @@
 			(uuid "722b6f68-aa30-4a14-8acd-80694ea733fc")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP20")
 					(unit 1)
@@ -26248,7 +26320,7 @@
 			(uuid "9dd538f6-2910-487e-aefe-2d93f5f01061")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R29")
 					(unit 1)
@@ -26327,7 +26399,7 @@
 			(uuid "2e868bfa-f755-4a68-95f8-c0946ae584dc")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C58")
 					(unit 1)
@@ -26347,7 +26419,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9156a3ca-cba9-4da4-94eb-31fd8b4baa4f")
-		(property "Reference" "C45"
+		(property "Reference" "C44"
 			(at 358.14 111.7665 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26409,9 +26481,9 @@
 			(uuid "22257a96-5cf9-45b4-b804-b91ebfc52187")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "C45")
+					(reference "C44")
 					(unit 1)
 				)
 			)
@@ -26489,7 +26561,7 @@
 			(uuid "b280dedc-8418-4624-af0c-af490af2c25c")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "J3")
 					(unit 1)
@@ -26567,7 +26639,7 @@
 			(uuid "b1888a9a-70cc-47a4-9762-a805a19ae40e")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR03")
 					(unit 1)
@@ -26645,7 +26717,7 @@
 			(uuid "ad82a226-ec75-41e8-b66a-49fa58706b3a")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR01")
 					(unit 1)
@@ -26724,7 +26796,7 @@
 			(uuid "761cfd5d-ddbe-4df5-8231-e65d0edf2b87")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C55")
 					(unit 1)
@@ -26803,7 +26875,7 @@
 			(uuid "b3ffb547-0e52-44a7-96ad-5a166482b85d")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP24")
 					(unit 1)
@@ -26883,7 +26955,7 @@
 			(uuid "5cb11d5b-8d29-4b03-8943-c4fbbad684b3")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R15")
 					(unit 1)
@@ -26925,7 +26997,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PESD5V0L2BT:SOT23_NEX"
+		(property "Footprint" "Footprints:SOT23_NEX"
 			(at 193.04 359.41 0)
 			(hide yes)
 			(show_name no)
@@ -26970,7 +27042,7 @@
 			(uuid "562f7611-d2aa-4b08-9d83-9db5b1538558")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "U1")
 					(unit 1)
@@ -27063,7 +27135,7 @@
 			(uuid "70fd24a1-03ad-4617-b41e-8c6f713ac824")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "D1")
 					(unit 1)
@@ -27143,7 +27215,7 @@
 			(uuid "660054c7-8d87-443a-9b55-5533f001ea2d")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R38")
 					(unit 1)
@@ -27223,7 +27295,7 @@
 			(uuid "c95fc519-24e0-4fba-93fd-025cdb8df410")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R40")
 					(unit 1)
@@ -27265,7 +27337,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "705510038:CONN_70551-xxxx_04_MOL"
+		(property "Footprint" "Footprints:705510038"
 			(at 440.69 323.85 0)
 			(hide yes)
 			(show_name no)
@@ -27313,7 +27385,7 @@
 			(uuid "9b694c2b-286c-4890-9d03-9c4d4c05bdd5")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "J5")
 					(unit 1)
@@ -27333,7 +27405,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9ef6b6fb-8e96-43af-89e2-c4eb10bc52f6")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR013"
 			(at 363.22 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -27391,9 +27463,9 @@
 			(uuid "b38c3a2f-9d08-4d6f-9e06-89d4cf943d73")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "#PWR014")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -27473,7 +27545,7 @@
 			(uuid "3cd73b8e-4286-4450-944d-7a99e463ff2e")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C7")
 					(unit 1)
@@ -27552,7 +27624,7 @@
 			(uuid "a3757e76-4cfb-4166-93ce-f8ed36832235")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP18")
 					(unit 1)
@@ -27634,7 +27706,7 @@
 			(uuid "5d785f9a-435f-45af-8a9f-4830690fd5bf")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R7")
 					(unit 1)
@@ -27654,7 +27726,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ac72aed5-81dd-493c-b65e-12c86bbf98b4")
-		(property "Reference" "R50"
+		(property "Reference" "R53"
 			(at 415.29 324.104 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27714,9 +27786,9 @@
 			(uuid "ad8dc4f7-6a91-4822-a140-531e7ffc4b75")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "R50")
+					(reference "R53")
 					(unit 1)
 				)
 			)
@@ -27796,7 +27868,7 @@
 			(uuid "439d89ce-f01b-42df-9fec-50aca2f84105")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C25")
 					(unit 1)
@@ -27878,7 +27950,7 @@
 			(uuid "85a21f3e-059e-4640-895b-da9b9ac6d827")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C6")
 					(unit 1)
@@ -27957,7 +28029,7 @@
 			(uuid "eeb0e890-35fb-4e6c-981b-a15c99d0accf")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C53")
 					(unit 1)
@@ -28039,7 +28111,7 @@
 			(uuid "eb305001-8327-4d85-ab33-23d92f5a9444")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "J10")
 					(unit 1)
@@ -28121,7 +28193,7 @@
 			(uuid "a255f332-89cb-44d3-a5de-1ce341467583")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R4")
 					(unit 1)
@@ -28201,7 +28273,7 @@
 			(uuid "5790ebd0-5cc1-4023-b28c-bf46480925e6")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R43")
 					(unit 1)
@@ -28281,7 +28353,7 @@
 			(uuid "fe7d9673-d9dc-4363-b6b4-818837d53c05")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R44")
 					(unit 1)
@@ -28363,7 +28435,7 @@
 			(uuid "a5dcf5d2-b8fa-48fe-948c-9c0c4b49f49b")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C19")
 					(unit 1)
@@ -28445,7 +28517,7 @@
 			(uuid "4bfd0494-b9a9-4c69-97a9-acedead21ca0")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R26")
 					(unit 1)
@@ -28485,7 +28557,7 @@
 				)
 			)
 		)
-		(property "Footprint" "CEP99-102:CEP99102"
+		(property "Footprint" "Footprints:CEP99102"
 			(at 124.46 239.09 0)
 			(hide yes)
 			(show_name no)
@@ -28605,7 +28677,7 @@
 			(uuid "dc49fd1e-f675-490e-a2b2-6aa78ed1bac3")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "T1")
 					(unit 1)
@@ -28684,7 +28756,7 @@
 			(uuid "9732c803-4e3d-4209-8ada-50c3a3dabe66")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP15")
 					(unit 1)
@@ -28726,7 +28798,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Molex 0705550056:CONN_705550000-SD_22_MOL"
+		(property "Footprint" "Footprints:705550056"
 			(at 275.59 185.42 0)
 			(hide yes)
 			(show_name no)
@@ -28828,7 +28900,7 @@
 			(uuid "ae5a6c5f-490d-43a1-b786-def6ac88dc9d")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "J4")
 					(unit 1)
@@ -28908,7 +28980,7 @@
 			(uuid "71e10ca9-9bdd-49e3-84ae-23421e28fef3")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R36")
 					(unit 1)
@@ -28987,7 +29059,7 @@
 			(uuid "5b1a7661-768e-470d-b137-49e955603a73")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R41")
 					(unit 1)
@@ -29067,7 +29139,7 @@
 			(uuid "82c2a64f-7750-44ff-ab41-501ccbaa47a7")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R18")
 					(unit 1)
@@ -29146,7 +29218,7 @@
 			(uuid "ad5d6c53-824b-432b-b0b9-ae8199d83a71")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C56")
 					(unit 1)
@@ -29223,7 +29295,7 @@
 			(uuid "b7ce76cb-8329-4c26-9f53-c017a8c890a6")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR025")
 					(unit 1)
@@ -29305,7 +29377,7 @@
 			(uuid "67d9d497-44bd-418b-9365-75c6b1af216b")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R9")
 					(unit 1)
@@ -29387,7 +29459,7 @@
 			(uuid "2ded586b-932a-4476-8421-e5779efb26fa")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R8")
 					(unit 1)
@@ -29466,7 +29538,7 @@
 			(uuid "ad2cfce9-157e-4c8e-8dab-981374a38fdb")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C52")
 					(unit 1)
@@ -29548,7 +29620,7 @@
 			(uuid "fab2b1b3-9a92-4911-9a23-0266e430d951")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C3")
 					(unit 1)
@@ -29627,7 +29699,7 @@
 			(uuid "618bff01-eda6-4303-8535-f078fd5273ce")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C57")
 					(unit 1)
@@ -29709,7 +29781,7 @@
 			(uuid "a9bfbf85-0240-451f-88b5-9220531b0134")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "J13")
 					(unit 1)
@@ -29786,7 +29858,7 @@
 			(uuid "e52a5ea8-89b3-41b5-9ad3-7d6c3d7c6759")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR026")
 					(unit 1)
@@ -29868,7 +29940,7 @@
 			(uuid "66ebb209-7297-480c-b42a-f3f0c8134014")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C2")
 					(unit 1)
@@ -29950,7 +30022,7 @@
 			(uuid "a4b110b0-51bc-4adb-b6cd-c982e7c6fba1")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "J6")
 					(unit 1)
@@ -29970,7 +30042,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d3d5718e-288b-4988-90be-8cc18e811a41")
-		(property "Reference" "R48"
+		(property "Reference" "R49"
 			(at 359.41 344.424 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30030,9 +30102,9 @@
 			(uuid "19fd13b4-a21f-4343-8287-780813d8c790")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "R48")
+					(reference "R49")
 					(unit 1)
 				)
 			)
@@ -30108,7 +30180,7 @@
 			(uuid "dec2805b-1f78-4f70-8d83-2add907f32f2")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR06")
 					(unit 1)
@@ -30190,7 +30262,7 @@
 			(uuid "3c508123-b13c-486f-aaa1-9ae5c79a5dcd")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R27")
 					(unit 1)
@@ -30272,7 +30344,7 @@
 			(uuid "3690ce8b-9a82-406e-b900-c63265045e9a")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C24")
 					(unit 1)
@@ -30351,7 +30423,7 @@
 			(uuid "01c63e74-d91c-46eb-902f-ce8f036c4348")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP27")
 					(unit 1)
@@ -30433,7 +30505,7 @@
 			(uuid "f68a80e0-001d-4e8a-85c4-bd7f834a4dda")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C38")
 					(unit 1)
@@ -30515,7 +30587,7 @@
 			(uuid "d7319960-d9d2-412e-86b9-e5e3dc9b09cb")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C32")
 					(unit 1)
@@ -30592,7 +30664,7 @@
 			(uuid "32cadb0a-fb40-4712-b062-4f5b41dbb8c2")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR022")
 					(unit 1)
@@ -30672,7 +30744,7 @@
 			(uuid "078179b7-03aa-4bf6-9d87-1f873c9e1655")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R19")
 					(unit 1)
@@ -30754,7 +30826,7 @@
 			(uuid "7d791ffb-b72e-4be1-afde-a79691f56f6c")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C21")
 					(unit 1)
@@ -30834,7 +30906,7 @@
 			(uuid "44fffd1c-35da-4bfd-9860-8b844ad4ea80")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R60")
 					(unit 1)
@@ -30913,7 +30985,7 @@
 			(uuid "5cfe4865-6e10-431f-b270-98259b79a03a")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP13")
 					(unit 1)
@@ -30993,7 +31065,7 @@
 			(uuid "a839a3cd-afce-40e8-9606-7d9fe0c8850c")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R33")
 					(unit 1)
@@ -31075,7 +31147,7 @@
 			(uuid "d312f303-617a-4eea-bbaa-b5417602b396")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C29")
 					(unit 1)
@@ -31095,7 +31167,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e6d37dc5-5b71-4f5f-b968-e37978cf2338")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR012"
 			(at 355.6 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -31153,9 +31225,9 @@
 			(uuid "bce68922-3127-4146-8498-34b083cf1023")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "#PWR013")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -31173,7 +31245,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e7fae3af-ee87-4e29-881f-cb51e2bf0d43")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR09"
 			(at 325.12 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -31231,9 +31303,9 @@
 			(uuid "6fea58ce-209b-43af-a658-66d8b1de40b8")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "#PWR011")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -31313,7 +31385,7 @@
 			(uuid "8bcbc80f-b210-4751-aa16-16a941f20a56")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R6")
 					(unit 1)
@@ -31395,7 +31467,7 @@
 			(uuid "b3f28aac-e139-4269-bb2f-3881e9b5f937")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C23")
 					(unit 1)
@@ -31477,7 +31549,7 @@
 			(uuid "b7763188-fdc6-41c7-880b-fd9b01145756")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "J11")
 					(unit 1)
@@ -31559,7 +31631,7 @@
 			(uuid "a5e97f84-fc4b-4435-a393-78dfd37daaeb")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R23")
 					(unit 1)
@@ -31579,7 +31651,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ee1ba84f-9748-45a7-9ab2-96ed7f862184")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR014"
 			(at 372.11 229.87 0)
 			(hide yes)
 			(show_name no)
@@ -31637,9 +31709,9 @@
 			(uuid "463911e4-322c-4922-be12-75d31c96aad5")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "#PWR015")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -31719,7 +31791,7 @@
 			(uuid "948a0719-eb58-4042-8972-a5951dfb45df")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R3")
 					(unit 1)
@@ -31798,7 +31870,7 @@
 			(uuid "75295a90-57d6-44ec-93ad-e3411406e6de")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP10")
 					(unit 1)
@@ -31876,7 +31948,7 @@
 			(uuid "822e7701-0396-419e-ae91-345482ff53dd")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "#PWR018")
 					(unit 1)
@@ -31955,7 +32027,7 @@
 			(uuid "a12fb693-b5b0-4e65-97c8-e99dbf4d2453")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP7")
 					(unit 1)
@@ -32034,7 +32106,7 @@
 			(uuid "2343f244-0624-43b9-9a1c-038ac5a1643d")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "TP6")
 					(unit 1)
@@ -32054,7 +32126,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fb69891e-eddc-42da-92ce-256615af774f")
-		(property "Reference" "C44"
+		(property "Reference" "C43"
 			(at 337.82 172.7265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32116,9 +32188,9 @@
 			(uuid "804dcbb0-0d7d-4343-b245-678523f92abd")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
-					(reference "C44")
+					(reference "C43")
 					(unit 1)
 				)
 			)
@@ -32196,7 +32268,7 @@
 			(uuid "9dfb2241-b294-46f5-a214-fa58d1979d4b")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "R45")
 					(unit 1)
@@ -32278,7 +32350,7 @@
 			(uuid "282f44a1-eb73-4712-9d3f-576a59120079")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C41")
 					(unit 1)
@@ -32357,7 +32429,7 @@
 			(uuid "e3e35cb5-baf7-4e36-ae0e-d58812c0fd46")
 		)
 		(instances
-			(project "Cell Monitoring Unit（CMU）"
+			(project "Cell Monitoring Unit (CMU)"
 				(path "/5927a41a-6d6e-49f5-8ec2-0772454faf5b"
 					(reference "C51")
 					(unit 1)

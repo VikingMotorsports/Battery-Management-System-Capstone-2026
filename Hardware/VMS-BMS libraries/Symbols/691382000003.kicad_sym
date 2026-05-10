@@ -1,0 +1,61 @@
+
+(kicad_symbol_lib (version 20211014) (generator kicad_symbol_editor)
+  (symbol "691382000003" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+    (property "Reference" "J" (id 0) (at -4.99 -1.205 0)
+      (effects (font (size 1.27 1.27)) (justify bottom right))
+    )
+    (property "Value" "691382000003" (id 1) (at -4.95 -3.01 0)
+      (effects (font (size 1.27 1.27)) (justify bottom right))
+    )
+    (property "Footprint" "691382000003:691382000003" (id 2) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (symbol "691382000003_0_0"
+      (polyline
+        (pts (xy -2.54 -1.27) (xy -2.54 -2.54)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 0.0 -1.27) (xy 0.0 -2.54)) (stroke (width 0.254))
+      )
+      (polyline
+        (pts (xy 2.54 -1.27) (xy 2.54 -2.54)) (stroke (width 0.254))
+      )
+      (circle (center -2.54 -1.27) (radius 0.254)
+        (stroke (width 0.635)) (fill (type none))
+      )
+      (circle (center 0.0 -1.27) (radius 0.254)
+        (stroke (width 0.635)) (fill (type none))
+      )
+      (circle (center 2.54 -1.27) (radius 0.254)
+        (stroke (width 0.635)) (fill (type none))
+      )
+      (rectangle (start -3.81 -2.54) (end 3.81 0.0)
+        (stroke (width 0.254)) (fill (type background))
+      )
+      (pin passive line (at -2.54 -5.08 90.0) (length 2.54)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "1"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at 0.0 -5.08 90.0) (length 2.54)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "2"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at 2.54 -5.08 90.0) (length 2.54)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "3"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+    )
+  )
+)

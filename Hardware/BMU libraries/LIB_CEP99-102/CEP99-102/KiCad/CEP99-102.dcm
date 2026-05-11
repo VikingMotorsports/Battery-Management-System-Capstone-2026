@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP CEP99-102
-D  Pulse transformer for Automobiles.High withstand Voltage  2,500Vrms,Operating temperature  - 40deg.  +125deg.
-K
-F https://products.sumida.com/products/pdf/CEP99_CEP99B_eng_rev2.pdf?t=1532030986
-$ENDCMP
-#
-#End Doc Library

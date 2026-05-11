@@ -1,9 +1,0 @@
-Manufacturer=STMicroelectronics
-PartNumber=STM32C092RCT6
-PartCategory=Integrated Circuit
-PackageCategory=Quad Flat Packages
-PinCount=64
-Version=3.1
-Released=2025-02-20 05:21:21
-Downloaded=2026-04-14 02:01:46
-3D=Y

@@ -1,6 +1,7 @@
 / {
 	zephyr,user {
-		gpios = <&gpiob 6 GPIO_ACTIVE_HIGH>;
+		wake-gpios = <&gpiob 6 GPIO_ACTIVE_HIGH>;
+		fault-gpios = <&gpiob 4 GPIO_ACTIVE_LOW>;
 	};
 };
 

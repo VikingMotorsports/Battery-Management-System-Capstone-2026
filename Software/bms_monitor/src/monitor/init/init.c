@@ -16,7 +16,7 @@
 LOG_MODULE_REGISTER(init, LOG_LEVEL_INF);
 
 #define UART_NODE DT_NODELABEL(usart1)
-#define GPIO_NODE DT_PATH(zephyr_user)
+#define WAKE_GPIO_NODE DT_PATH(zephyr_user)
 
 #define BQ_PRE_PULSE_IDLE_US 1000U
 #define BQ_WAKE_PULSE_US 2750U
@@ -30,7 +30,7 @@ LOG_MODULE_REGISTER(init, LOG_LEVEL_INF);
 PINCTRL_DT_DEFINE(UART_NODE);
 static const struct pinctrl_dev_config *uart_pinctrl = PINCTRL_DT_DEV_CONFIG_GET(UART_NODE);
 
-static const struct gpio_dt_spec gpio = GPIO_DT_SPEC_GET(GPIO_NODE, gpios);
+static const struct gpio_dt_spec wake_gpio = GPIO_DT_SPEC_GET(WAKE_GPIO_NODE, wake_gpios);
 
 static void line_drive_high(void);
 static void line_drive_low(void);
@@ -45,13 +45,13 @@ int monitor_init(void)
 
     LOG_INF("starting monitor init");
 
-    if (!gpio_is_ready_dt(&gpio))
+    if (!gpio_is_ready_dt(&wake_gpio))
     {
         LOG_ERR("wake GPIO device not ready");
         return -ENODEV;
     }
 
-    ret = gpio_pin_configure_dt(&gpio, GPIO_OUTPUT_HIGH);
+    ret = gpio_pin_configure_dt(&wake_gpio, GPIO_OUTPUT_HIGH);
     if (ret < 0)
     {
         LOG_ERR("wake GPIO configure failed: %d", ret);
@@ -91,18 +91,53 @@ int monitor_init(void)
         return ret;
     }
 
-    LOG_INF("monitor init complete");
+    return 0;
+}
+
+int commit_customer_crc(void)
+{
+    uint8_t rx_buf[ONE_BYTE_READ_FRAME_LEN];
+    uint8_t crc_hi;
+    uint8_t crc_lo;
+    int ret;
+
+    ret = read_reg(SINGLE_READ, 1U, BQ79616_REG_CUST_CRC_RSLT_HI, rx_buf, sizeof(rx_buf), 1U);
+    if (ret < 0)
+    {
+        return ret;
+    }
+    crc_hi = rx_buf[4];
+
+    ret = read_reg(SINGLE_READ, 1U, BQ79616_REG_CUST_CRC_RSLT_LO, rx_buf, sizeof(rx_buf), 1U);
+    if (ret < 0)
+    {
+        return ret;
+    }
+    crc_lo = rx_buf[4];
+
+    ret = write_reg(SINGLE_WRITE, 1U, BQ79616_REG_CUST_CRC_HI, &crc_hi, 1U);
+    if (ret < 0)
+    {
+        return ret;
+    }
+
+    ret = write_reg(SINGLE_WRITE, 1U, BQ79616_REG_CUST_CRC_LO, &crc_lo, 1U);
+    if (ret < 0)
+    {
+        return ret;
+    }
+
     return 0;
 }
 
 static void line_drive_high(void)
 {
-    gpio_pin_set_dt(&gpio, 1);
+    gpio_pin_set_dt(&wake_gpio, 1);
 }
 
 static void line_drive_low(void)
 {
-    gpio_pin_set_dt(&gpio, 0);
+    gpio_pin_set_dt(&wake_gpio, 0);
 }
 
 static void send_single_wake_ping(void)

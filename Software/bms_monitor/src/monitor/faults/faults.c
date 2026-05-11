@@ -11,6 +11,7 @@
 #include <errno.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include <string.h>
 
 LOG_MODULE_REGISTER(faults, LOG_LEVEL_INF);
 
@@ -21,17 +22,30 @@ LOG_MODULE_REGISTER(faults, LOG_LEVEL_INF);
 #define ONE_BYTE_FRAME_LEN (ONE_BYTE_NUM_BYTES + 6U)
 
 #define BQ79600_NFAULT_EN_VALUE 0x04U
-#define BQ79600_FCOMM_EN_VALUE 0x10U
+#define BQ796XX_FCOMM_EN_VALUE 0x10U
 
-#define BQ79616_FCOMM_EN_VALUE 0x10U
+#define BQ79600_FAULT_SUMMARY_COMM_MASK 0x08U
+#define BQ79600_FAULT_SUMMARY_REG_MASK 0x04U
+#define BQ79600_FAULT_SUMMARY_SYS_MASK 0x02U
+#define BQ79600_FAULT_SUMMARY_PWR_MASK 0x01U
+
+#define BQ79616_FAULT_SUMMARY_PROT_MASK 0x80U
+#define BQ79616_FAULT_SUMMARY_COMP_ADC_MASK 0x40U
+#define BQ79616_FAULT_SUMMARY_OTP_MASK 0x20U
+#define BQ79616_FAULT_SUMMARY_COMM_MASK 0x10U
+#define BQ79616_FAULT_SUMMARY_OTUT_MASK 0x08U
+#define BQ79616_FAULT_SUMMARY_OVUV_MASK 0x04U
+#define BQ79616_FAULT_SUMMARY_SYS_MASK 0x02U
+#define BQ79616_FAULT_SUMMARY_PWR_MASK 0x01U
 
 static const struct gpio_dt_spec fault_gpio = GPIO_DT_SPEC_GET(FAULT_GPIO_NODE, fault_gpios);
 
 static struct gpio_callback fault_gpio_callback_data;
 static volatile bool fault_pending_flag = false;
 
-static uint8_t parse_one_byte(const uint8_t *rx_buf);
 static void fault_gpio_callback(const struct device *port, struct gpio_callback *cb, uint32_t pins);
+static int read_bridge_faults(bridge_fault_data_t *bridge_faults);
+static int read_stack_faults(stack_fault_data_t *stack_faults);
 
 int faults_init(void)
 {
@@ -58,26 +72,22 @@ int faults_init(void)
         return ret;
     }
 
-    gpio_init_callback(&fault_gpio_callback_data,
-                       fault_gpio_callback,
-                       BIT(fault_gpio.pin));
+    gpio_init_callback(&fault_gpio_callback_data, fault_gpio_callback, BIT(fault_gpio.pin));
     gpio_add_callback(fault_gpio.port, &fault_gpio_callback_data);
 
-    data = BQ79600_NFAULT_EN_VALUE | BQ79600_FCOMM_EN_VALUE;
+    data = BQ79600_NFAULT_EN_VALUE | BQ796XX_FCOMM_EN_VALUE;
     ret = write_reg(SINGLE_WRITE, BRIDGE_ADDR, BQ79600_REG_DEV_CONF1, &data, 1U);
     if (ret < 0)
     {
-        LOG_ERR("BQ79600 DEV_CONF1 write failed: reg=0x%04X err=%d",
-                BQ79600_REG_DEV_CONF1, ret);
+        LOG_ERR("BQ79600 DEV_CONF1 write failed: reg=0x%04X err=%d", BQ79600_REG_DEV_CONF1, ret);
         return ret;
     }
 
-    data = BQ79616_FCOMM_EN_VALUE;
-    ret = write_reg(BROADCAST_WRITE, 0U, BQ79616_REG_DEV_CONF, &data, 1U);
+    data = BQ796XX_FCOMM_EN_VALUE;
+    ret = write_reg(STACK_WRITE, 0U, BQ79616_REG_DEV_CONF, &data, 1U);
     if (ret < 0)
     {
-        LOG_ERR("BQ79616 DEV_CONF write failed: reg=0x%04X err=%d",
-                BQ79616_REG_DEV_CONF, ret);
+        LOG_ERR("BQ79616 DEV_CONF write failed: reg=0x%04X err=%d", BQ79616_REG_DEV_CONF, ret);
         return ret;
     }
 
@@ -97,7 +107,6 @@ void faults_clear_pending(void)
 
 int read_faults(fault_data_t *faults)
 {
-    uint8_t rx_buf[ONE_BYTE_FRAME_LEN];
     int ret;
 
     if (faults == NULL)
@@ -106,310 +115,241 @@ int read_faults(fault_data_t *faults)
         return -EINVAL;
     }
 
-    /* ---------------- BQ79600 bridge fault tree ---------------- */
+    memset(faults, 0, sizeof(*faults));
 
-    ret = read_reg(SINGLE_READ, BRIDGE_ADDR, BQ79600_REG_FAULT_SUMMARY,
-                   rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
+    ret = read_bridge_faults(&faults->bridge);
     if (ret < 0)
     {
-        LOG_ERR("BQ79600 FAULT_SUMMARY read failed: err=%d", ret);
         return ret;
     }
-    faults->bridge.summary = parse_one_byte(rx_buf);
-    faults->bridge.active = (faults->bridge.summary != 0U);
 
-    ret = read_reg(SINGLE_READ, BRIDGE_ADDR, BQ79600_REG_FAULT_COMM1,
-                   rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
+    ret = read_stack_faults(faults->stack);
     if (ret < 0)
     {
-        LOG_ERR("BQ79600 FAULT_COMM1 read failed: err=%d", ret);
         return ret;
     }
-    faults->bridge.fault_comm1 = parse_one_byte(rx_buf);
 
-    ret = read_reg(SINGLE_READ, BRIDGE_ADDR, BQ79600_REG_FAULT_COMM2,
-                   rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
+    return 0;
+}
+
+static int read_bridge_faults(bridge_fault_data_t *bridge_faults)
+{
+    uint8_t rx_buf[10];
+    int ret;
+
+    ret = read_reg(SINGLE_READ, BRIDGE_ADDR, BQ79600_REG_FAULT_SUMMARY, rx_buf, sizeof(rx_buf), 1U);
     if (ret < 0)
     {
-        LOG_ERR("BQ79600 FAULT_COMM2 read failed: err=%d", ret);
+        LOG_ERR("BQ79600 FAULT_SUMMARY read failed err=%d", ret);
         return ret;
     }
-    faults->bridge.fault_comm2 = parse_one_byte(rx_buf);
+    bridge_faults->fault_summary = rx_buf[4];
+    bridge_faults->active = (bridge_faults->fault_summary != 0U);
 
-    ret = read_reg(SINGLE_READ, BRIDGE_ADDR, BQ79600_REG_FAULT_REG,
-                   rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-    if (ret < 0)
+    if ((bridge_faults->fault_summary & BQ79600_FAULT_SUMMARY_COMM_MASK) != 0U)
     {
-        LOG_ERR("BQ79600 FAULT_REG read failed: err=%d", ret);
-        return ret;
+        ret = read_reg(SINGLE_READ, BRIDGE_ADDR, BQ79600_REG_FAULT_COMM1, rx_buf, sizeof(rx_buf), 2U);
+        if (ret < 0)
+        {
+            LOG_ERR("BQ79600 FAULT_COMM1..2 read failed err=%d", ret);
+            return ret;
+        }
+        bridge_faults->fault_comm1 = rx_buf[4];
+        bridge_faults->fault_comm2 = rx_buf[5];
     }
-    faults->bridge.fault_reg = parse_one_byte(rx_buf);
 
-    ret = read_reg(SINGLE_READ, BRIDGE_ADDR, BQ79600_REG_FAULT_SYS,
-                   rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-    if (ret < 0)
+    if ((bridge_faults->fault_summary & BQ79600_FAULT_SUMMARY_REG_MASK) != 0U)
     {
-        LOG_ERR("BQ79600 FAULT_SYS read failed: err=%d", ret);
-        return ret;
+        ret = read_reg(SINGLE_READ, BRIDGE_ADDR, BQ79600_REG_FAULT_REG, rx_buf, sizeof(rx_buf), 1U);
+        if (ret < 0)
+        {
+            LOG_ERR("BQ79600 FAULT_REG read failed err=%d", ret);
+            return ret;
+        }
+        bridge_faults->fault_reg = rx_buf[4];
     }
-    faults->bridge.fault_sys = parse_one_byte(rx_buf);
 
-    ret = read_reg(SINGLE_READ, BRIDGE_ADDR, BQ79600_REG_FAULT_PWR,
-                   rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-    if (ret < 0)
+    if ((bridge_faults->fault_summary & BQ79600_FAULT_SUMMARY_SYS_MASK) != 0U)
     {
-        LOG_ERR("BQ79600 FAULT_PWR read failed: err=%d", ret);
-        return ret;
+        ret = read_reg(SINGLE_READ, BRIDGE_ADDR, BQ79600_REG_FAULT_SYS, rx_buf, sizeof(rx_buf), 1U);
+        if (ret < 0)
+        {
+            LOG_ERR("BQ79600 FAULT_SYS read failed err=%d", ret);
+            return ret;
+        }
+        bridge_faults->fault_sys = rx_buf[4];
     }
-    faults->bridge.fault_pwr = parse_one_byte(rx_buf);
 
-    /* ---------------- BQ79616 stack fault tree ---------------- */
+    if ((bridge_faults->fault_summary & BQ79600_FAULT_SUMMARY_PWR_MASK) != 0U)
+    {
+        ret = read_reg(SINGLE_READ, BRIDGE_ADDR, BQ79600_REG_FAULT_PWR, rx_buf, sizeof(rx_buf), 1U);
+        if (ret < 0)
+        {
+            LOG_ERR("BQ79600 FAULT_PWR read failed err=%d", ret);
+            return ret;
+        }
+        bridge_faults->fault_pwr = rx_buf[4];
+    }
+
+    return 0;
+}
+
+static int read_stack_faults(stack_fault_data_t *stack_faults)
+{
+    uint8_t rx_buf[12];
+    int ret;
 
     for (uint8_t dev = 1U; dev <= NUM_STACK_DEVICES; dev++)
     {
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_SUMMARY,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
+        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_SUMMARY, rx_buf, sizeof(rx_buf), 1U);
         if (ret < 0)
         {
-            LOG_ERR("BQ79616 dev %u FAULT_SUMMARY read failed: err=%d", dev, ret);
+            LOG_ERR("BQ79616 dev %u FAULT_SUMMARY read failed err=%d", dev, ret);
             return ret;
         }
-        faults->stack[dev - 1U].summary = parse_one_byte(rx_buf);
-        faults->stack[dev - 1U].active = (faults->stack[dev - 1U].summary != 0U);
+        stack_faults[dev - 1U].fault_summary = rx_buf[4];
+        stack_faults[dev - 1U].active = (stack_faults[dev - 1U].fault_summary != 0U);
 
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_PROT1,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
+        if ((stack_faults[dev - 1U].fault_summary & BQ79616_FAULT_SUMMARY_PROT_MASK) != 0U)
         {
-            LOG_ERR("BQ79616 dev %u FAULT_PROT1 read failed: err=%d", dev, ret);
-            return ret;
+            ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_PROT1, rx_buf, sizeof(rx_buf), 2U);
+            if (ret < 0)
+            {
+                LOG_ERR("BQ79616 dev %u FAULT_PROT1..2 read failed: err=%d", dev, ret);
+                return ret;
+            }
+            stack_faults[dev - 1U].fault_prot1 = rx_buf[4];
+            stack_faults[dev - 1U].fault_prot2 = rx_buf[5];
         }
-        faults->stack[dev - 1U].fault_prot1 = parse_one_byte(rx_buf);
 
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_PROT2,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
+        if ((stack_faults[dev - 1U].fault_summary & BQ79616_FAULT_SUMMARY_COMP_ADC_MASK) != 0U)
         {
-            LOG_ERR("BQ79616 dev %u FAULT_PROT2 read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_prot2 = parse_one_byte(rx_buf);
+            ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_VCCB1, rx_buf, sizeof(rx_buf), 2U);
+            if (ret < 0)
+            {
+                LOG_ERR("BQ79616 dev %u FAULT_COMP_VCCB1..2 read failed: err=%d", dev, ret);
+                return ret;
+            }
+            stack_faults[dev - 1U].fault_comp_vccb1 = rx_buf[4];
+            stack_faults[dev - 1U].fault_comp_vccb2 = rx_buf[5];
 
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_GPIO,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_COMP_GPIO read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_comp_gpio = parse_one_byte(rx_buf);
+            ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_VCOW1, rx_buf, sizeof(rx_buf), 2U);
+            if (ret < 0)
+            {
+                LOG_ERR("BQ79616 dev %u FAULT_COMP_VCOW1..2 read failed: err=%d", dev, ret);
+                return ret;
+            }
+            stack_faults[dev - 1U].fault_comp_vcow1 = rx_buf[4];
+            stack_faults[dev - 1U].fault_comp_vcow2 = rx_buf[5];
 
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_MISC,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_COMP_MISC read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_comp_misc = parse_one_byte(rx_buf);
+            ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_CBOW1, rx_buf, sizeof(rx_buf), 2U);
+            if (ret < 0)
+            {
+                LOG_ERR("BQ79616 dev %u FAULT_COMP_CBOW1..2 read failed: err=%d", dev, ret);
+                return ret;
+            }
+            stack_faults[dev - 1U].fault_comp_cbow1 = rx_buf[4];
+            stack_faults[dev - 1U].fault_comp_cbow2 = rx_buf[5];
 
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_VCCB1,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_COMP_VCCB1 read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_comp_vccb1 = parse_one_byte(rx_buf);
+            ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_CBFET1, rx_buf, sizeof(rx_buf), 2U);
+            if (ret < 0)
+            {
+                LOG_ERR("BQ79616 dev %u FAULT_COMP_CBFET1..2 read failed: err=%d", dev, ret);
+                return ret;
+            }
+            stack_faults[dev - 1U].fault_comp_cbfet1 = rx_buf[4];
+            stack_faults[dev - 1U].fault_comp_cbfet2 = rx_buf[5];
 
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_VCCB2,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_COMP_VCCB2 read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_comp_vccb2 = parse_one_byte(rx_buf);
+            ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_GPIO, rx_buf, sizeof(rx_buf), 1U);
+            if (ret < 0)
+            {
+                LOG_ERR("BQ79616 dev %u FAULT_COMP_GPIO read failed: err=%d", dev, ret);
+                return ret;
+            }
+            stack_faults[dev - 1U].fault_comp_gpio = rx_buf[4];
 
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_VCOW1,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_COMP_VCOW1 read failed: err=%d", dev, ret);
-            return ret;
+            ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_MISC, rx_buf, sizeof(rx_buf), 1U);
+            if (ret < 0)
+            {
+                LOG_ERR("BQ79616 dev %u FAULT_COMP_MISC read failed: err=%d", dev, ret);
+                return ret;
+            }
+            stack_faults[dev - 1U].fault_comp_misc = rx_buf[4];
         }
-        faults->stack[dev - 1U].fault_comp_vcow1 = parse_one_byte(rx_buf);
 
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_VCOW2,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
+        if ((stack_faults[dev - 1U].fault_summary & BQ79616_FAULT_SUMMARY_OTP_MASK) != 0U)
         {
-            LOG_ERR("BQ79616 dev %u FAULT_COMP_VCOW2 read failed: err=%d", dev, ret);
-            return ret;
+            ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_OTP, rx_buf, sizeof(rx_buf), 1U);
+            if (ret < 0)
+            {
+                LOG_ERR("BQ79616 dev %u FAULT_OTP read failed: err=%d", dev, ret);
+                return ret;
+            }
+            stack_faults[dev - 1U].fault_otp = rx_buf[4];
         }
-        faults->stack[dev - 1U].fault_comp_vcow2 = parse_one_byte(rx_buf);
 
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_CBOW1,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
+        if ((stack_faults[dev - 1U].fault_summary & BQ79616_FAULT_SUMMARY_COMM_MASK) != 0U)
         {
-            LOG_ERR("BQ79616 dev %u FAULT_COMP_CBOW1 read failed: err=%d", dev, ret);
-            return ret;
+            ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMM1, rx_buf, sizeof(rx_buf), 3U);
+            if (ret < 0)
+            {
+                LOG_ERR("BQ79616 dev %u FAULT_COMM1..3 read failed: err=%d", dev, ret);
+                return ret;
+            }
+            stack_faults[dev - 1U].fault_comm1 = rx_buf[4];
+            stack_faults[dev - 1U].fault_comm2 = rx_buf[5];
+            stack_faults[dev - 1U].fault_comm3 = rx_buf[6];
         }
-        faults->stack[dev - 1U].fault_comp_cbow1 = parse_one_byte(rx_buf);
 
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_CBOW2,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
+        if ((stack_faults[dev - 1U].fault_summary & BQ79616_FAULT_SUMMARY_OTUT_MASK) != 0U)
         {
-            LOG_ERR("BQ79616 dev %u FAULT_COMP_CBOW2 read failed: err=%d", dev, ret);
-            return ret;
+            ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_OT, rx_buf, sizeof(rx_buf), 2U);
+            if (ret < 0)
+            {
+                LOG_ERR("BQ79616 dev %u FAULT_OT..UT read failed: err=%d", dev, ret);
+                return ret;
+            }
+            stack_faults[dev - 1U].fault_ot = rx_buf[4];
+            stack_faults[dev - 1U].fault_ut = rx_buf[5];
         }
-        faults->stack[dev - 1U].fault_comp_cbow2 = parse_one_byte(rx_buf);
 
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_CBFET1,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
+        if ((stack_faults[dev - 1U].fault_summary & BQ79616_FAULT_SUMMARY_OVUV_MASK) != 0U)
         {
-            LOG_ERR("BQ79616 dev %u FAULT_COMP_CBFET1 read failed: err=%d", dev, ret);
-            return ret;
+            ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_OV1, rx_buf, sizeof(rx_buf), 4U);
+            if (ret < 0)
+            {
+                LOG_ERR("BQ79616 dev %u FAULT_OV1..UV2 read failed: err=%d", dev, ret);
+                return ret;
+            }
+            stack_faults[dev - 1U].fault_ov1 = rx_buf[4];
+            stack_faults[dev - 1U].fault_ov2 = rx_buf[5];
+            stack_faults[dev - 1U].fault_uv1 = rx_buf[6];
+            stack_faults[dev - 1U].fault_uv2 = rx_buf[7];
         }
-        faults->stack[dev - 1U].fault_comp_cbfet1 = parse_one_byte(rx_buf);
 
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMP_CBFET2,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
+        if ((stack_faults[dev - 1U].fault_summary & BQ79616_FAULT_SUMMARY_SYS_MASK) != 0U)
         {
-            LOG_ERR("BQ79616 dev %u FAULT_COMP_CBFET2 read failed: err=%d", dev, ret);
-            return ret;
+            ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_SYS, rx_buf, sizeof(rx_buf), 1U);
+            if (ret < 0)
+            {
+                LOG_ERR("BQ79616 dev %u FAULT_SYS read failed: err=%d", dev, ret);
+                return ret;
+            }
+            stack_faults[dev - 1U].fault_sys = rx_buf[4];
         }
-        faults->stack[dev - 1U].fault_comp_cbfet2 = parse_one_byte(rx_buf);
 
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_OTP,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
+        if ((stack_faults[dev - 1U].fault_summary & BQ79616_FAULT_SUMMARY_PWR_MASK) != 0U)
         {
-            LOG_ERR("BQ79616 dev %u FAULT_OTP read failed: err=%d", dev, ret);
-            return ret;
+            ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_PWR1, rx_buf, sizeof(rx_buf), 3U);
+            if (ret < 0)
+            {
+                LOG_ERR("BQ79616 dev %u FAULT_PWR1..3 read failed: err=%d", dev, ret);
+                return ret;
+            }
+            stack_faults[dev - 1U].fault_pwr1 = rx_buf[4];
+            stack_faults[dev - 1U].fault_pwr2 = rx_buf[5];
+            stack_faults[dev - 1U].fault_pwr3 = rx_buf[6];
         }
-        faults->stack[dev - 1U].fault_otp = parse_one_byte(rx_buf);
-
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMM1,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_COMM1 read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_comm1 = parse_one_byte(rx_buf);
-
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMM2,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_COMM2 read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_comm2 = parse_one_byte(rx_buf);
-
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_COMM3,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_COMM3 read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_comm3 = parse_one_byte(rx_buf);
-
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_OT,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_OT read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_ot = parse_one_byte(rx_buf);
-
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_UT,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_UT read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_ut = parse_one_byte(rx_buf);
-
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_OV1,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_OV1 read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_ov1 = parse_one_byte(rx_buf);
-
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_OV2,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_OV2 read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_ov2 = parse_one_byte(rx_buf);
-
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_UV1,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_UV1 read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_uv1 = parse_one_byte(rx_buf);
-
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_UV2,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_UV2 read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_uv2 = parse_one_byte(rx_buf);
-
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_SYS,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_SYS read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_sys = parse_one_byte(rx_buf);
-
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_PWR1,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_PWR1 read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_pwr1 = parse_one_byte(rx_buf);
-
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_PWR2,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_PWR2 read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_pwr2 = parse_one_byte(rx_buf);
-
-        ret = read_reg(SINGLE_READ, dev, BQ79616_REG_FAULT_PWR3,
-                       rx_buf, sizeof(rx_buf), ONE_BYTE_NUM_BYTES);
-        if (ret < 0)
-        {
-            LOG_ERR("BQ79616 dev %u FAULT_PWR3 read failed: err=%d", dev, ret);
-            return ret;
-        }
-        faults->stack[dev - 1U].fault_pwr3 = parse_one_byte(rx_buf);
     }
 
     return 0;
@@ -427,14 +367,14 @@ int clear_faults(void)
         return ret;
     }
 
-    ret = write_reg(BROADCAST_WRITE, 0U, BQ79616_REG_FAULT_RST1, &data, 1U);
+    ret = write_reg(STACK_WRITE, 0U, BQ79616_REG_FAULT_RST1, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("BQ79616 FAULT_RST1 write failed: err=%d", ret);
         return ret;
     }
 
-    ret = write_reg(BROADCAST_WRITE, 0U, BQ79616_REG_FAULT_RST2, &data, 1U);
+    ret = write_reg(STACK_WRITE, 0U, BQ79616_REG_FAULT_RST2, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("BQ79616 FAULT_RST2 write failed: err=%d", ret);
@@ -444,14 +384,7 @@ int clear_faults(void)
     return 0;
 }
 
-static uint8_t parse_one_byte(const uint8_t *rx_buf)
-{
-    return rx_buf[4];
-}
-
-static void fault_gpio_callback(const struct device *port,
-                                struct gpio_callback *cb,
-                                uint32_t pins)
+static void fault_gpio_callback(const struct device *port, struct gpio_callback *cb, uint32_t pins)
 {
     ARG_UNUSED(port);
     ARG_UNUSED(cb);

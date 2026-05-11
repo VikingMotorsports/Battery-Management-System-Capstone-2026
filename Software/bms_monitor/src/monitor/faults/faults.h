@@ -8,7 +8,7 @@
 
 typedef struct
 {
-    uint8_t summary;
+    uint8_t fault_summary;
 
     uint8_t fault_comm1;
     uint8_t fault_comm2;
@@ -22,7 +22,7 @@ typedef struct
 
 typedef struct
 {
-    uint8_t summary;
+    uint8_t fault_summary;
 
     uint8_t fault_prot1;
     uint8_t fault_prot2;

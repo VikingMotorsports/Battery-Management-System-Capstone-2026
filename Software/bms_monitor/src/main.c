@@ -72,7 +72,7 @@ int main(void)
     }
     else
     {
-        printk("Initial Bridge Fault Summary: 0x%02X\n", faults.bridge.summary);
+        printk("Initial Bridge Fault Summary: 0x%02X\n", faults.bridge.fault_summary);
         printk("Initial Bridge Fault COMM1:   0x%02X\n", faults.bridge.fault_comm1);
         printk("Initial Bridge Fault COMM2:   0x%02X\n", faults.bridge.fault_comm2);
         printk("Initial Bridge Fault REG:     0x%02X\n", faults.bridge.fault_reg);
@@ -81,7 +81,7 @@ int main(void)
 
         for (int i = 0; i < NUM_STACK_DEVICES; i++)
         {
-            printk("Initial Stack Dev %d Summary:        0x%02X\n", i + 1, faults.stack[i].summary);
+            printk("Initial Stack Dev %d Summary:        0x%02X\n", i + 1, faults.stack[i].fault_summary);
             printk("  PROT1=0x%02X PROT2=0x%02X\n",
                    faults.stack[i].fault_prot1,
                    faults.stack[i].fault_prot2);
@@ -143,7 +143,7 @@ int main(void)
     }
     else
     {
-        printk("Bridge Fault Summary Re-read: 0x%02X\n", faults.bridge.summary);
+        printk("Bridge Fault Summary Re-read: 0x%02X\n", faults.bridge.fault_summary);
         printk("Bridge Fault COMM1 Re-read:   0x%02X\n", faults.bridge.fault_comm1);
         printk("Bridge Fault COMM2 Re-read:   0x%02X\n", faults.bridge.fault_comm2);
         printk("Bridge Fault REG Re-read:     0x%02X\n", faults.bridge.fault_reg);
@@ -152,7 +152,7 @@ int main(void)
 
         for (int i = 0; i < NUM_STACK_DEVICES; i++)
         {
-            printk("Stack Dev %d Summary Re-read:        0x%02X\n", i + 1, faults.stack[i].summary);
+            printk("Stack Dev %d Summary Re-read:        0x%02X\n", i + 1, faults.stack[i].fault_summary);
             printk("  PROT1=0x%02X PROT2=0x%02X\n",
                    faults.stack[i].fault_prot1,
                    faults.stack[i].fault_prot2);
@@ -212,7 +212,7 @@ int main(void)
             }
             else
             {
-                printk("Bridge Fault Summary: 0x%02X\n", faults.bridge.summary);
+                printk("Bridge Fault Summary: 0x%02X\n", faults.bridge.fault_summary);
                 printk("Bridge Fault COMM1:   0x%02X\n", faults.bridge.fault_comm1);
                 printk("Bridge Fault COMM2:   0x%02X\n", faults.bridge.fault_comm2);
                 printk("Bridge Fault REG:     0x%02X\n", faults.bridge.fault_reg);
@@ -221,7 +221,7 @@ int main(void)
 
                 for (int i = 0; i < NUM_STACK_DEVICES; i++)
                 {
-                    printk("Stack Dev %d Summary:        0x%02X\n", i + 1, faults.stack[i].summary);
+                    printk("Stack Dev %d Summary:        0x%02X\n", i + 1, faults.stack[i].fault_summary);
                     printk("  PROT1=0x%02X PROT2=0x%02X\n",
                            faults.stack[i].fault_prot1,
                            faults.stack[i].fault_prot2);

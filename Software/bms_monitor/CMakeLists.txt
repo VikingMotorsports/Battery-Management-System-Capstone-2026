@@ -5,6 +5,7 @@ project(bms_firmware)
 
 target_sources(app PRIVATE
     src/main.c
+    src/debug/debug.c
     src/uart/uart.c
     src/protocol/protocol.c
     src/monitor/init/init.c
@@ -15,6 +16,7 @@ target_sources(app PRIVATE
 
 target_include_directories(app PRIVATE
     src
+    src/debug
     src/uart
     src/protocol
     src/monitor/init

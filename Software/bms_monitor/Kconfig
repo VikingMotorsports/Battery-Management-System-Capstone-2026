@@ -1,0 +1,34 @@
+mainmenu "BMS Monitor"
+
+menu "Application debug options"
+
+config APP_DEBUG_PRINTS
+    bool "Enable application debug printing"
+    default y
+    help
+      Master switch for application debug printing helpers.
+
+config APP_DEBUG_VOLTAGES
+    bool "Enable voltage debug printing"
+    default y
+    depends on APP_DEBUG_PRINTS
+    help
+      Print cell voltage debug output.
+
+config APP_DEBUG_TEMPERATURES
+    bool "Enable temperature debug printing"
+    default y
+    depends on APP_DEBUG_PRINTS
+    help
+      Print temperature debug output.
+
+config APP_DEBUG_FAULTS
+    bool "Enable fault debug printing"
+    default y
+    depends on APP_DEBUG_PRINTS
+    help
+      Print fault debug output.
+
+endmenu
+
+source "Kconfig.zephyr"

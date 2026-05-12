@@ -54,6 +54,8 @@ int main(void)
 
     LOG_INF("faults init complete");
 
+    k_msleep(10);
+
     ret = commit_customer_crc();
     if (ret < 0)
     {
@@ -85,16 +87,6 @@ int main(void)
         LOG_INF("faults clear complete");
     }
 
-    ret = read_faults(&faults);
-    if (ret < 0)
-    {
-        LOG_ERR("read_faults failed: %d", ret);
-    }
-    else
-    {
-        debug_print_faults(&faults);
-    }
-
     k_msleep(2000);
 
     while (1)
@@ -118,7 +110,6 @@ int main(void)
         if (ret < 0)
         {
             LOG_ERR("read_cell_voltages failed: %d", ret);
-            k_msleep(1000);
             continue;
         }
         debug_print_voltages(&voltages);

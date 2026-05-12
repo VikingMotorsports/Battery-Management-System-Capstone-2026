@@ -18,6 +18,10 @@ LOG_MODULE_REGISTER(voltage, LOG_LEVEL_INF);
 #define VCELL_RESPONSE_FRAME_LEN (VCELL_BLOCK_NUM_BYTES + 6U)
 #define VCELL_UNUSED_RAW ((int16_t)0x8000)
 
+#define OV_THRESH 0x1EU // 3000mV = 3V
+#define UV_THRESH 0x26U // 3100mV = 3.1V
+#define OVUV_CTRL_ROUND_ROBIN_GO 0x05U
+
 static void parse_cell_voltages(const uint8_t *rx_buf, cell_voltage_data_t *voltages);
 
 int voltage_init(void)
@@ -38,6 +42,30 @@ int voltage_init(void)
     if (ret < 0)
     {
         LOG_ERR("ADC_CTRL1 write failed: reg=0x%04X err=%d", BQ79616_REG_ADC_CTRL1, ret);
+        return ret;
+    }
+
+    data = OV_THRESH;
+    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_OV_THRESH, &data, 1U);
+    if (ret < 0)
+    {
+        LOG_ERR("OV_THRESH write failed: reg=0x%04X err=%d", BQ79616_REG_OV_THRESH, ret);
+        return ret;
+    }
+
+    data = UV_THRESH;
+    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_UV_THRESH, &data, 1U);
+    if (ret < 0)
+    {
+        LOG_ERR("UV_THRESH write failed: reg=0x%04X err=%d", BQ79616_REG_UV_THRESH, ret);
+        return ret;
+    }
+
+    data = OVUV_CTRL_ROUND_ROBIN_GO;
+    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_OVUV_CTRL, &data, 1U);
+    if (ret < 0)
+    {
+        LOG_ERR("OVUV_CTRL write failed: reg=0x%04X err=%d", BQ79616_REG_OVUV_CTRL, ret);
         return ret;
     }
 

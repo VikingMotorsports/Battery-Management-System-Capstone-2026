@@ -15,7 +15,7 @@ LOG_MODULE_REGISTER(temperature, LOG_LEVEL_INF);
 #define CONTROL2_TSREF_EN 0x01U
 #define ADC_CTRL1_CONTINUOUS_MAIN_GO 0x06U
 
-#define GPIO_MODE_ADC_ONLY 0x12U
+#define GPIO_MODE_ADC_OTUT 0x09U
 
 #define TEMP_NUM_BYTES 18U
 #define TEMP_RESPONSE_FRAME_LEN (TEMP_NUM_BYTES + 6U)
@@ -29,13 +29,17 @@ LOG_MODULE_REGISTER(temperature, LOG_LEVEL_INF);
 #define NTC_BETA_K 3380.0f
 #define T0_KELVIN 298.15f
 
+#define OT_THRESH 0x13U // ~50C = 29%
+#define UT_THRESH 0xC0U // ~-5C = 78%
+#define OTUT_CTRL_ROUND_ROBIN_GO 0x05U
+
 static void parse_temperatures(const uint8_t *rx_buf, temperature_data_t *temperatures);
 
 int temperature_init(void)
 {
     int ret;
     uint8_t data;
-    static const uint8_t all_gpio_thermistors_adc_only[4] = {GPIO_MODE_ADC_ONLY, 0x00, 0x00, 0x00};
+    static const uint8_t all_gpio_thermistors_adc_otut[4] = {GPIO_MODE_ADC_OTUT, 0x00, 0x00, 0x00};
 
     data = CONTROL2_TSREF_EN;
     ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_CONTROL2, &data, 1U);
@@ -45,12 +49,28 @@ int temperature_init(void)
         return ret;
     }
 
-    k_msleep(2);
+    k_msleep(6);
 
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_GPIO_CONF1, all_gpio_thermistors_adc_only, 4U);
+    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_GPIO_CONF1, all_gpio_thermistors_adc_otut, 4U);
     if (ret < 0)
     {
         LOG_ERR("GPIO_CONF1-4 write failed: reg=0x%04X err=%d", BQ79616_REG_GPIO_CONF1, ret);
+        return ret;
+    }
+
+    data = OT_THRESH | UT_THRESH;
+    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_OTUT_THRESH, &data, 1U);
+    if (ret < 0)
+    {
+        LOG_ERR("OTUT_THRESH write failed: reg=0x%04X err=%d", BQ79616_REG_OTUT_THRESH, ret);
+        return ret;
+    }
+
+    data = OTUT_CTRL_ROUND_ROBIN_GO;
+    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_OTUT_CTRL, &data, 1U);
+    if (ret < 0)
+    {
+        LOG_ERR("OTUT_CTRL write failed: reg=0x%04X err=%d", BQ79616_REG_OTUT_CTRL, ret);
         return ret;
     }
 

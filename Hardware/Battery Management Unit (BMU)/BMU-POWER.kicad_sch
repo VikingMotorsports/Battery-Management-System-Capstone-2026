@@ -3845,7 +3845,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "GRN"
 			(at 274.828 146.304 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4325,7 +4325,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "GRN"
 			(at 221.488 146.304 90)
 			(show_name no)
 			(do_not_autoplace no)

@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "ISO7710FQDRQ1") (type "KiCad") (uri "${KIPRJMOD}/ISO7710FQDRQ1/ISO7710FQDRQ1.kicad_sym") (options "") (descr ""))
+)

@@ -214,7 +214,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "70551-0038:705510038"
+		(symbol "705510038:705510038"
 			(body_styles demorgan)
 			(pin_names
 				(offset 0.254)
@@ -3914,7 +3914,7 @@
 		)
 	)
 	(symbol
-		(lib_id "70551-0038:705510038")
+		(lib_id "705510038:705510038")
 		(at 238.76 142.24 180)
 		(unit 1)
 		(body_style 1)
@@ -4725,7 +4725,7 @@
 		)
 	)
 	(symbol
-		(lib_id "70551-0038:705510038")
+		(lib_id "705510038:705510038")
 		(at 238.76 161.29 180)
 		(unit 1)
 		(body_style 1)

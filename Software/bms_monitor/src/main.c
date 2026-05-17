@@ -3,6 +3,7 @@
 #include "voltage.h"
 #include "temperature.h"
 #include "faults.h"
+#include "balancing.h"
 
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
@@ -15,6 +16,9 @@ int main(void)
     cell_voltage_data_t voltages;
     temperature_data_t temperatures;
     fault_data_t faults;
+    balancing_data_t balancing = {0};
+    balancing_state_t previous_balancing_state;
+    uint16_t previous_selected_cells;
 
     LOG_INF("battery monitor startup");
 
@@ -53,6 +57,15 @@ int main(void)
     }
 
     LOG_INF("faults init complete");
+
+    ret = balancing_init();
+    if (ret < 0)
+    {
+        LOG_ERR("balancing_init failed: %d", ret);
+        return 0;
+    }
+
+    LOG_INF("balancing init complete");
 
     k_msleep(10);
 
@@ -110,9 +123,51 @@ int main(void)
         if (ret < 0)
         {
             LOG_ERR("read_cell_voltages failed: %d", ret);
+
+            ret = balancing_stop();
+            if (ret < 0)
+            {
+                LOG_ERR("balancing_stop failed: %d", ret);
+            }
+
+            k_msleep(1000);
             continue;
         }
+
         debug_print_voltages(&voltages);
+
+        previous_balancing_state = balancing.state;
+        previous_selected_cells = balancing.selected_cells;
+
+        ret = balancing_update(&voltages, &balancing);
+        if (ret < 0)
+        {
+            LOG_ERR("balancing_update failed: %d", ret);
+
+            ret = balancing_stop();
+            if (ret < 0)
+            {
+                LOG_ERR("balancing_stop failed: %d", ret);
+            }
+        }
+        else
+        {
+            if (previous_balancing_state == BALANCING_STATE_RUNNING &&
+                balancing.state == BALANCING_STATE_COMPLETE)
+            {
+                k_msleep(100);
+                ret = read_cell_voltages(&voltages);
+                if (ret < 0)
+                {
+                    LOG_ERR("post-balance read_cell_voltages failed: %d", ret);
+                }
+            }
+
+            debug_print_balancing(&voltages,
+                                  &balancing,
+                                  previous_balancing_state,
+                                  previous_selected_cells);
+        }
 
         ret = read_temperatures(&temperatures);
         if (ret < 0)

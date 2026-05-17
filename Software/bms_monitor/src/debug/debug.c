@@ -289,3 +289,210 @@ void debug_print_faults(const fault_data_t *faults)
     ARG_UNUSED(faults);
 #endif
 }
+
+static const char *balancing_state_name(balancing_state_t state)
+{
+    switch (state)
+    {
+    case BALANCING_STATE_IDLE:
+        return "idle";
+    case BALANCING_STATE_RUNNING:
+        return "running";
+    case BALANCING_STATE_COMPLETE:
+        return "complete";
+    default:
+        return "unknown";
+    }
+}
+
+static void print_balancing_voltage_summary(const cell_voltage_data_t *voltages)
+{
+    float vmin = 100.0f;
+    float vmax = 0.0f;
+    int min_cell = -1;
+    int max_cell = -1;
+
+    if (voltages == NULL)
+    {
+        printk("Balancing voltage summary got null pointer\n");
+        return;
+    }
+
+    for (int i = 0; i < NUM_BALANCE_CELLS; i++)
+    {
+        if (!voltages->cells[i].active)
+        {
+            continue;
+        }
+
+        if (voltages->cells[i].voltage < vmin)
+        {
+            vmin = voltages->cells[i].voltage;
+            min_cell = i + 1;
+        }
+
+        if (voltages->cells[i].voltage > vmax)
+        {
+            vmax = voltages->cells[i].voltage;
+            max_cell = i + 1;
+        }
+    }
+
+    printk("Balancing voltage summary\n");
+
+    if (min_cell > 0 && max_cell > 0)
+    {
+        printk("\tmin cell %d: ", min_cell);
+        print_float_6(vmin);
+        printk(" V\n");
+
+        printk("\tmax cell %d: ", max_cell);
+        print_float_6(vmax);
+        printk(" V\n");
+
+        printk("\tspread: ");
+        print_float_6(vmax - vmin);
+        printk(" V\n");
+
+        for (int i = 0; i < NUM_BALANCE_CELLS; i++)
+        {
+            if (!voltages->cells[i].active)
+            {
+                continue;
+            }
+
+            printk("\tcell %d: voltage=", i + 1);
+            print_float_6(voltages->cells[i].voltage);
+            printk(" V delta=");
+            print_float_6(voltages->cells[i].voltage - vmin);
+            printk(" V\n");
+        }
+    }
+    else
+    {
+        printk("\tunavailable\n");
+    }
+
+    printk("\n");
+}
+
+static void print_balancing_cycle_start(const cell_voltage_data_t *voltages,
+                                        const balancing_data_t *balancing)
+{
+    float vmin = 100.0f;
+    int min_cell = -1;
+
+    if (voltages == NULL || balancing == NULL)
+    {
+        printk("Balancing cycle start got null pointer\n");
+        return;
+    }
+
+    for (int i = 0; i < NUM_BALANCE_CELLS; i++)
+    {
+        if (!voltages->cells[i].active)
+        {
+            continue;
+        }
+
+        if (voltages->cells[i].voltage < vmin)
+        {
+            vmin = voltages->cells[i].voltage;
+            min_cell = i + 1;
+        }
+    }
+
+    printk("Balancing cycle start\n");
+    printk("\tstate=%s active=%d selected_cells=0x%04X\n",
+           balancing_state_name(balancing->state),
+           balancing->active,
+           balancing->selected_cells);
+
+    if (min_cell > 0)
+    {
+        printk("\tminimum cell %d: ", min_cell);
+        print_float_6(vmin);
+        printk(" V\n");
+    }
+
+    for (int cell = 1; cell <= NUM_BALANCE_CELLS; cell++)
+    {
+        if ((balancing->selected_cells & (1U << (cell - 1))) == 0U)
+        {
+            continue;
+        }
+
+        printk("\tcell %d: voltage=", cell);
+        print_float_6(voltages->cells[cell - 1].voltage);
+        printk(" V delta=");
+        print_float_6(voltages->cells[cell - 1].voltage - vmin);
+        printk(" V\n");
+    }
+
+    printk("\n");
+}
+
+static void print_balancing_cycle_complete(const balancing_data_t *balancing)
+{
+    if (balancing == NULL)
+    {
+        printk("Balancing cycle complete got null pointer\n");
+        return;
+    }
+
+    printk("Balancing cycle complete\n");
+    printk("\tselected_cells=0x%04X complete_cells=0x%04X\n",
+           balancing->selected_cells,
+           balancing->complete_cells);
+
+    for (int cell = 1; cell <= NUM_BALANCE_CELLS; cell++)
+    {
+        if ((balancing->selected_cells & (1U << (cell - 1))) == 0U)
+        {
+            continue;
+        }
+
+        printk("\tcell %d: complete=%d\n",
+               cell,
+               (balancing->complete_cells & (1U << (cell - 1))) != 0U);
+    }
+
+    printk("\n");
+}
+
+void debug_print_balancing(const cell_voltage_data_t *voltages,
+                           const balancing_data_t *balancing,
+                           balancing_state_t previous_state,
+                           uint16_t previous_selected_cells)
+{
+#if defined(CONFIG_APP_DEBUG_PRINTS) && defined(CONFIG_APP_DEBUG_BALANCING)
+    if (balancing == NULL)
+    {
+        printk("Balancing got null pointer\n");
+        return;
+    }
+
+    if (previous_state != BALANCING_STATE_RUNNING &&
+        balancing->state == BALANCING_STATE_RUNNING)
+    {
+        print_balancing_cycle_start(voltages, balancing);
+    }
+    else if (previous_state == BALANCING_STATE_RUNNING &&
+             balancing->state == BALANCING_STATE_COMPLETE)
+    {
+        print_balancing_cycle_complete(balancing);
+        print_balancing_voltage_summary(voltages);
+    }
+    else if (previous_state != BALANCING_STATE_IDLE &&
+             balancing->state == BALANCING_STATE_IDLE)
+    {
+        printk("Balancing stopped: previous_selected_cells=0x%04X\n\n",
+               previous_selected_cells);
+    }
+#else
+    ARG_UNUSED(voltages);
+    ARG_UNUSED(balancing);
+    ARG_UNUSED(previous_state);
+    ARG_UNUSED(previous_selected_cells);
+#endif
+}

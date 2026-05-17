@@ -29,6 +29,13 @@ config APP_DEBUG_FAULTS
     help
       Print fault debug output.
 
+config APP_DEBUG_BALANCING
+    bool "Enable balancing debug printing"
+    default y
+    depends on APP_DEBUG_PRINTS
+    help
+      Print cell balancing debug output.
+
 endmenu
 
 source "Kconfig.zephyr"

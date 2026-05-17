@@ -16,9 +16,11 @@ int main(void)
     cell_voltage_data_t voltages;
     temperature_data_t temperatures;
     fault_data_t faults;
+#if defined(CONFIG_APP_CELL_BALANCING)
     balancing_data_t balancing = {0};
     balancing_state_t previous_balancing_state;
     uint16_t previous_selected_cells;
+#endif
 
     LOG_INF("battery monitor startup");
 
@@ -58,6 +60,7 @@ int main(void)
 
     LOG_INF("faults init complete");
 
+#if defined(CONFIG_APP_CELL_BALANCING)
     ret = balancing_init();
     if (ret < 0)
     {
@@ -66,6 +69,9 @@ int main(void)
     }
 
     LOG_INF("balancing init complete");
+#else
+    LOG_INF("cell balancing disabled");
+#endif
 
     k_msleep(10);
 
@@ -124,11 +130,13 @@ int main(void)
         {
             LOG_ERR("read_cell_voltages failed: %d", ret);
 
+#if defined(CONFIG_APP_CELL_BALANCING)
             ret = balancing_stop();
             if (ret < 0)
             {
                 LOG_ERR("balancing_stop failed: %d", ret);
             }
+#endif
 
             k_msleep(1000);
             continue;
@@ -136,6 +144,7 @@ int main(void)
 
         debug_print_voltages(&voltages);
 
+#if defined(CONFIG_APP_CELL_BALANCING)
         previous_balancing_state = balancing.state;
         previous_selected_cells = balancing.selected_cells;
 
@@ -168,6 +177,7 @@ int main(void)
                                   previous_balancing_state,
                                   previous_selected_cells);
         }
+#endif
 
         ret = read_temperatures(&temperatures);
         if (ret < 0)

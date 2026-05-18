@@ -1,8 +1,7 @@
 #include "init.h"
-#include "protocol.h"
+#include "bq796xx_protocol.h"
 #include "uart.h"
-#include "../register_maps/bq79600_regs.h"
-#include "../register_maps/bq79616_regs.h"
+#include "../register_maps/bq796xx_regs.h"
 
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
@@ -101,27 +100,27 @@ int commit_customer_crc(void)
     uint8_t crc_lo;
     int ret;
 
-    ret = read_reg(SINGLE_READ, 1U, BQ79616_REG_CUST_CRC_RSLT_HI, rx_buf, sizeof(rx_buf), 1U);
+    ret = bq796xx_read_reg(SINGLE_READ, 1U, BQ79616_REG_CUST_CRC_RSLT_HI, rx_buf, sizeof(rx_buf), 1U);
     if (ret < 0)
     {
         return ret;
     }
     crc_hi = rx_buf[4];
 
-    ret = read_reg(SINGLE_READ, 1U, BQ79616_REG_CUST_CRC_RSLT_LO, rx_buf, sizeof(rx_buf), 1U);
+    ret = bq796xx_read_reg(SINGLE_READ, 1U, BQ79616_REG_CUST_CRC_RSLT_LO, rx_buf, sizeof(rx_buf), 1U);
     if (ret < 0)
     {
         return ret;
     }
     crc_lo = rx_buf[4];
 
-    ret = write_reg(SINGLE_WRITE, 1U, BQ79616_REG_CUST_CRC_HI, &crc_hi, 1U);
+    ret = bq796xx_write_reg(SINGLE_WRITE, 1U, BQ79616_REG_CUST_CRC_HI, &crc_hi, 1U);
     if (ret < 0)
     {
         return ret;
     }
 
-    ret = write_reg(SINGLE_WRITE, 1U, BQ79616_REG_CUST_CRC_LO, &crc_lo, 1U);
+    ret = bq796xx_write_reg(SINGLE_WRITE, 1U, BQ79616_REG_CUST_CRC_LO, &crc_lo, 1U);
     if (ret < 0)
     {
         return ret;
@@ -165,7 +164,7 @@ static int wake_stack(void)
     uint8_t data = BQ79600_CONTROL1_SEND_WAKE;
     int ret;
 
-    ret = write_reg(SINGLE_WRITE, BRIDGE_ADDR, BQ79600_REG_CONTROL1, &data, 1U);
+    ret = bq796xx_write_reg(SINGLE_WRITE, BRIDGE_ADDR, BQ79600_REG_CONTROL1, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("SEND_WAKE write failed: reg=0x%04X err=%d", BQ79600_REG_CONTROL1, ret);
@@ -183,7 +182,7 @@ static int auto_address(void)
     for (uint16_t reg = BQ79616_REG_OTP_ECC_DATAIN1; reg <= BQ79616_REG_OTP_ECC_DATAIN8; reg++)
     {
         data = OTP_DUMMY_VALUE;
-        ret = write_reg(STACK_WRITE, 0U, reg, &data, 1U);
+        ret = bq796xx_write_reg(STACK_WRITE, 0U, reg, &data, 1U);
         if (ret < 0)
         {
             LOG_ERR("dummy stack write failed: reg=0x%04X err=%d", reg, ret);
@@ -194,7 +193,7 @@ static int auto_address(void)
     }
 
     data = BQ79616_CONTROL1_AUTO_ADDR;
-    ret = write_reg(BROADCAST_WRITE, 0U, BQ79616_REG_CONTROL1, &data, 1U);
+    ret = bq796xx_write_reg(BROADCAST_WRITE, 0U, BQ79616_REG_CONTROL1, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("auto-address enable failed: reg=0x%04X err=%d", BQ79616_REG_CONTROL1, ret);
@@ -205,7 +204,7 @@ static int auto_address(void)
     for (uint8_t addr = 0U; addr <= NUM_STACK_DEVICES; addr++)
     {
         data = addr;
-        ret = write_reg(BROADCAST_WRITE, 0U, BQ79616_REG_DIR0_ADDR, &data, 1U);
+        ret = bq796xx_write_reg(BROADCAST_WRITE, 0U, BQ79616_REG_DIR0_ADDR, &data, 1U);
         if (ret < 0)
         {
             LOG_ERR("DIR0_ADDR assignment failed: addr=0x%02X reg=0x%04X err=%d", addr, BQ79616_REG_DIR0_ADDR, ret);
@@ -216,7 +215,7 @@ static int auto_address(void)
     }
 
     data = BQ79616_COMM_CTRL_STACK;
-    ret = write_reg(BROADCAST_WRITE, 0U, BQ79616_REG_COMM_CTRL, &data, 1U);
+    ret = bq796xx_write_reg(BROADCAST_WRITE, 0U, BQ79616_REG_COMM_CTRL, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("COMM_CTRL stack write failed: reg=0x%04X err=%d", BQ79616_REG_COMM_CTRL, ret);
@@ -225,7 +224,7 @@ static int auto_address(void)
     k_msleep(1);
 
     data = BQ79616_COMM_CTRL_TOP_STACK;
-    ret = write_reg(SINGLE_WRITE, NUM_STACK_DEVICES, BQ79616_REG_COMM_CTRL, &data, 1U);
+    ret = bq796xx_write_reg(SINGLE_WRITE, NUM_STACK_DEVICES, BQ79616_REG_COMM_CTRL, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("COMM_CTRL top-stack write failed: dev=0x%02X reg=0x%04X err=%d", NUM_STACK_DEVICES, BQ79616_REG_COMM_CTRL, ret);
@@ -235,7 +234,7 @@ static int auto_address(void)
 
     for (uint16_t reg = BQ79616_REG_OTP_ECC_DATAIN1; reg <= BQ79616_REG_OTP_ECC_DATAIN8; reg++)
     {
-        ret = read_reg(STACK_READ, 0U, reg, rx_buf, sizeof(rx_buf), 1U);
+        ret = bq796xx_read_reg(STACK_READ, 0U, reg, rx_buf, sizeof(rx_buf), 1U);
         if (ret < 0)
         {
             LOG_ERR("dummy stack read failed: reg=0x%04X err=%d", reg, ret);

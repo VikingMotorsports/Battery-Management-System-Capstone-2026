@@ -1,6 +1,6 @@
 #include "voltage.h"
-#include "protocol.h"
-#include "../register_maps/bq79616_regs.h"
+#include "bq796xx_protocol.h"
+#include "../register_maps/bq796xx_regs.h"
 
 #include <stddef.h>
 #include <stdint.h>
@@ -30,7 +30,7 @@ int voltage_init(void)
     uint8_t data;
 
     data = ACTIVE_CELL_6;
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_ACTIVE_CELL, &data, 1U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_ACTIVE_CELL, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("ACTIVE_CELL write failed: reg=0x%04X err=%d", BQ79616_REG_ACTIVE_CELL, ret);
@@ -38,7 +38,7 @@ int voltage_init(void)
     }
 
     data = ADC_CTRL1_CONTINUOUS_MAIN_GO;
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_ADC_CTRL1, &data, 1U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_ADC_CTRL1, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("ADC_CTRL1 write failed: reg=0x%04X err=%d", BQ79616_REG_ADC_CTRL1, ret);
@@ -46,7 +46,7 @@ int voltage_init(void)
     }
 
     data = OV_THRESH;
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_OV_THRESH, &data, 1U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_OV_THRESH, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("OV_THRESH write failed: reg=0x%04X err=%d", BQ79616_REG_OV_THRESH, ret);
@@ -54,7 +54,7 @@ int voltage_init(void)
     }
 
     data = UV_THRESH;
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_UV_THRESH, &data, 1U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_UV_THRESH, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("UV_THRESH write failed: reg=0x%04X err=%d", BQ79616_REG_UV_THRESH, ret);
@@ -62,7 +62,7 @@ int voltage_init(void)
     }
 
     data = OVUV_CTRL_ROUND_ROBIN_GO;
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_OVUV_CTRL, &data, 1U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_OVUV_CTRL, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("OVUV_CTRL write failed: reg=0x%04X err=%d", BQ79616_REG_OVUV_CTRL, ret);
@@ -85,7 +85,7 @@ int read_cell_voltages(cell_voltage_data_t *voltages)
 
     k_usleep(500);
 
-    ret = read_reg(STACK_READ, STACK_ADDR_UNUSED, BQ79616_REG_VCELL16_HI, rx_buf, sizeof(rx_buf), VCELL_BLOCK_NUM_BYTES);
+    ret = bq796xx_read_reg(STACK_READ, STACK_ADDR_UNUSED, BQ79616_REG_VCELL16_HI, rx_buf, sizeof(rx_buf), VCELL_BLOCK_NUM_BYTES);
     if (ret < 0)
     {
         LOG_ERR("VCELL block read failed: reg=0x%04X err=%d", BQ79616_REG_VCELL16_HI, ret);

@@ -1,6 +1,6 @@
 #include "temperature.h"
-#include "protocol.h"
-#include "../register_maps/bq79616_regs.h"
+#include "bq796xx_protocol.h"
+#include "../register_maps/bq796xx_regs.h"
 
 #include <stddef.h>
 #include <stdint.h>
@@ -42,7 +42,7 @@ int temperature_init(void)
     static const uint8_t all_gpio_thermistors_adc_otut[4] = {GPIO_MODE_ADC_OTUT, 0x00, 0x00, 0x00};
 
     data = CONTROL2_TSREF_EN;
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_CONTROL2, &data, 1U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_CONTROL2, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("CONTROL2 write failed: reg=0x%04X err=%d", BQ79616_REG_CONTROL2, ret);
@@ -51,7 +51,7 @@ int temperature_init(void)
 
     k_msleep(6);
 
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_GPIO_CONF1, all_gpio_thermistors_adc_otut, 4U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_GPIO_CONF1, all_gpio_thermistors_adc_otut, 4U);
     if (ret < 0)
     {
         LOG_ERR("GPIO_CONF1-4 write failed: reg=0x%04X err=%d", BQ79616_REG_GPIO_CONF1, ret);
@@ -59,7 +59,7 @@ int temperature_init(void)
     }
 
     data = OT_THRESH | UT_THRESH;
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_OTUT_THRESH, &data, 1U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_OTUT_THRESH, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("OTUT_THRESH write failed: reg=0x%04X err=%d", BQ79616_REG_OTUT_THRESH, ret);
@@ -67,7 +67,7 @@ int temperature_init(void)
     }
 
     data = OTUT_CTRL_ROUND_ROBIN_GO;
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_OTUT_CTRL, &data, 1U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_OTUT_CTRL, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("OTUT_CTRL write failed: reg=0x%04X err=%d", BQ79616_REG_OTUT_CTRL, ret);
@@ -75,7 +75,7 @@ int temperature_init(void)
     }
 
     data = ADC_CTRL1_CONTINUOUS_MAIN_GO;
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_ADC_CTRL1, &data, 1U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_ADC_CTRL1, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("ADC_CTRL1 write failed: reg=0x%04X err=%d", BQ79616_REG_ADC_CTRL1, ret);
@@ -98,7 +98,7 @@ int read_temperatures(temperature_data_t *temperatures)
 
     k_msleep(2);
 
-    ret = read_reg(STACK_READ, STACK_ADDR_UNUSED, BQ79616_REG_TSREF_HI, rx_buf, sizeof(rx_buf), TEMP_NUM_BYTES);
+    ret = bq796xx_read_reg(STACK_READ, STACK_ADDR_UNUSED, BQ79616_REG_TSREF_HI, rx_buf, sizeof(rx_buf), TEMP_NUM_BYTES);
     if (ret < 0)
     {
         LOG_ERR("temperature block read failed: reg=0x%04X err=%d", BQ79616_REG_TSREF_HI, ret);

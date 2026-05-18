@@ -1,6 +1,6 @@
 #include "balancing.h"
-#include "protocol.h"
-#include "../register_maps/bq79616_regs.h"
+#include "bq796xx_protocol.h"
+#include "../register_maps/bq796xx_regs.h"
 
 #include <zephyr/logging/log.h>
 #include <errno.h>
@@ -44,7 +44,7 @@ int balancing_init(void)
     }
 
     data = VCB_DONE_DISABLED;
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_VCB_DONE_THRESH, &data, 1U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_VCB_DONE_THRESH, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("VCB_DONE_THRESH write failed: reg=0x%04X err=%d", BQ79616_REG_VCB_DONE_THRESH, ret);
@@ -52,7 +52,7 @@ int balancing_init(void)
     }
 
     data = BAL_DUTY_5_SECONDS;
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_BAL_CTRL1, &data, 1U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_BAL_CTRL1, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("BAL_CTRL1 write failed: reg=0x%04X err=%d", BQ79616_REG_BAL_CTRL1, ret);
@@ -60,7 +60,7 @@ int balancing_init(void)
     }
 
     data = 0U;
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_BAL_CTRL2, &data, 1U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_BAL_CTRL2, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("BAL_CTRL2 write failed: reg=0x%04X err=%d", BQ79616_REG_BAL_CTRL2, ret);
@@ -227,7 +227,7 @@ static int read_complete_cells(uint16_t *complete_cells)
         return -EINVAL;
     }
 
-    ret = read_reg(STACK_READ, STACK_ADDR_UNUSED, BQ79616_REG_CB_COMPLETE1, rx, sizeof(rx), ONE_BYTE_NUM_BYTES);
+    ret = bq796xx_read_reg(STACK_READ, STACK_ADDR_UNUSED, BQ79616_REG_CB_COMPLETE1, rx, sizeof(rx), ONE_BYTE_NUM_BYTES);
     if (ret < 0)
     {
         LOG_ERR("CB_COMPLETE1 read failed: reg=0x%04X err=%d", BQ79616_REG_CB_COMPLETE1, ret);
@@ -235,7 +235,7 @@ static int read_complete_cells(uint16_t *complete_cells)
     }
     complete1 = rx[4];
 
-    ret = read_reg(STACK_READ, STACK_ADDR_UNUSED, BQ79616_REG_CB_COMPLETE2, rx, sizeof(rx), ONE_BYTE_NUM_BYTES);
+    ret = bq796xx_read_reg(STACK_READ, STACK_ADDR_UNUSED, BQ79616_REG_CB_COMPLETE2, rx, sizeof(rx), ONE_BYTE_NUM_BYTES);
     if (ret < 0)
     {
         LOG_ERR("CB_COMPLETE2 read failed: reg=0x%04X err=%d", BQ79616_REG_CB_COMPLETE2, ret);
@@ -269,7 +269,7 @@ int balancing_stop(void)
     }
 
     data = BAL_CTRL2_AUTO_BAL_GO;
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_BAL_CTRL2, &data, 1U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_BAL_CTRL2, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("BAL_CTRL2 zero-timer latch failed: reg=0x%04X err=%d", BQ79616_REG_BAL_CTRL2, ret);
@@ -297,14 +297,14 @@ static int write_cell_balance_timers(uint16_t selected_cells)
         }
     }
 
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_CB_CELL16_CTRL, &data[0], 8U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_CB_CELL16_CTRL, &data[0], 8U);
     if (ret < 0)
     {
         LOG_ERR("CB_CELL16_CTRL..CB_CELL9_CTRL write failed: reg=0x%04X err=%d", BQ79616_REG_CB_CELL16_CTRL, ret);
         return ret;
     }
 
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_CB_CELL8_CTRL, &data[8], 8U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_CB_CELL8_CTRL, &data[8], 8U);
     if (ret < 0)
     {
         LOG_ERR("CB_CELL8_CTRL..CB_CELL1_CTRL write failed: reg=0x%04X err=%d", BQ79616_REG_CB_CELL8_CTRL, ret);
@@ -325,7 +325,7 @@ static int start_cell_balancing(void)
     uint8_t data;
 
     data = BAL_CTRL2_AUTO_BAL_GO;
-    ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_BAL_CTRL2, &data, 1U);
+    ret = bq796xx_write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_BAL_CTRL2, &data, 1U);
     if (ret < 0)
     {
         LOG_ERR("BAL_CTRL2 auto balance start failed: reg=0x%04X err=%d", BQ79616_REG_BAL_CTRL2, ret);

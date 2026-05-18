@@ -1,4 +1,4 @@
-#include "protocol.h"
+#include "bq796xx_protocol.h"
 #include "uart.h"
 
 #include <zephyr/sys/util.h>
@@ -7,7 +7,7 @@
 #include <stdint.h>
 #include <stddef.h>
 
-LOG_MODULE_REGISTER(protocol, LOG_LEVEL_INF);
+LOG_MODULE_REGISTER(bq796xx_protocol, LOG_LEVEL_INF);
 
 #define SINGLE_READ_INIT 0x80U
 #define SINGLE_WRITE_INIT 0x90U
@@ -25,7 +25,7 @@ static size_t build_stack_read_frame(uint16_t reg_addr, uint8_t num_bytes, uint8
 static size_t build_stack_write_frame(uint16_t reg_addr, const uint8_t *data, uint8_t num_bytes, uint8_t *frame);
 static size_t build_broadcast_write_frame(uint16_t reg_addr, const uint8_t *data, uint8_t num_bytes, uint8_t *frame);
 
-int read_reg(read_mode_t mode, uint8_t dev_addr, uint16_t reg_addr, uint8_t *rx_buf, size_t rx_len, uint8_t num_bytes)
+int bq796xx_read_reg(read_mode_t mode, uint8_t dev_addr, uint16_t reg_addr, uint8_t *rx_buf, size_t rx_len, uint8_t num_bytes)
 {
     uint8_t frame[MAX_FRAME_BYTES];
     size_t frame_len;
@@ -51,7 +51,7 @@ int read_reg(read_mode_t mode, uint8_t dev_addr, uint16_t reg_addr, uint8_t *rx_
     return uart_transaction(frame, frame_len, rx_buf, rx_len, expected_rx_len);
 }
 
-int write_reg(write_mode_t mode, uint8_t dev_addr, uint16_t reg_addr, const uint8_t *data, uint8_t num_bytes)
+int bq796xx_write_reg(write_mode_t mode, uint8_t dev_addr, uint16_t reg_addr, const uint8_t *data, uint8_t num_bytes)
 {
     uint8_t frame[MAX_FRAME_BYTES];
     size_t frame_len;

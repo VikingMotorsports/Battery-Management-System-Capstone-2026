@@ -5,41 +5,47 @@
 
 static void print_float_6(float value)
 {
+    bool negative = value < 0.0f;
+
+    if (negative)
+    {
+        value = -value;
+    }
+
     int whole = (int)value;
     int frac = (int)((value - (float)whole) * 1000000.0f);
 
-    if (frac < 0)
-    {
-        frac = -frac;
-    }
-
-    printk("%d.%06d", whole, frac);
+    printk("%s%d.%06d", negative ? "-" : "", whole, frac);
 }
 
 static void print_float_3(float value)
 {
+    bool negative = value < 0.0f;
+
+    if (negative)
+    {
+        value = -value;
+    }
+
     int whole = (int)value;
     int frac = (int)((value - (float)whole) * 1000.0f);
 
-    if (frac < 0)
-    {
-        frac = -frac;
-    }
-
-    printk("%d.%03d", whole, frac);
+    printk("%s%d.%03d", negative ? "-" : "", whole, frac);
 }
 
 static void print_float_1(float value)
 {
+    bool negative = value < 0.0f;
+
+    if (negative)
+    {
+        value = -value;
+    }
+
     int whole = (int)value;
     int frac = (int)((value - (float)whole) * 10.0f);
 
-    if (frac < 0)
-    {
-        frac = -frac;
-    }
-
-    printk("%d.%1d", whole, frac);
+    printk("%s%d.%1d", negative ? "-" : "", whole, frac);
 }
 
 void debug_print_voltages(const cell_voltage_data_t *voltages)
@@ -104,6 +110,25 @@ void debug_print_temperatures(const temperature_data_t *temperatures)
     printk("\n");
 #else
     ARG_UNUSED(temperatures);
+#endif
+}
+
+void debug_print_current(const current_data_t *current)
+{
+#if defined(CONFIG_APP_DEBUG_PRINTS) && defined(CONFIG_APP_DEBUG_CURRENT)
+    if (current == NULL)
+    {
+        printk("Current got null pointer\n");
+        return;
+    }
+
+    printk("Current: raw=0x%04X vshunt=", (uint16_t)current->raw_shunt_voltage);
+    print_float_6(current->shunt_voltage);
+    printk(" V raw=0x%04X current=", (uint16_t)current->raw_current);
+    print_float_6(current->current);
+    printk(" A\n\n");
+#else
+    ARG_UNUSED(current);
 #endif
 }
 

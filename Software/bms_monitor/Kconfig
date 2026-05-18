@@ -28,6 +28,13 @@ config APP_DEBUG_TEMPERATURES
     help
       Print temperature debug output.
 
+config APP_DEBUG_CURRENT
+    bool "Enable current debug printing"
+    default y
+    depends on APP_DEBUG_PRINTS
+    help
+      Print current debug output.
+
 config APP_DEBUG_FAULTS
     bool "Enable fault debug printing"
     default y

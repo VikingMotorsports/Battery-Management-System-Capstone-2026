@@ -1,5 +1,6 @@
 #include "init.h"
 #include "bq796xx_protocol.h"
+#include "i2c.h"
 #include "uart.h"
 #include "../register_maps/bq796xx_regs.h"
 
@@ -71,6 +72,13 @@ int monitor_init(void)
     if (ret < 0)
     {
         LOG_ERR("uart_init failed: %d", ret);
+        return ret;
+    }
+
+    ret = i2c_init();
+    if (ret < 0)
+    {
+        LOG_ERR("i2c_init failed: %d", ret);
         return ret;
     }
 

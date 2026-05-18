@@ -1,0 +1,8 @@
+#ifndef INA238_REGS_H
+#define INA238_REGS_H
+
+#define INA238_REG_SHUNT_CAL 0x02U
+#define INA238_REG_VSHUNT 0x04U
+#define INA238_REG_CURRENT 0x07U
+
+#endif

@@ -2,6 +2,7 @@
 #include "debug.h"
 #include "voltage.h"
 #include "temperature.h"
+#include "current.h"
 #include "faults.h"
 #include "balancing.h"
 
@@ -15,6 +16,7 @@ int main(void)
     int ret;
     cell_voltage_data_t voltages;
     temperature_data_t temperatures;
+    current_data_t current;
     fault_data_t faults;
 #if defined(CONFIG_APP_CELL_BALANCING)
     balancing_data_t balancing = {0};
@@ -50,6 +52,15 @@ int main(void)
     }
 
     LOG_INF("temperature init complete");
+
+    ret = current_init();
+    if (ret < 0)
+    {
+        LOG_ERR("current_init failed: %d", ret);
+        return 0;
+    }
+
+    LOG_INF("current init complete");
 
     ret = faults_init();
     if (ret < 0)
@@ -143,6 +154,16 @@ int main(void)
         }
 
         debug_print_voltages(&voltages);
+
+        ret = read_current(&current);
+        if (ret < 0)
+        {
+            LOG_ERR("read_current failed: %d", ret);
+        }
+        else
+        {
+            debug_print_current(&current);
+        }
 
 #if defined(CONFIG_APP_CELL_BALANCING)
         previous_balancing_state = balancing.state;

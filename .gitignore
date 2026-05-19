@@ -1,3 +1,6 @@
+# macOS Finder metadata files
+.DS_Store
+
 # Ignore local archives and build folders
 archive
 build

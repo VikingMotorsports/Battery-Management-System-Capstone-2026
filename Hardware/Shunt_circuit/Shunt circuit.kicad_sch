@@ -4982,7 +4982,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0304831b-cd18-4e0d-818c-2eb1c7058ef9")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR07"
 			(at 111.76 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -5042,7 +5042,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR013")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -5059,7 +5059,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0355f3da-cb13-4aea-ab39-537f35234a1c")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR012"
 			(at 130.81 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -5119,7 +5119,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR018")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -5137,7 +5137,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "03c7ee84-2bb6-4345-9fbd-16c31ffa35aa")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR010"
 			(at 123.19 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -5197,7 +5197,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR025")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -5214,7 +5214,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "04f0f4ae-b6b9-455c-bbe1-837a70f8b12f")
-		(property "Reference" "C8"
+		(property "Reference" "C6"
 			(at 138.43 36.8362 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5322,7 +5322,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "C8")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -5339,7 +5339,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "07254183-49e6-46c5-bb4c-3aea9caf3ee3")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR018"
 			(at 166.37 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -5399,7 +5399,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR010")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -5418,7 +5418,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "08e49673-12e2-4dae-a948-793617da0873")
-		(property "Reference" "U1"
+		(property "Reference" "U2"
 			(at 154.94 25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5533,7 +5533,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "U1")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -5550,7 +5550,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0c1248f8-c8f3-4e6f-bef6-c85ba611d810")
-		(property "Reference" "D2"
+		(property "Reference" "D1"
 			(at 109.22 31.6864 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5669,7 +5669,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "D2")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -5686,7 +5686,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0e9a63ed-8136-4000-9731-3b365513136c")
-		(property "Reference" "R6"
+		(property "Reference" "R1"
 			(at 69.85 84.328 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5792,7 +5792,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "R6")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -5810,7 +5810,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "137d4085-ee56-4e1c-a5a3-262044d45ba1")
-		(property "Reference" "R1"
+		(property "Reference" "R5"
 			(at 114.3 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5918,7 +5918,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "R1")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -5936,7 +5936,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "138273cc-d53d-422f-ae79-be676b627804")
-		(property "Reference" "TP_3V3"
+		(property "Reference" "TP_3V1"
 			(at 249.428 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6042,7 +6042,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "TP_3V3")
+					(reference "TP_3V1")
 					(unit 1)
 				)
 			)
@@ -6059,7 +6059,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "15a90f92-6a9b-432f-be9f-f25ceba58a95")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR013"
 			(at 133.35 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -6119,7 +6119,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR05")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -6137,7 +6137,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "18006b7c-6834-483b-9313-d23d4120094c")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR022"
 			(at 177.8 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -6197,7 +6197,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR08")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -6214,7 +6214,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1b98df87-4fe6-4ca5-a6e0-c5a5a6a52a2f")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR01"
 			(at 85.09 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -6274,7 +6274,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR024")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -6291,7 +6291,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "21256397-ec19-4c20-873e-ad93296d2360")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR017"
 			(at 165.1 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -6351,7 +6351,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR015")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -6368,7 +6368,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "22c35c81-7de9-49f7-9831-1f5133b27234")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR025"
 			(at 189.23 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -6428,7 +6428,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR026")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -6446,7 +6446,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "25456595-2a79-4b3b-be7f-7dc1c5aac35b")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR05"
 			(at 111.76 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -6506,7 +6506,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR027")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -6523,7 +6523,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "260bec1c-2890-4aa8-bdc6-9e1b64313e7b")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR08"
 			(at 111.76 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -6583,7 +6583,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR023")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -6600,7 +6600,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2df1e1c9-80e9-4455-8cac-4ebc5bb91419")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR04"
 			(at 109.22 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -6660,7 +6660,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR06")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -6678,7 +6678,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2e00258e-120c-41ce-a0c9-5599fecc7842")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 96.1233 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6810,7 +6810,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "U2")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -6951,7 +6951,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "370aa7b9-32f7-42b9-9c9b-ca5469bc55bf")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR027"
 			(at 241.3 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -7011,7 +7011,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR014")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -7152,7 +7152,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4088ce43-2c5e-47a1-b856-43658d2b486f")
-		(property "Reference" "R3"
+		(property "Reference" "R4"
 			(at 114.3 105.4099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7260,7 +7260,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "R3")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -7278,7 +7278,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4166fa26-ca33-44f5-af79-b6570522b872")
-		(property "Reference" "R2"
+		(property "Reference" "R6"
 			(at 125.73 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7386,7 +7386,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "R2")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -7527,7 +7527,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4700303a-54e3-44eb-a79a-f9a9134f68a4")
-		(property "Reference" "D1"
+		(property "Reference" "D2"
 			(at 186.69 31.6864 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7646,7 +7646,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "D1")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -7664,7 +7664,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4c66046f-8727-4672-83ee-71f99a63c44e")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR02"
 			(at 93.98 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -7724,7 +7724,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR017")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -7741,7 +7741,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5080841e-04c1-4652-9483-e8c18c06c92c")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR014"
 			(at 137.16 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -7801,7 +7801,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR016")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -7818,7 +7818,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "545def2c-2dd2-485f-9b63-83b813c9cd9f")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR016"
 			(at 165.1 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -7878,7 +7878,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR04")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -8288,7 +8288,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68797310-6e97-4ca3-b53f-cbf0ee282d13")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR020"
 			(at 171.45 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -8348,7 +8348,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR022")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -8366,7 +8366,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6cff116f-15c1-4549-a1fd-d55d2ae4d3ff")
-		(property "Reference" "C10"
+		(property "Reference" "C2"
 			(at 82.55 67.3162 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8474,7 +8474,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "C10")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -8836,7 +8836,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8201eb37-1c1f-4505-8d52-7bf4ceb36076")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR015"
 			(at 142.24 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -8896,7 +8896,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR012")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -8913,7 +8913,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8815eab5-e21e-4a3e-ba68-973ac1a25fc9")
-		(property "Reference" "C5"
+		(property "Reference" "C4"
 			(at 116.8338 132.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9021,7 +9021,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "C5")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -9038,7 +9038,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8a159f78-af53-4110-8779-91a0d7c48cde")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR011"
 			(at 128.27 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -9098,7 +9098,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR020")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -9116,7 +9116,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "91f3c194-a447-4066-849c-3d07df8fde4c")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR03"
 			(at 93.98 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9176,7 +9176,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR02")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -9193,7 +9193,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9a6ac9f8-3a91-4959-89fc-b502ce00f38c")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR023"
 			(at 186.69 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -9253,7 +9253,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR019")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -9517,7 +9517,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a3f4d1cd-1841-4289-8a7f-a1c5f92f7e0c")
-		(property "Reference" "R8"
+		(property "Reference" "R9"
 			(at 186.69 39.3699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9625,7 +9625,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "R8")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -9642,7 +9642,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a6e4c555-0176-4eeb-b46b-333058470ccf")
-		(property "Reference" "C9"
+		(property "Reference" "C5"
 			(at 129.54 36.8362 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9750,7 +9750,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "C9")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -9768,7 +9768,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "acb39974-0fff-42d4-a997-48cb2d5e1052")
-		(property "Reference" "R5"
+		(property "Reference" "R8"
 			(at 185.42 77.4699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9876,7 +9876,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "R5")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -9894,7 +9894,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ad03bb04-4e76-4fbe-bef0-afc8ae3995ca")
-		(property "Reference" "C2"
+		(property "Reference" "C7"
 			(at 134.62 73.6662 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10002,7 +10002,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "C2")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -10020,7 +10020,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b52f8384-1ef0-4b6c-8463-3346290252f7")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR09"
 			(at 123.19 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -10080,7 +10080,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR01")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -10098,7 +10098,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b86f1e4d-14f1-412b-b119-e1f651bba8fa")
-		(property "Reference" "C3"
+		(property "Reference" "C8"
 			(at 162.56 73.6662 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10206,7 +10206,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "C3")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -10223,7 +10223,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c0565cd3-8d1a-4b99-89a6-371c0d63c717")
-		(property "Reference" "J3"
+		(property "Reference" "J2"
 			(at 251.968 105.664 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10355,7 +10355,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "J3")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -10495,7 +10495,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c29f9b5f-639d-49e4-b8b2-4d5e70c92f5e")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR026"
 			(at 241.3 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -10555,7 +10555,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR03")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -10572,7 +10572,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c42a8961-6788-4faa-9554-78b17a65c447")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR024"
 			(at 189.23 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -10632,7 +10632,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR07")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -10649,7 +10649,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c60a59ed-65de-4366-95d8-c7a16c314931")
-		(property "Reference" "C6"
+		(property "Reference" "C10"
 			(at 181.6162 121.92 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10757,7 +10757,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "C6")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -10774,7 +10774,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c874a53e-2097-4f00-bf77-b4210d0f77b1")
-		(property "Reference" "R7"
+		(property "Reference" "R2"
 			(at 70.104 101.6 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10880,7 +10880,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "R7")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -11021,7 +11021,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d1101cf1-e528-4f7e-b69a-34db9466ae51")
-		(property "Reference" "C4"
+		(property "Reference" "C3"
 			(at 114.3062 121.92 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11129,7 +11129,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "C4")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -11146,7 +11146,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d2903a52-78a2-4bbc-836f-56630ea2fbaf")
-		(property "Reference" "R4"
+		(property "Reference" "R7"
 			(at 175.26 80.0101 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11254,7 +11254,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "R4")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -11272,7 +11272,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e20af80a-b7ea-4ddf-b669-2b00d42d351c")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR06"
 			(at 111.76 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -11332,7 +11332,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR028")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -11472,7 +11472,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e66fd9df-2060-4f01-8702-365682cf2c71")
-		(property "Reference" "J2"
+		(property "Reference" "J1"
 			(at 34.036 88.138 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11579,7 +11579,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "J2")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -11596,7 +11596,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e7f2fb0d-6cee-4f43-a8bc-4097740b74ef")
-		(property "Reference" "C7"
+		(property "Reference" "C9"
 			(at 173.99 36.8362 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11704,7 +11704,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "C7")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -11723,7 +11723,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e9c0dd11-ccc8-4b5c-8044-7cd82e61b7ac")
-		(property "Reference" "R9"
+		(property "Reference" "R3"
 			(at 109.22 39.3699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11831,7 +11831,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "R9")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -11850,7 +11850,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f2e7ddf0-0c7d-47f4-9767-5b884e862bfb")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR019"
 			(at 171.45 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -11910,7 +11910,7 @@
 		(instances
 			(project "Shunt circuit"
 				(path "/5d1fc160-e5dc-46a3-a6dd-c592726ed1b4"
-					(reference "#PWR011")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)

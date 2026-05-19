@@ -5320,7 +5320,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "10fb5b3d-5b16-4cb0-8adb-b89d178efaf1")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR041"
 			(at 182.88 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -5380,7 +5380,7 @@
 		(instances
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "#PWR040")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -5398,7 +5398,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "22c373ab-7c7f-4b0d-9507-a657a7e6aa5e")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR043"
 			(at 185.42 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -5458,7 +5458,7 @@
 		(instances
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "#PWR042")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -5671,7 +5671,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "357277f9-221d-46b3-b6aa-a8801591fc91")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR044"
 			(at 189.23 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -5731,7 +5731,7 @@
 		(instances
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "#PWR043")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -5748,7 +5748,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "38fcc650-66ac-4435-954c-14d05b2e90a5")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR036"
 			(at 110.49 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -5808,7 +5808,7 @@
 		(instances
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "#PWR035")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -6156,7 +6156,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5668b191-821e-42b2-8294-43b873b1e2c1")
-		(property "Reference" "#PWR045"
+		(property "Reference" "#PWR046"
 			(at 209.55 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -6216,7 +6216,7 @@
 		(instances
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "#PWR045")
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -6318,7 +6318,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "87c8b0e5-ad6e-44a4-9831-6854a1d623e6")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR035"
 			(at 109.22 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -6378,7 +6378,7 @@
 		(instances
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "#PWR034")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -6474,7 +6474,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8ba22ce1-3ec3-46cb-bbdf-6655eccf1921")
-		(property "Reference" "#PWR046"
+		(property "Reference" "#PWR047"
 			(at 232.41 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -6534,7 +6534,7 @@
 		(instances
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "#PWR046")
+					(reference "#PWR047")
 					(unit 1)
 				)
 			)
@@ -6903,7 +6903,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "94e782e5-5831-458a-a7ad-5aca238d4259")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR040"
 			(at 176.53 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -6963,7 +6963,7 @@
 		(instances
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "#PWR039")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -7099,7 +7099,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "97df682e-ae23-40d7-a653-ec3b1f81d29c")
-		(property "Reference" "#PWR044"
+		(property "Reference" "#PWR045"
 			(at 196.85 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -7159,7 +7159,7 @@
 		(instances
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "#PWR044")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -7257,7 +7257,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "af727842-c5ef-4120-bfc1-e6e56e6621ff")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR039"
 			(at 168.91 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -7317,7 +7317,7 @@
 		(instances
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "#PWR038")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -7414,7 +7414,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c2b95176-c3c2-4f1d-9b5c-4d9bfd6f8bd1")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR037"
 			(at 144.78 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -7474,7 +7474,7 @@
 		(instances
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "#PWR036")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -7811,7 +7811,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dbb3691b-0763-47ac-9d31-e495298b928f")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR038"
 			(at 144.78 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -7871,7 +7871,7 @@
 		(instances
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "#PWR037")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -7888,7 +7888,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dcbdc3b2-c3d0-43a4-adaf-8bf848d12952")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR042"
 			(at 182.88 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -7948,7 +7948,7 @@
 		(instances
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "#PWR041")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -7966,7 +7966,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e2beca25-624d-404b-85f1-1819611a4d38")
-		(property "Reference" "#PWR047"
+		(property "Reference" "#PWR048"
 			(at 256.54 238.76 0)
 			(hide yes)
 			(show_name no)
@@ -8026,7 +8026,7 @@
 		(instances
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "#PWR047")
+					(reference "#PWR048")
 					(unit 1)
 				)
 			)

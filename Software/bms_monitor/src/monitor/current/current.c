@@ -11,6 +11,7 @@ LOG_MODULE_REGISTER(current, LOG_LEVEL_INF);
 #define INA238_I2C_ADDR 0x40U
 #define INA238_U16_NUM_BYTES 2U
 #define INA238_SHUNT_CAL_VALUE 1250U
+#define INA238_SOVL_THRESH 0x00C8U // 1 mV = 1 A
 #define INA238_VSHUNT_LSB_UV 5.0f
 #define INA238_CURRENT_LSB_A (50.0f / 32768.0f)
 
@@ -28,6 +29,16 @@ int current_init(void)
     if (ret < 0)
     {
         LOG_ERR("INA238 SHUNT_CAL write failed: reg=0x%02X err=%d", INA238_REG_SHUNT_CAL, ret);
+        return ret;
+    }
+
+    data[0] = (uint8_t)(INA238_SOVL_THRESH >> 8);
+    data[1] = (uint8_t)(INA238_SOVL_THRESH & 0xFFU);
+
+    ret = ina238_write_reg(INA238_I2C_ADDR, INA238_REG_SOVL, data, INA238_U16_NUM_BYTES);
+    if (ret < 0)
+    {
+        LOG_ERR("INA238 SOVL write failed: reg=0x%02X err=%d", INA238_REG_SOVL, ret);
         return ret;
     }
 

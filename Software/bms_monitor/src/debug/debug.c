@@ -309,6 +309,53 @@ void debug_print_faults(const fault_data_t *faults)
         }
     }
 
+#if defined(CONFIG_APP_CURRENT_MONITORING)
+    if (faults->ina.active)
+    {
+        printk("INA238 fault summary: 0x%04X\n", faults->ina.diag_alrt);
+
+        if (faults->ina.math_overflow)
+        {
+            printk("\tMATHOF\n");
+        }
+
+        if (faults->ina.temp_over_limit)
+        {
+            printk("\tTMPOL\n");
+        }
+
+        if (faults->ina.shunt_over_limit)
+        {
+            printk("\tSHNTOL\n");
+        }
+
+        if (faults->ina.shunt_under_limit)
+        {
+            printk("\tSHNTUL\n");
+        }
+
+        if (faults->ina.bus_over_limit)
+        {
+            printk("\tBUSOL\n");
+        }
+
+        if (faults->ina.bus_under_limit)
+        {
+            printk("\tBUSUL\n");
+        }
+
+        if (faults->ina.power_over_limit)
+        {
+            printk("\tPOL\n");
+        }
+
+        if (faults->ina.memory_checksum_error)
+        {
+            printk("\tMEMSTAT\n");
+        }
+    }
+#endif
+
     printk("\n");
 #else
     ARG_UNUSED(faults);

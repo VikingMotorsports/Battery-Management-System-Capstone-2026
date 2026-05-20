@@ -63,8 +63,25 @@ typedef struct
 
 typedef struct
 {
+    uint16_t diag_alrt;
+
+    bool math_overflow;
+    bool temp_over_limit;
+    bool shunt_over_limit;
+    bool shunt_under_limit;
+    bool bus_over_limit;
+    bool bus_under_limit;
+    bool power_over_limit;
+    bool memory_checksum_error;
+
+    bool active;
+} ina_fault_data_t;
+
+typedef struct
+{
     bridge_fault_data_t bridge;
     stack_fault_data_t stack[NUM_STACK_DEVICES];
+    ina_fault_data_t ina;
 } fault_data_t;
 
 int faults_init(void);

@@ -1,12 +1,15 @@
 #include "faults.h"
 #include "bq796xx_protocol.h"
+#include "ina238_protocol.h"
 #include "../register_maps/bq796xx_regs.h"
+#include "../register_maps/ina238_regs.h"
 
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/devicetree.h>
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/logging/log.h>
+#include <zephyr/sys/util.h>
 #include <errno.h>
 #include <stdint.h>
 #include <stdbool.h>
@@ -17,7 +20,9 @@ LOG_MODULE_REGISTER(faults, LOG_LEVEL_INF);
 #define FAULT_GPIO_NODE DT_PATH(zephyr_user)
 
 #define BRIDGE_ADDR 0x00U
+#define INA238_I2C_ADDR 0x40U
 #define ONE_BYTE_NUM_BYTES 1U
+#define TWO_BYTE_NUM_BYTES 2U
 #define ONE_BYTE_FRAME_LEN (ONE_BYTE_NUM_BYTES + 6U)
 
 #define BQ79600_NFAULT_EN_VALUE 0x04U
@@ -37,14 +42,33 @@ LOG_MODULE_REGISTER(faults, LOG_LEVEL_INF);
 #define BQ79616_FAULT_SUMMARY_SYS_MASK 0x02U
 #define BQ79616_FAULT_SUMMARY_PWR_MASK 0x01U
 
+#define INA238_DIAG_ALRT_ALATCH_VALUE 0x8000U
+
+#define INA238_DIAG_ALRT_MATHOF_MASK 0x0200U
+#define INA238_DIAG_ALRT_TMPOL_MASK 0x0080U
+#define INA238_DIAG_ALRT_SHNTOL_MASK 0x0040U
+#define INA238_DIAG_ALRT_SHNTUL_MASK 0x0020U
+#define INA238_DIAG_ALRT_BUSOL_MASK 0x0010U
+#define INA238_DIAG_ALRT_BUSUL_MASK 0x0008U
+#define INA238_DIAG_ALRT_POL_MASK 0x0004U
+#define INA238_DIAG_ALRT_MEMSTAT_MASK 0x0001U
+#define INA238_DIAG_ALRT_FAULT_SUMMARY_MASK 0x02FCU
+
 static const struct gpio_dt_spec fault_gpio = GPIO_DT_SPEC_GET(FAULT_GPIO_NODE, fault_gpios);
+#if defined(CONFIG_APP_CURRENT_MONITORING)
+static const struct gpio_dt_spec ina_alert_gpio = GPIO_DT_SPEC_GET(FAULT_GPIO_NODE, ina_alert_gpios);
+#endif
 
 static struct gpio_callback fault_gpio_callback_data;
+#if defined(CONFIG_APP_CURRENT_MONITORING)
+static struct gpio_callback ina_alert_gpio_callback_data;
+#endif
 static volatile bool fault_pending_flag = false;
 
 static void fault_gpio_callback(const struct device *port, struct gpio_callback *cb, uint32_t pins);
 static int read_bridge_faults(bridge_fault_data_t *bridge_faults);
 static int read_stack_faults(stack_fault_data_t *stack_faults);
+static int read_ina_faults(ina_fault_data_t *ina_faults);
 
 int faults_init(void)
 {
@@ -73,6 +97,43 @@ int faults_init(void)
 
     gpio_init_callback(&fault_gpio_callback_data, fault_gpio_callback, BIT(fault_gpio.pin));
     gpio_add_callback(fault_gpio.port, &fault_gpio_callback_data);
+
+#if defined(CONFIG_APP_CURRENT_MONITORING)
+    uint8_t tx_buf[TWO_BYTE_NUM_BYTES];
+
+    if (!gpio_is_ready_dt(&ina_alert_gpio))
+    {
+        LOG_ERR("INA alert GPIO device not ready");
+        return -ENODEV;
+    }
+
+    ret = gpio_pin_configure_dt(&ina_alert_gpio, GPIO_INPUT);
+    if (ret < 0)
+    {
+        LOG_ERR("INA alert GPIO configure failed: %d", ret);
+        return ret;
+    }
+
+    ret = gpio_pin_interrupt_configure_dt(&ina_alert_gpio, GPIO_INT_EDGE_TO_ACTIVE);
+    if (ret < 0)
+    {
+        LOG_ERR("INA alert GPIO interrupt configure failed: %d", ret);
+        return ret;
+    }
+
+    gpio_init_callback(&ina_alert_gpio_callback_data, fault_gpio_callback, BIT(ina_alert_gpio.pin));
+    gpio_add_callback(ina_alert_gpio.port, &ina_alert_gpio_callback_data);
+
+    tx_buf[0] = (uint8_t)(INA238_DIAG_ALRT_ALATCH_VALUE >> 8);
+    tx_buf[1] = (uint8_t)(INA238_DIAG_ALRT_ALATCH_VALUE & 0xFFU);
+
+    ret = ina238_write_reg(INA238_I2C_ADDR, INA238_REG_DIAG_ALRT, tx_buf, TWO_BYTE_NUM_BYTES);
+    if (ret < 0)
+    {
+        LOG_ERR("INA238 DIAG_ALRT write failed: err=%d", ret);
+        return ret;
+    }
+#endif
 
     data = BQ79600_NFAULT_EN_VALUE | BQ796XX_FCOMM_EN_VALUE;
     ret = bq796xx_write_reg(SINGLE_WRITE, BRIDGE_ADDR, BQ79600_REG_DEV_CONF1, &data, 1U);
@@ -127,6 +188,43 @@ int read_faults(fault_data_t *faults)
     {
         return ret;
     }
+
+#if defined(CONFIG_APP_CURRENT_MONITORING)
+    ret = read_ina_faults(&faults->ina);
+    if (ret < 0)
+    {
+        return ret;
+    }
+#endif
+
+    return 0;
+}
+
+static int read_ina_faults(ina_fault_data_t *ina_faults)
+{
+    uint8_t rx_buf[TWO_BYTE_NUM_BYTES];
+    int ret;
+
+    ret = ina238_read_reg(INA238_I2C_ADDR, INA238_REG_DIAG_ALRT, rx_buf, sizeof(rx_buf), TWO_BYTE_NUM_BYTES);
+    if (ret < 0)
+    {
+        LOG_ERR("INA238 DIAG_ALRT read failed err=%d", ret);
+        return ret;
+    }
+
+    ina_faults->diag_alrt = (uint16_t)(((uint16_t)rx_buf[0] << 8) | (uint16_t)rx_buf[1]);
+
+    ina_faults->math_overflow = (ina_faults->diag_alrt & INA238_DIAG_ALRT_MATHOF_MASK) != 0U;
+    ina_faults->temp_over_limit = (ina_faults->diag_alrt & INA238_DIAG_ALRT_TMPOL_MASK) != 0U;
+    ina_faults->shunt_over_limit = (ina_faults->diag_alrt & INA238_DIAG_ALRT_SHNTOL_MASK) != 0U;
+    ina_faults->shunt_under_limit = (ina_faults->diag_alrt & INA238_DIAG_ALRT_SHNTUL_MASK) != 0U;
+    ina_faults->bus_over_limit = (ina_faults->diag_alrt & INA238_DIAG_ALRT_BUSOL_MASK) != 0U;
+    ina_faults->bus_under_limit = (ina_faults->diag_alrt & INA238_DIAG_ALRT_BUSUL_MASK) != 0U;
+    ina_faults->power_over_limit = (ina_faults->diag_alrt & INA238_DIAG_ALRT_POL_MASK) != 0U;
+    ina_faults->memory_checksum_error = (ina_faults->diag_alrt & INA238_DIAG_ALRT_MEMSTAT_MASK) == 0U;
+
+    ina_faults->active = ((ina_faults->diag_alrt & INA238_DIAG_ALRT_FAULT_SUMMARY_MASK) != 0U) ||
+                         ina_faults->memory_checksum_error;
 
     return 0;
 }
@@ -358,6 +456,9 @@ int clear_faults(void)
 {
     int ret;
     uint8_t data = 0xFFU;
+#if defined(CONFIG_APP_CURRENT_MONITORING)
+    ina_fault_data_t ina_faults;
+#endif
 
     ret = bq796xx_write_reg(SINGLE_WRITE, BRIDGE_ADDR, BQ79600_REG_FAULT_RST, &data, 1U);
     if (ret < 0)
@@ -380,14 +481,30 @@ int clear_faults(void)
         return ret;
     }
 
+#if defined(CONFIG_APP_CURRENT_MONITORING)
+    ret = read_ina_faults(&ina_faults);
+    if (ret < 0)
+    {
+        return ret;
+    }
+#endif
+
     return 0;
 }
 
 static void fault_gpio_callback(const struct device *port, struct gpio_callback *cb, uint32_t pins)
 {
-    ARG_UNUSED(port);
     ARG_UNUSED(cb);
-    ARG_UNUSED(pins);
 
-    fault_pending_flag = true;
+    if ((port == fault_gpio.port) && ((pins & BIT(fault_gpio.pin)) != 0U))
+    {
+        fault_pending_flag = true;
+    }
+
+#if defined(CONFIG_APP_CURRENT_MONITORING)
+    if ((port == ina_alert_gpio.port) && ((pins & BIT(ina_alert_gpio.pin)) != 0U))
+    {
+        fault_pending_flag = true;
+    }
+#endif
 }

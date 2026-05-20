@@ -3,6 +3,15 @@
 #include <zephyr/sys/printk.h>
 #include <zephyr/sys/util.h>
 
+#if defined(CONFIG_APP_FAULT_MONITORING) && \
+    (defined(CONFIG_APP_VOLTAGE_MONITORING) || defined(CONFIG_APP_TEMPERATURE_MONITORING))
+#define APP_DEBUG_BQ796XX_FAULTS 1
+#endif
+
+#if defined(CONFIG_APP_FAULT_MONITORING) && defined(CONFIG_APP_CURRENT_MONITORING)
+#define APP_DEBUG_INA238_FAULTS 1
+#endif
+
 static void print_float_6(float value)
 {
     bool negative = value < 0.0f;
@@ -141,6 +150,7 @@ void debug_print_faults(const fault_data_t *faults)
         return;
     }
 
+#if defined(APP_DEBUG_BQ796XX_FAULTS)
     if (faults->bridge.fault_summary != 0U)
     {
         printk("Bridge fault summary: 0x%02X\n", faults->bridge.fault_summary);
@@ -308,8 +318,9 @@ void debug_print_faults(const fault_data_t *faults)
             printk("\tPWR3: 0x%02X\n", faults->stack[i].fault_pwr3);
         }
     }
+#endif
 
-#if defined(CONFIG_APP_CURRENT_MONITORING)
+#if defined(APP_DEBUG_INA238_FAULTS)
     if (faults->ina.active)
     {
         printk("INA238 fault summary: 0x%04X\n", faults->ina.diag_alrt);

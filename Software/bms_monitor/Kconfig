@@ -23,6 +23,7 @@ config APP_CURRENT_MONITORING
 config APP_FAULT_MONITORING
     bool "Enable fault monitoring"
     default y
+    depends on APP_VOLTAGE_MONITORING || APP_TEMPERATURE_MONITORING || APP_CURRENT_MONITORING
     help
       Enable fault monitoring.
 

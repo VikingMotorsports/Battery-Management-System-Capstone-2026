@@ -19,6 +19,19 @@ LOG_MODULE_REGISTER(faults, LOG_LEVEL_INF);
 
 #define FAULT_GPIO_NODE DT_PATH(zephyr_user)
 
+#if defined(CONFIG_APP_FAULT_MONITORING) && \
+    (defined(CONFIG_APP_VOLTAGE_MONITORING) || defined(CONFIG_APP_TEMPERATURE_MONITORING))
+#define APP_BQ796XX_FAULT_MONITORING 1
+#endif
+
+#if defined(CONFIG_APP_FAULT_MONITORING) && defined(CONFIG_APP_CURRENT_MONITORING)
+#define APP_INA238_FAULT_MONITORING 1
+#endif
+
+#if defined(APP_BQ796XX_FAULT_MONITORING) || defined(APP_INA238_FAULT_MONITORING)
+#define APP_FAULT_MONITORING 1
+#endif
+
 #define BRIDGE_ADDR 0x00U
 #define INA238_I2C_ADDR 0x40U
 #define ONE_BYTE_NUM_BYTES 1U
@@ -54,13 +67,17 @@ LOG_MODULE_REGISTER(faults, LOG_LEVEL_INF);
 #define INA238_DIAG_ALRT_MEMSTAT_MASK 0x0001U
 #define INA238_DIAG_ALRT_FAULT_SUMMARY_MASK 0x02FCU
 
+#if defined(APP_BQ796XX_FAULT_MONITORING)
 static const struct gpio_dt_spec fault_gpio = GPIO_DT_SPEC_GET(FAULT_GPIO_NODE, fault_gpios);
-#if defined(CONFIG_APP_CURRENT_MONITORING)
+#endif
+#if defined(APP_INA238_FAULT_MONITORING)
 static const struct gpio_dt_spec ina_alert_gpio = GPIO_DT_SPEC_GET(FAULT_GPIO_NODE, ina_alert_gpios);
 #endif
 
+#if defined(APP_BQ796XX_FAULT_MONITORING)
 static struct gpio_callback fault_gpio_callback_data;
-#if defined(CONFIG_APP_CURRENT_MONITORING)
+#endif
+#if defined(APP_INA238_FAULT_MONITORING)
 static struct gpio_callback ina_alert_gpio_callback_data;
 #endif
 static volatile bool fault_pending_flag = false;
@@ -72,7 +89,10 @@ static int read_ina_faults(ina_fault_data_t *ina_faults);
 
 int faults_init(void)
 {
+#if defined(APP_FAULT_MONITORING)
     int ret;
+#endif
+#if defined(APP_BQ796XX_FAULT_MONITORING)
     uint8_t data;
 
     if (!gpio_is_ready_dt(&fault_gpio))
@@ -97,8 +117,9 @@ int faults_init(void)
 
     gpio_init_callback(&fault_gpio_callback_data, fault_gpio_callback, BIT(fault_gpio.pin));
     gpio_add_callback(fault_gpio.port, &fault_gpio_callback_data);
+#endif
 
-#if defined(CONFIG_APP_CURRENT_MONITORING)
+#if defined(APP_INA238_FAULT_MONITORING)
     uint8_t tx_buf[TWO_BYTE_NUM_BYTES];
 
     if (!gpio_is_ready_dt(&ina_alert_gpio))
@@ -135,6 +156,7 @@ int faults_init(void)
     }
 #endif
 
+#if defined(APP_BQ796XX_FAULT_MONITORING)
     data = BQ79600_NFAULT_EN_VALUE | BQ796XX_FCOMM_EN_VALUE;
     ret = bq796xx_write_reg(SINGLE_WRITE, BRIDGE_ADDR, BQ79600_REG_DEV_CONF1, &data, 1U);
     if (ret < 0)
@@ -150,8 +172,7 @@ int faults_init(void)
         LOG_ERR("BQ79616 DEV_CONF write failed: reg=0x%04X err=%d", BQ79616_REG_DEV_CONF, ret);
         return ret;
     }
-
-    LOG_INF("fault interrupt and signaling initialized");
+#endif
     return 0;
 }
 
@@ -189,19 +210,18 @@ int read_faults(fault_data_t *faults)
         return ret;
     }
 
-#if defined(CONFIG_APP_CURRENT_MONITORING)
     ret = read_ina_faults(&faults->ina);
     if (ret < 0)
     {
         return ret;
     }
-#endif
 
     return 0;
 }
 
 static int read_ina_faults(ina_fault_data_t *ina_faults)
 {
+#if defined(APP_INA238_FAULT_MONITORING)
     uint8_t rx_buf[TWO_BYTE_NUM_BYTES];
     int ret;
 
@@ -227,10 +247,16 @@ static int read_ina_faults(ina_fault_data_t *ina_faults)
                          ina_faults->memory_checksum_error;
 
     return 0;
+#else
+    ARG_UNUSED(ina_faults);
+
+    return 0;
+#endif
 }
 
 static int read_bridge_faults(bridge_fault_data_t *bridge_faults)
 {
+#if defined(APP_BQ796XX_FAULT_MONITORING)
     uint8_t rx_buf[10];
     int ret;
 
@@ -289,10 +315,16 @@ static int read_bridge_faults(bridge_fault_data_t *bridge_faults)
     }
 
     return 0;
+#else
+    ARG_UNUSED(bridge_faults);
+
+    return 0;
+#endif
 }
 
 static int read_stack_faults(stack_fault_data_t *stack_faults)
 {
+#if defined(APP_BQ796XX_FAULT_MONITORING)
     uint8_t rx_buf[12];
     int ret;
 
@@ -450,16 +482,26 @@ static int read_stack_faults(stack_fault_data_t *stack_faults)
     }
 
     return 0;
+#else
+    ARG_UNUSED(stack_faults);
+
+    return 0;
+#endif
 }
 
 int clear_faults(void)
 {
-    int ret;
+#if defined(APP_FAULT_MONITORING)
+    int ret = 0;
+#endif
+#if defined(APP_BQ796XX_FAULT_MONITORING)
     uint8_t data = 0xFFU;
-#if defined(CONFIG_APP_CURRENT_MONITORING)
+#endif
+#if defined(APP_INA238_FAULT_MONITORING)
     ina_fault_data_t ina_faults;
 #endif
 
+#if defined(APP_BQ796XX_FAULT_MONITORING)
     ret = bq796xx_write_reg(SINGLE_WRITE, BRIDGE_ADDR, BQ79600_REG_FAULT_RST, &data, 1U);
     if (ret < 0)
     {
@@ -480,8 +522,9 @@ int clear_faults(void)
         LOG_ERR("BQ79616 FAULT_RST2 write failed: err=%d", ret);
         return ret;
     }
+#endif
 
-#if defined(CONFIG_APP_CURRENT_MONITORING)
+#if defined(APP_INA238_FAULT_MONITORING)
     ret = read_ina_faults(&ina_faults);
     if (ret < 0)
     {
@@ -496,15 +539,22 @@ static void fault_gpio_callback(const struct device *port, struct gpio_callback 
 {
     ARG_UNUSED(cb);
 
+#if defined(APP_FAULT_MONITORING)
+#if defined(APP_BQ796XX_FAULT_MONITORING)
     if ((port == fault_gpio.port) && ((pins & BIT(fault_gpio.pin)) != 0U))
     {
         fault_pending_flag = true;
     }
+#endif
 
-#if defined(CONFIG_APP_CURRENT_MONITORING)
+#if defined(APP_INA238_FAULT_MONITORING)
     if ((port == ina_alert_gpio.port) && ((pins & BIT(ina_alert_gpio.pin)) != 0U))
     {
         fault_pending_flag = true;
     }
+#endif
+#else
+    ARG_UNUSED(port);
+    ARG_UNUSED(pins);
 #endif
 }

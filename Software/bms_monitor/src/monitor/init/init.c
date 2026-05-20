@@ -27,6 +27,11 @@ LOG_MODULE_REGISTER(init, LOG_LEVEL_INF);
 #define OTP_DUMMY_VALUE 0x00U
 #define ONE_BYTE_READ_FRAME_LEN 7U
 
+#if defined(CONFIG_APP_VOLTAGE_MONITORING) || defined(CONFIG_APP_TEMPERATURE_MONITORING) || \
+    defined(CONFIG_APP_FAULT_MONITORING) || defined(CONFIG_APP_CELL_BALANCING)
+#define APP_BQ796XX_MONITORING 1
+#endif
+
 PINCTRL_DT_DEFINE(UART_NODE);
 static const struct pinctrl_dev_config *uart_pinctrl = PINCTRL_DT_DEV_CONFIG_GET(UART_NODE);
 
@@ -45,6 +50,16 @@ int monitor_init(void)
 
     LOG_INF("starting monitor init");
 
+#if defined(CONFIG_APP_CURRENT_MONITORING)
+    ret = i2c_init();
+    if (ret < 0)
+    {
+        LOG_ERR("i2c_init failed: %d", ret);
+        return ret;
+    }
+#endif
+
+#if defined(APP_BQ796XX_MONITORING)
     if (!gpio_is_ready_dt(&wake_gpio))
     {
         LOG_ERR("wake GPIO device not ready");
@@ -75,13 +90,6 @@ int monitor_init(void)
         return ret;
     }
 
-    ret = i2c_init();
-    if (ret < 0)
-    {
-        LOG_ERR("i2c_init failed: %d", ret);
-        return ret;
-    }
-
     ret = wake_stack();
     if (ret < 0)
     {
@@ -97,6 +105,7 @@ int monitor_init(void)
         LOG_ERR("auto-address failed: %d", ret);
         return ret;
     }
+#endif
 
     return 0;
 }

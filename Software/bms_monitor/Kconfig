@@ -1,10 +1,39 @@
 mainmenu "BMS Monitor"
 
+menu "Application monitor options"
+
+config APP_VOLTAGE_MONITORING
+    bool "Enable voltage monitoring"
+    default y
+    help
+      Enable cell voltage monitoring.
+
+config APP_TEMPERATURE_MONITORING
+    bool "Enable temperature monitoring"
+    default y
+    help
+      Enable temperature monitoring.
+
+config APP_CURRENT_MONITORING
+    bool "Enable current monitoring"
+    default y
+    help
+      Enable current monitoring.
+
+config APP_FAULT_MONITORING
+    bool "Enable fault monitoring"
+    default y
+    help
+      Enable fault monitoring.
+
 config APP_CELL_BALANCING
     bool "Enable cell balancing"
     default y
+    depends on APP_VOLTAGE_MONITORING
     help
-      Enable the cell balancing functionality.
+      Enable cell balancing.
+
+endmenu
 
 menu "Application debug options"
 
@@ -17,28 +46,28 @@ config APP_DEBUG_PRINTS
 config APP_DEBUG_VOLTAGES
     bool "Enable voltage debug printing"
     default y
-    depends on APP_DEBUG_PRINTS
+    depends on APP_DEBUG_PRINTS && APP_VOLTAGE_MONITORING
     help
       Print cell voltage debug output.
 
 config APP_DEBUG_TEMPERATURES
     bool "Enable temperature debug printing"
     default y
-    depends on APP_DEBUG_PRINTS
+    depends on APP_DEBUG_PRINTS && APP_TEMPERATURE_MONITORING
     help
       Print temperature debug output.
 
 config APP_DEBUG_CURRENT
     bool "Enable current debug printing"
     default y
-    depends on APP_DEBUG_PRINTS
+    depends on APP_DEBUG_PRINTS && APP_CURRENT_MONITORING
     help
       Print current debug output.
 
 config APP_DEBUG_FAULTS
     bool "Enable fault debug printing"
     default y
-    depends on APP_DEBUG_PRINTS
+    depends on APP_DEBUG_PRINTS && APP_FAULT_MONITORING
     help
       Print fault debug output.
 

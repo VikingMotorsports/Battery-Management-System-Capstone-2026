@@ -11,19 +11,33 @@
 
 LOG_MODULE_REGISTER(main, LOG_LEVEL_INF);
 
+#if defined(CONFIG_APP_VOLTAGE_MONITORING) || defined(CONFIG_APP_TEMPERATURE_MONITORING) || \
+    defined(CONFIG_APP_FAULT_MONITORING) || defined(CONFIG_APP_CELL_BALANCING)
+#define APP_BQ796XX_MONITORING 1
+#endif
+
 int main(void)
 {
     int ret;
+#if defined(CONFIG_APP_VOLTAGE_MONITORING)
     cell_voltage_data_t voltages;
+#endif
+#if defined(CONFIG_APP_TEMPERATURE_MONITORING)
     temperature_data_t temperatures;
+#endif
+#if defined(CONFIG_APP_CURRENT_MONITORING)
     current_data_t current;
+#endif
+#if defined(CONFIG_APP_FAULT_MONITORING)
     fault_data_t faults;
+#endif
 #if defined(CONFIG_APP_CELL_BALANCING)
     balancing_data_t balancing = {0};
     balancing_state_t previous_balancing_state;
     uint16_t previous_selected_cells;
 #endif
 
+#if defined(CONFIG_APP_CURRENT_MONITORING) || defined(APP_BQ796XX_MONITORING)
     LOG_INF("battery monitor startup");
 
     ret = monitor_init();
@@ -34,7 +48,11 @@ int main(void)
     }
 
     LOG_INF("monitor init complete");
+#else
+    LOG_INF("all monitor backends disabled");
+#endif
 
+#if defined(CONFIG_APP_VOLTAGE_MONITORING)
     ret = voltage_init();
     if (ret < 0)
     {
@@ -43,7 +61,11 @@ int main(void)
     }
 
     LOG_INF("voltage init complete");
+#else
+    LOG_INF("voltage monitoring disabled");
+#endif
 
+#if defined(CONFIG_APP_TEMPERATURE_MONITORING)
     ret = temperature_init();
     if (ret < 0)
     {
@@ -52,7 +74,11 @@ int main(void)
     }
 
     LOG_INF("temperature init complete");
+#else
+    LOG_INF("temperature monitoring disabled");
+#endif
 
+#if defined(CONFIG_APP_CURRENT_MONITORING)
     ret = current_init();
     if (ret < 0)
     {
@@ -61,7 +87,11 @@ int main(void)
     }
 
     LOG_INF("current init complete");
+#else
+    LOG_INF("current monitoring disabled");
+#endif
 
+#if defined(CONFIG_APP_FAULT_MONITORING)
     ret = faults_init();
     if (ret < 0)
     {
@@ -70,6 +100,9 @@ int main(void)
     }
 
     LOG_INF("faults init complete");
+#else
+    LOG_INF("fault monitoring disabled");
+#endif
 
 #if defined(CONFIG_APP_CELL_BALANCING)
     ret = balancing_init();
@@ -86,6 +119,7 @@ int main(void)
 
     k_msleep(10);
 
+#if defined(APP_BQ796XX_MONITORING)
     ret = commit_customer_crc();
     if (ret < 0)
     {
@@ -94,7 +128,9 @@ int main(void)
     }
 
     LOG_INF("customer CRC commit complete");
+#endif
 
+#if defined(CONFIG_APP_FAULT_MONITORING)
     ret = read_faults(&faults);
     if (ret < 0)
     {
@@ -118,9 +154,11 @@ int main(void)
     }
 
     k_msleep(2000);
+#endif
 
     while (1)
     {
+#if defined(CONFIG_APP_FAULT_MONITORING)
         if (faults_pending())
         {
             faults_clear_pending();
@@ -135,7 +173,9 @@ int main(void)
                 debug_print_faults(&faults);
             }
         }
+#endif
 
+#if defined(CONFIG_APP_VOLTAGE_MONITORING)
         ret = read_cell_voltages(&voltages);
         if (ret < 0)
         {
@@ -154,7 +194,9 @@ int main(void)
         }
 
         debug_print_voltages(&voltages);
+#endif
 
+#if defined(CONFIG_APP_CURRENT_MONITORING)
         ret = read_current(&current);
         if (ret < 0)
         {
@@ -164,6 +206,7 @@ int main(void)
         {
             debug_print_current(&current);
         }
+#endif
 
 #if defined(CONFIG_APP_CELL_BALANCING)
         previous_balancing_state = balancing.state;
@@ -200,6 +243,7 @@ int main(void)
         }
 #endif
 
+#if defined(CONFIG_APP_TEMPERATURE_MONITORING)
         ret = read_temperatures(&temperatures);
         if (ret < 0)
         {
@@ -209,6 +253,7 @@ int main(void)
         {
             debug_print_temperatures(&temperatures);
         }
+#endif
 
         k_msleep(1000);
     }

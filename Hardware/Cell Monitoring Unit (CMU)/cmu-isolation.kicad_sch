@@ -1301,6 +1301,18 @@
 		)
 		(uuid "4b1b218b-15d5-437a-8a82-3da7d4b2c77c")
 	)
+	(text "Middle module: use both COMH and COML.\nEnd module: use one side and terminate the unused side.\nRing: use both sides and terminate chain ends."
+		(exclude_from_sim no)
+		(at 191.008 142.748 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+			)
+			(justify left)
+		)
+		(uuid "db8f438b-b098-4e73-ab0e-e8c78761ba04")
+	)
 	(junction
 		(at 241.3 101.6)
 		(diameter 0)

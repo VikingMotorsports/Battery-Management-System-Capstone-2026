@@ -18,8 +18,8 @@ LOG_MODULE_REGISTER(voltage, LOG_LEVEL_INF);
 #define VCELL_RESPONSE_FRAME_LEN (VCELL_BLOCK_NUM_BYTES + 6U)
 #define VCELL_UNUSED_RAW ((int16_t)0x8000)
 
-#define OV_THRESH 0x1EU // 3000mV = 3V
-#define UV_THRESH 0x26U // 3100mV = 3.1V
+#define OV_THRESH 0x18U // 3650mV = 3.65V
+#define UV_THRESH 0x10U // 2000mV = 2.00V
 #define OVUV_CTRL_ROUND_ROBIN_GO 0x05U
 
 static void parse_cell_voltages(const uint8_t *rx_buf, cell_voltage_data_t *voltages);

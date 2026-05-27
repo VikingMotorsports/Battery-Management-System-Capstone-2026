@@ -5,9 +5,12 @@
 #include "current.h"
 #include "faults.h"
 #include "balancing.h"
+#include "metrics.h"
+#include "telemetry.h"
 
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
+#include <stdbool.h>
 
 LOG_MODULE_REGISTER(main, LOG_LEVEL_INF);
 
@@ -18,6 +21,7 @@ LOG_MODULE_REGISTER(main, LOG_LEVEL_INF);
 int main(void)
 {
     int ret;
+
 #if defined(CONFIG_APP_VOLTAGE_MONITORING)
     cell_voltage_data_t voltages;
 #endif
@@ -28,8 +32,9 @@ int main(void)
     current_data_t current;
 #endif
 #if defined(CONFIG_APP_FAULT_MONITORING)
-    fault_data_t faults;
+    fault_data_t faults = {0};
 #endif
+    bms_metrics_t metrics;
 #if defined(CONFIG_APP_CELL_BALANCING)
     balancing_data_t balancing = {0};
     balancing_state_t previous_balancing_state;
@@ -150,6 +155,7 @@ int main(void)
     else
     {
         LOG_INF("faults clear complete");
+        faults = (fault_data_t){0};
     }
 
     k_msleep(2000);
@@ -157,20 +163,18 @@ int main(void)
 
     while (1)
     {
+        bool have_voltages = false;
+        bool have_temperatures = false;
+        bool have_current = false;
+#if defined(CONFIG_APP_FAULT_MONITORING)
+        bool had_fault_interrupt = false;
+#endif
+
 #if defined(CONFIG_APP_FAULT_MONITORING)
         if (faults_pending())
         {
             faults_clear_pending();
-
-            ret = read_faults(&faults);
-            if (ret < 0)
-            {
-                LOG_ERR("read_faults failed: %d", ret);
-            }
-            else
-            {
-                debug_print_faults(&faults);
-            }
+            had_fault_interrupt = true;
         }
 #endif
 
@@ -193,6 +197,7 @@ int main(void)
         }
 
         debug_print_voltages(&voltages);
+        have_voltages = true;
 #endif
 
 #if defined(CONFIG_APP_CURRENT_MONITORING)
@@ -204,6 +209,7 @@ int main(void)
         else
         {
             debug_print_current(&current);
+            have_current = true;
         }
 #endif
 
@@ -251,8 +257,52 @@ int main(void)
         else
         {
             debug_print_temperatures(&temperatures);
+            have_temperatures = true;
         }
 #endif
+
+#if defined(CONFIG_APP_FAULT_MONITORING)
+        ret = read_faults(&faults);
+        if (ret < 0)
+        {
+            LOG_ERR("read_faults failed: %d", ret);
+        }
+        else if (had_fault_interrupt)
+        {
+            debug_print_faults(&faults);
+        }
+#endif
+
+        calculate_metrics(
+#if defined(CONFIG_APP_VOLTAGE_MONITORING)
+            have_voltages ? &voltages : NULL,
+#else
+            NULL,
+#endif
+#if defined(CONFIG_APP_TEMPERATURE_MONITORING)
+            have_temperatures ? &temperatures : NULL,
+#else
+            NULL,
+#endif
+#if defined(CONFIG_APP_CURRENT_MONITORING)
+            have_current ? &current : NULL,
+#else
+            NULL,
+#endif
+            &metrics);
+
+        ret = telemetry_transmit(
+            &metrics,
+#if defined(CONFIG_APP_FAULT_MONITORING)
+            &faults
+#else
+            NULL
+#endif
+        );
+        if (ret < 0)
+        {
+            LOG_ERR("telemetry_transmit failed: %d", ret);
+        }
 
         k_msleep(1000);
     }

@@ -50,7 +50,23 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.2
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 0.0,
+          "corner_smoothing": 0,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 0.2,
+          "min_island_area": 10.0,
+          "min_thickness": 0.25,
+          "pad_connection": 1,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.5,
+          "thermal_relief_spoke_width": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -237,7 +253,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "1.0"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -257,7 +273,48 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "pin_to_pin|1358900|1155700|2188e75d-d07d-4854-a2e4-411bb42b17ff|ae4f3901-2c0e-4d28-bc37-1ff4c022f6f5|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562",
+        ""
+      ],
+      [
+        "pin_to_pin|1409700|1333500|7f89d702-bcc5-4dac-8f8e-8b3fcc3f6b16|5af41a79-fa47-4ea1-a3bf-d6d05d113688|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562",
+        ""
+      ],
+      [
+        "pin_to_pin|1460500|1155700|25f7922f-b1f2-4298-af95-8ef2f721dbfb|16fe0f68-6c5c-4438-8ede-bd654436cf98|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562",
+        ""
+      ],
+      [
+        "pin_to_pin|2298700|2095500|987ee648-0e5a-445c-96df-1d79d0809345|a22064ae-7b4d-403c-b257-1246b54ed8f6|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/01117139-6d59-4834-bcb3-303985cabb84|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/01117139-6d59-4834-bcb3-303985cabb84|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/01117139-6d59-4834-bcb3-303985cabb84",
+        ""
+      ],
+      [
+        "pin_to_pin|2844800|1104900|99171145-1994-4ff3-8404-5d1360c2c8ae|d0ac1053-52b0-4ec5-b601-1c5ffae966b6|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562",
+        ""
+      ],
+      [
+        "pin_to_pin|2895600|1282700|a685afa1-ddde-454b-bf8e-57e5b39a8444|92f2c637-9421-4907-88e8-90689fc7d7d7|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562",
+        ""
+      ],
+      [
+        "pin_to_pin|2946400|1104900|780cf9e5-1ba6-426b-8870-e269d1e13317|f72b9a9d-6f19-4313-acca-a2bdd719b41c|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/eb7f1f52-6a07-403e-9b5e-72db4459d562",
+        ""
+      ],
+      [
+        "pin_to_pin|698500|1295400|1ac4de81-79bf-4a94-93af-14974105f994|e2d72e1c-d28c-4b51-ace6-b92e48e50fc2|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/01117139-6d59-4834-bcb3-303985cabb84|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/01117139-6d59-4834-bcb3-303985cabb84|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/01117139-6d59-4834-bcb3-303985cabb84",
+        ""
+      ],
+      [
+        "pin_to_pin|698500|1397000|a6136d17-6d20-46e8-849c-f88701f55880|ccd5cac8-c03b-4343-8d8c-aeba9e0e6c59|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/01117139-6d59-4834-bcb3-303985cabb84|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/01117139-6d59-4834-bcb3-303985cabb84|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/01117139-6d59-4834-bcb3-303985cabb84",
+        ""
+      ],
+      [
+        "pin_to_pin|774700|1346200|bbcbdb5c-f503-401a-aeee-9b4148a3de9a|f7816148-4b0d-4b4b-b840-a8693c27fd98|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/01117139-6d59-4834-bcb3-303985cabb84|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/01117139-6d59-4834-bcb3-303985cabb84|/5927a41a-6d6e-49f5-8ec2-0772454faf5b/01117139-6d59-4834-bcb3-303985cabb84",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -465,7 +522,7 @@
       "pin_not_connected": "error",
       "pin_not_driven": "error",
       "pin_to_pin": "warning",
-      "power_pin_not_driven": "error",
+      "power_pin_not_driven": "ignore",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
@@ -600,12 +657,60 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Name",
+          "name": "Manufacturer_Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Part_Number",
+          "name": "Manufacturer_Part_Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Part Number",
+          "name": "Mouser Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Price/Stock",
+          "name": "Mouser Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Height",
+          "name": "Height",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -658,13 +763,25 @@
         "uuid": "5927a41a-6d6e-49f5-8ec2-0772454faf5b"
       }
     ],
-    "used_designators": "#FLG1,R1-62,J1-13,#PWR1-28,T1-2,D1,C1-58,TP1-27,U1-4",
+    "used_designators": "T1-2,#FLG1,TP1-27,R1-62,D1,C1-58,#PWR1-29,J1-3,J5-15,U1-4,F1-18",
     "variants": []
   },
   "sheets": [
     [
       "5927a41a-6d6e-49f5-8ec2-0772454faf5b",
       "Cell Monitoring Unit (CMU)"
+    ],
+    [
+      "ad89f08f-9040-4301-afae-af40ebb84333",
+      "Cell filtering and balancing"
+    ],
+    [
+      "01117139-6d59-4834-bcb3-303985cabb84",
+      "BQ79616"
+    ],
+    [
+      "eb7f1f52-6a07-403e-9b5e-72db4459d562",
+      "Transformer Isolation"
     ]
   ],
   "text_variables": {},

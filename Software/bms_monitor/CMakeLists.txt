@@ -8,8 +8,12 @@ target_sources(app PRIVATE
     src/debug/debug.c
     src/uart/uart.c
     src/i2c/i2c.c
+    src/can/can.c
     src/protocols/bq796xx_protocol.c
     src/protocols/ina238_protocol.c
+    src/protocols/bms_protocol.c
+    src/metrics/metrics.c
+    src/telemetry/telemetry.c
     src/monitor/init/init.c
     src/monitor/voltage/voltage.c
     src/monitor/temperature/temperature.c
@@ -23,7 +27,10 @@ target_include_directories(app PRIVATE
     src/debug
     src/uart
     src/i2c
+    src/can
     src/protocols
+    src/metrics
+    src/telemetry
     src/monitor/init
     src/monitor/register_maps
     src/monitor/voltage

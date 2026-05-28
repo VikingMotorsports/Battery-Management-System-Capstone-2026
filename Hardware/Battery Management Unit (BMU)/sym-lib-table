@@ -13,4 +13,5 @@
 	(lib (name "PESD5V0L2BT") (type "KiCad") (uri "${KIPRJMOD}/../VMS-BMS libraries/Symbols/PESD5V0L2BT.kicad_sym") (options "") (descr ""))
 	(lib (name "STM32C092RCT6") (type "KiCad") (uri "${KIPRJMOD}/../VMS-BMS libraries/Symbols/STM32C092RCT6.kicad_sym") (options "") (descr ""))
 	(lib (name "ZXTN4004KQTC") (type "KiCad") (uri "${KIPRJMOD}/../VMS-BMS libraries/Symbols/ZXTN4004KQTC.kicad_sym") (options "") (descr ""))
+	(lib (name "HM2147NLT") (type "KiCad") (uri "${KIPRJMOD}/../VMS-BMS libraries/Symbols/HM2147NLT.kicad_sym") (options "") (descr ""))
 )

@@ -414,288 +414,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "CEP99-102:CEP99-102"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "T"
-				(at 16.51 7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "CEP99-102"
-				(at 16.51 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "CEP99102"
-				(at 16.51 -94.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Datasheet" "https://products.sumida.com/products/pdf/CEP99_CEP99B_eng_rev2.pdf?t=1532030986"
-				(at 16.51 -194.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Description" "Pulse transformer for Automobiles.High withstand Voltage  2,500Vrms,Operating temperature  - 40deg.  +125deg."
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Height" "10"
-				(at 16.51 -394.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Mouser Part Number" ""
-				(at 16.51 -494.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Mouser Price/Stock" ""
-				(at 16.51 -594.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Manufacturer_Name" "Sumida"
-				(at 16.51 -694.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Manufacturer_Part_Number" "CEP99-102"
-				(at 16.51 -794.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(symbol "CEP99-102_1_1"
-				(rectangle
-					(start 5.08 2.54)
-					(end 15.24 -10.16)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at 0 0 0)
-					(length 5.08)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 0)
-					(length 5.08)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -7.62 0)
-					(length 5.08)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 -7.62 180)
-					(length 5.08)
-					(name "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 -5.08 180)
-					(length 5.08)
-					(name "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 -2.54 180)
-					(length 5.08)
-					(name "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 0 180)
-					(length 5.08)
-					(name "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -1340,6 +1058,276 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "HM2147NLT:HM2147NLT"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "T"
+				(at 26.67 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "HM2147NLT"
+				(at 26.67 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "HM2147NLT"
+				(at 26.67 -94.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Datasheet" "https://www.mouser.in/datasheet/2/447/Pulse_7_18_2022_BM101_6_22_A__003_-3000424.pdf"
+				(at 26.67 -194.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Description" "Audio Transformers / Signal Transformers 500uH 1500V AEC-Q200"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Height" "3.45"
+				(at 26.67 -394.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Name" "Yageo Group"
+				(at 26.67 -494.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Part_Number" "HM2147NLT"
+				(at 26.67 -594.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Part Number" "673-HM2147NLT"
+				(at 26.67 -694.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Pulse-Electronics/HM2147NLT?qs=vvQtp7zwQdPcBq8r5qisBw%3D%3D"
+				(at 26.67 -794.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Arrow Part Number" "HM2147NLT"
+				(at 26.67 -894.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Arrow Price/Stock" "https://www.arrow.com/en/products/hm2147nlt/pulse-electronics-corporation?utm_currency=USD&region=nac"
+				(at 26.67 -994.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(symbol "HM2147NLT_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 25.4 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "PRI_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "PRI_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 0)
+					(length 5.08)
+					(name "PRI_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 30.48 -5.08 180)
+					(length 5.08)
+					(name "SEC_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 30.48 -2.54 180)
+					(length 5.08)
+					(name "SEC_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 30.48 0 180)
+					(length 5.08)
+					(name "SEC_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2304,7 +2292,7 @@
 		)
 		(uuid "10096e53-d357-44f8-8e2e-63ac55fa77b5")
 	)
-	(text "Tranformer Isolation For BQ79600\n"
+	(text "Transformer Isolation For BQ79600\n"
 		(exclude_from_sim no)
 		(at 172.466 117.602 0)
 		(effects
@@ -2457,12 +2445,6 @@
 		(uuid "51926ced-f4cc-46df-84e6-0f55999a5bb3")
 	)
 	(junction
-		(at 121.92 132.08)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "52d39b5f-cf56-411e-b861-fcc9eef4d610")
-	)
-	(junction
 		(at 227.33 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2546,11 +2528,13 @@
 		(color 0 0 0 0)
 		(uuid "ed0a178f-32d6-446e-a7af-f728d6e9668c")
 	)
-	(junction
-		(at 121.92 185.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fd2e5b9b-b1ca-43e8-b1a5-a42307a48beb")
+	(no_connect
+		(at 87.63 184.15)
+		(uuid "63c518db-9a23-46a7-a2e6-5845d281eba5")
+	)
+	(no_connect
+		(at 87.63 130.81)
+		(uuid "65471c7e-3f22-4046-9c91-284fad54120d")
 	)
 	(wire
 		(pts
@@ -2561,16 +2545,6 @@
 			(type default)
 		)
 		(uuid "02aaf70a-1853-40c4-8e79-b97ca170f44c")
-	)
-	(wire
-		(pts
-			(xy 118.11 130.81) (xy 121.92 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0403aff9-f88a-47b5-b0f6-9c3a6d46ec69")
 	)
 	(wire
 		(pts
@@ -2644,13 +2618,13 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 185.42) (xy 121.92 185.42)
+			(xy 123.19 132.08) (xy 135.89 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1af3b798-f1a9-4db4-8c50-adb3798cf7ad")
+		(uuid "0f86dad6-2d6c-4911-b5fd-dd5d44402cd7")
 	)
 	(wire
 		(pts
@@ -2674,6 +2648,16 @@
 	)
 	(wire
 		(pts
+			(xy 81.28 181.61) (xy 87.63 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "222a2920-9b9b-4086-a7c3-f368ba4ca5f0")
+	)
+	(wire
+		(pts
 			(xy 218.44 67.31) (xy 218.44 68.58)
 		)
 		(stroke
@@ -2694,7 +2678,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 189.23) (xy 88.9 189.23)
+			(xy 60.96 189.23) (xy 73.66 189.23)
 		)
 		(stroke
 			(width 0)
@@ -2741,6 +2725,16 @@
 			(type default)
 		)
 		(uuid "3b0ec089-7ec3-4575-b876-b5c96b1366b5")
+	)
+	(wire
+		(pts
+			(xy 81.28 189.23) (xy 87.63 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c044f41-a0ad-447e-8420-1834ec158a4a")
 	)
 	(wire
 		(pts
@@ -2854,16 +2848,6 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 181.61) (xy 97.79 181.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5309c969-3571-41c0-9711-e712c8688ed4")
-	)
-	(wire
-		(pts
 			(xy 345.44 80.01) (xy 303.53 80.01)
 		)
 		(stroke
@@ -2934,6 +2918,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 185.42) (xy 133.35 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "621b02f0-8ddc-4170-af20-1b478c23d0e2")
+	)
+	(wire
+		(pts
 			(xy 331.47 76.2) (xy 331.47 96.52)
 		)
 		(stroke
@@ -2984,16 +2978,6 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 189.23) (xy 97.79 189.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6569a94b-b968-4f9b-ba4c-84712dc0dac1")
-	)
-	(wire
-		(pts
 			(xy 209.55 138.43) (xy 217.17 138.43)
 		)
 		(stroke
@@ -3014,6 +2998,16 @@
 	)
 	(wire
 		(pts
+			(xy 123.19 130.81) (xy 123.19 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67e5a5b4-e67b-48fa-802e-ac0b41088319")
+	)
+	(wire
+		(pts
 			(xy 161.29 181.61) (xy 161.29 203.2)
 		)
 		(stroke
@@ -3024,7 +3018,7 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 135.89) (xy 96.52 135.89)
+			(xy 81.28 135.89) (xy 87.63 135.89)
 		)
 		(stroke
 			(width 0)
@@ -3034,13 +3028,13 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 184.15) (xy 121.92 185.42)
+			(xy 87.63 133.35) (xy 87.63 135.89)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6bd6a894-b87a-48cf-949e-f5e0a01c6a54")
+		(uuid "6b61a8fe-41fd-4054-b4b9-85cb57462b39")
 	)
 	(wire
 		(pts
@@ -3054,7 +3048,7 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 128.27) (xy 96.52 128.27)
+			(xy 81.28 128.27) (xy 87.63 128.27)
 		)
 		(stroke
 			(width 0)
@@ -3074,6 +3068,16 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 186.69) (xy 87.63 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77f44e2f-a97c-4d58-a12c-49916a6d5cb1")
+	)
+	(wire
+		(pts
 			(xy 209.55 191.77) (xy 209.55 193.04)
 		)
 		(stroke
@@ -3084,13 +3088,13 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 189.23) (xy 118.11 201.93)
+			(xy 118.11 186.69) (xy 118.11 201.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "82ae015e-b054-4cba-bd9a-cf80b4b31d9f")
+		(uuid "7b3d4202-766b-43a0-8594-ba77d6a55d97")
 	)
 	(wire
 		(pts
@@ -3104,23 +3108,13 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 132.08) (xy 121.92 132.08)
+			(xy 118.11 130.81) (xy 123.19 130.81)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8b5deb87-f2ba-4ec7-92d3-051bcb36eec9")
-	)
-	(wire
-		(pts
-			(xy 118.11 184.15) (xy 121.92 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8d514f50-f709-4070-a6b7-069a1363183e")
+		(uuid "8c697be4-524d-459f-b77e-21585d69e3dd")
 	)
 	(wire
 		(pts
@@ -3164,7 +3158,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 181.61) (xy 88.9 181.61)
+			(xy 60.96 181.61) (xy 73.66 181.61)
 		)
 		(stroke
 			(width 0)
@@ -3191,16 +3185,6 @@
 			(type default)
 		)
 		(uuid "9f022419-0e21-43e6-af6f-4e2a38b3369c")
-	)
-	(wire
-		(pts
-			(xy 97.79 130.81) (xy 97.79 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a1196dd6-5bb6-4c0e-ac04-85e750285b2a")
 	)
 	(wire
 		(pts
@@ -3294,16 +3278,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 185.42) (xy 121.92 186.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ac474303-3370-4de6-a1da-5904e9db018a")
-	)
-	(wire
-		(pts
 			(xy 306.07 87.63) (xy 303.53 87.63)
 		)
 		(stroke
@@ -3384,16 +3358,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 132.08) (xy 121.92 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8342bfa-9387-44ee-a0dd-dc73bd98d09d")
-	)
-	(wire
-		(pts
 			(xy 218.44 73.66) (xy 218.44 90.17)
 		)
 		(stroke
@@ -3444,6 +3408,16 @@
 	)
 	(wire
 		(pts
+			(xy 118.11 184.15) (xy 127 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c56f0339-fba9-420d-b688-4d60c19841ea")
+	)
+	(wire
+		(pts
 			(xy 171.45 148.59) (xy 134.62 148.59)
 		)
 		(stroke
@@ -3474,6 +3448,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 184.15) (xy 127 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce790d55-27f1-42ed-b168-bf4aa9a52ebc")
+	)
+	(wire
+		(pts
 			(xy 193.04 166.37) (xy 193.04 167.64)
 		)
 		(stroke
@@ -3491,16 +3475,6 @@
 			(type default)
 		)
 		(uuid "cfbc3aa5-9795-4972-89f0-04a421103366")
-	)
-	(wire
-		(pts
-			(xy 97.79 184.15) (xy 97.79 186.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0e6c7fa-076f-4940-b528-bb5f78e4c1e1")
 	)
 	(wire
 		(pts
@@ -3584,7 +3558,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 135.89) (xy 118.11 148.59)
+			(xy 118.11 133.35) (xy 118.11 148.59)
 		)
 		(stroke
 			(width 0)
@@ -3714,7 +3688,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 128.27) (xy 76.2 128.27)
+			(xy 73.66 128.27) (xy 60.96 128.27)
 		)
 		(stroke
 			(width 0)
@@ -3794,26 +3768,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 130.81) (xy 121.92 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f15c6a90-e79a-4827-a978-50369a8379fc")
-	)
-	(wire
-		(pts
-			(xy 121.92 133.35) (xy 118.11 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f1ce7028-2d91-4783-9275-b2ebb8463fce")
-	)
-	(wire
-		(pts
 			(xy 306.07 100.33) (xy 306.07 90.17)
 		)
 		(stroke
@@ -3841,16 +3795,6 @@
 			(type default)
 		)
 		(uuid "f5464691-9131-495d-8b78-1dde576763bf")
-	)
-	(wire
-		(pts
-			(xy 121.92 186.69) (xy 118.11 186.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f6a80b10-e938-4a2f-959e-257f85c228f6")
 	)
 	(wire
 		(pts
@@ -3884,7 +3828,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 135.89) (xy 76.2 135.89)
+			(xy 73.66 135.89) (xy 60.96 135.89)
 		)
 		(stroke
 			(width 0)
@@ -4045,7 +3989,7 @@
 	)
 	(hierarchical_label "COMLP_2"
 		(shape bidirectional)
-		(at 76.2 181.61 180)
+		(at 60.96 181.61 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4056,7 +4000,7 @@
 	)
 	(hierarchical_label "COMHN_1"
 		(shape bidirectional)
-		(at 76.2 135.89 180)
+		(at 60.96 135.89 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4067,7 +4011,7 @@
 	)
 	(hierarchical_label "COMLN_2"
 		(shape bidirectional)
-		(at 76.2 189.23 180)
+		(at 60.96 189.23 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4078,7 +4022,7 @@
 	)
 	(hierarchical_label "COMHP_1"
 		(shape bidirectional)
-		(at 76.2 128.27 180)
+		(at 60.96 128.27 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4168,6 +4112,61 @@
 		)
 		(property "Description" ""
 			(at 171.45 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 171.45 203.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "1727-3834-1-ND"
+			(at 171.45 203.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "Nexperia USA Inc."
+			(at 171.45 203.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "PESD5V0L2BT,215"
+			(at 171.45 203.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/nexperia-usa-inc/PESD5V0L2BT-215/1157454"
+			(at 171.45 203.2 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4338,6 +4337,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 209.55 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-499CRCT-ND"
+			(at 209.55 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 209.55 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805FR-07499RL"
+			(at 209.55 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-07499RL/727986"
+			(at 209.55 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c0ce8fcb-5376-4337-b5dd-4a95d9999f42")
 		)
@@ -4410,6 +4464,61 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 186.69 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 186.69 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-4295-1-ND"
+			(at 186.69 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 186.69 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0805KRNPO9BN101"
+			(at 186.69 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KRNPO9BN101/5884169"
 			(at 186.69 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -4499,6 +4608,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 179.07 201.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-51.0CRCT-ND"
+			(at 179.07 201.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 179.07 201.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805FR-0751RL"
+			(at 179.07 201.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0751RL/728012"
+			(at 179.07 201.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "184ad997-e4ca-4e32-80dd-fabe73eb7510")
 		)
@@ -4569,6 +4733,61 @@
 		)
 		(property "Description" "Resistor, US symbol"
 			(at 130.81 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 130.81 148.59 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-0.0ARCT-ND"
+			(at 130.81 148.59 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 130.81 148.59 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805JR-070RL"
+			(at 130.81 148.59 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805JR-070RL/728216"
+			(at 130.81 148.59 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4673,7 +4892,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 92.71 128.27 90)
+		(at 77.47 128.27 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4683,7 +4902,7 @@
 		(dnp no)
 		(uuid "2b6b2c07-611a-4bbb-8af3-35f3881fcc86")
 		(property "Reference" "R4"
-			(at 92.71 125.984 90)
+			(at 77.47 125.984 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4693,7 +4912,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 92.964 130.556 90)
+			(at 77.724 130.556 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4703,7 +4922,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 92.964 127.254 90)
+			(at 77.724 127.254 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4714,7 +4933,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 128.27 0)
+			(at 77.47 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4725,7 +4944,62 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 92.71 128.27 0)
+			(at 77.47 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 77.47 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-0.0ARCT-ND"
+			(at 77.47 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 77.47 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805JR-070RL"
+			(at 77.47 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805JR-070RL/728216"
+			(at 77.47 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4806,6 +5080,61 @@
 		)
 		(property "Description" "Resistor, small US symbol"
 			(at 261.62 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 261.62 62.23 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-10.0CRCT-ND"
+			(at 261.62 62.23 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 261.62 62.23 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805FR-0710RL"
+			(at 261.62 62.23 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710RL/727534"
+			(at 261.62 62.23 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4910,7 +5239,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 92.71 135.89 90)
+		(at 77.47 135.89 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4920,7 +5249,7 @@
 		(dnp no)
 		(uuid "39890e3b-7f5c-4621-ab22-daef96e987cc")
 		(property "Reference" "R5"
-			(at 92.71 133.604 90)
+			(at 77.47 133.604 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4930,7 +5259,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 92.71 138.176 90)
+			(at 77.47 138.176 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4940,7 +5269,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 92.964 134.874 90)
+			(at 77.724 134.874 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4951,7 +5280,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 135.89 0)
+			(at 77.47 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4962,7 +5291,62 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 92.71 135.89 0)
+			(at 77.47 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 77.47 135.89 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-0.0ARCT-ND"
+			(at 77.47 135.89 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 77.47 135.89 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805JR-070RL"
+			(at 77.47 135.89 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805JR-070RL/728216"
+			(at 77.47 135.89 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5121,6 +5505,61 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 199.39 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 199.39 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-4295-1-ND"
+			(at 199.39 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 199.39 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0805KRNPO9BN101"
+			(at 199.39 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KRNPO9BN101/5884169"
 			(at 199.39 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -5373,6 +5812,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 161.29 149.86 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "1727-3834-1-ND"
+			(at 161.29 149.86 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "Nexperia USA Inc."
+			(at 161.29 149.86 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "PESD5V0L2BT,215"
+			(at 161.29 149.86 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/nexperia-usa-inc/PESD5V0L2BT-215/1157454"
+			(at 161.29 149.86 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "99ddb065-a04b-44f5-8106-4045268edf27")
 		)
@@ -5448,6 +5942,61 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 186.69 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 186.69 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-4295-1-ND"
+			(at 186.69 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 186.69 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0805KRNPO9BN101"
+			(at 186.69 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KRNPO9BN101/5884169"
 			(at 186.69 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -5540,6 +6089,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 199.39 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-4295-1-ND"
+			(at 199.39 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 199.39 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0805KRNPO9BN101"
+			(at 199.39 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KRNPO9BN101/5884169"
+			(at 199.39 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "da898075-a339-4f84-85b6-87cdd0aaf6d3")
 		)
@@ -5619,6 +6223,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 179.07 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-51.0CRCT-ND"
+			(at 179.07 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 179.07 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805FR-0751RL"
+			(at 179.07 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0751RL/728012"
+			(at 179.07 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b24e2350-0a61-4bdc-b659-d52ddec302a2")
 		)
@@ -5629,6 +6288,239 @@
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "HM2147NLT:HM2147NLT")
+		(at 87.63 181.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5e866047-cf7b-4773-968e-df19a0b73cb9")
+		(property "Reference" "T2"
+			(at 102.87 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "HM2147NLT"
+			(at 102.87 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Footprints:HM2147NLT"
+			(at 114.3 276.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.in/datasheet/2/447/Pulse_7_18_2022_BM101_6_22_A__003_-3000424.pdf"
+			(at 114.3 376.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "Audio Transformers / Signal Transformers 500uH 1500V AEC-Q200"
+			(at 87.63 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "3.45"
+			(at 114.3 576.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "Yageo Group"
+			(at 114.3 676.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "HM2147NLT"
+			(at 114.3 776.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "673-HM2147NLT"
+			(at 114.3 876.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Pulse-Electronics/HM2147NLT?qs=vvQtp7zwQdPcBq8r5qisBw%3D%3D"
+			(at 114.3 976.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Part Number" "HM2147NLT"
+			(at 114.3 1076.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/hm2147nlt/pulse-electronics-corporation?utm_currency=USD&region=nac"
+			(at 114.3 1176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 87.63 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "553-HM2147NLTCT-ND"
+			(at 87.63 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "Pulse Electronics"
+			(at 87.63 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "HM2147NLT"
+			(at 87.63 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/pulse-electronics/HM2147NLT/17279602"
+			(at 87.63 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "96424ccd-2fdf-47c4-8ae0-0308f94668bc")
+		)
+		(pin "1"
+			(uuid "7b7fac56-cf92-4bc9-b486-d65192c1e922")
+		)
+		(pin "4"
+			(uuid "1e71a783-13ea-4341-b73c-ace0e5102612")
+		)
+		(pin "6"
+			(uuid "f381511e-3c05-4850-8597-f5ffecb3f06f")
+		)
+		(pin "5"
+			(uuid "7af0cd90-1401-4bde-ab24-17bd32d9c449")
+		)
+		(pin "2"
+			(uuid "1d745c7c-42bc-4604-ac75-7fb76dbcea5a")
+		)
+		(instances
+			(project "Battery Management Unit (BMU)"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
+					(reference "T2")
 					(unit 1)
 				)
 			)
@@ -5854,6 +6746,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 125.73 201.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-0.0ARCT-ND"
+			(at 125.73 201.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 125.73 201.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805JR-070RL"
+			(at 125.73 201.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805JR-070RL/728216"
+			(at 125.73 201.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "462adda7-676c-43b9-a0d1-3642308afc56")
 		)
@@ -5924,6 +6871,61 @@
 		)
 		(property "Description" "Resistor, US symbol"
 			(at 132.08 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 132.08 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-0.0ARCT-ND"
+			(at 132.08 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 132.08 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805JR-070RL"
+			(at 132.08 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805JR-070RL/728216"
+			(at 132.08 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6012,6 +7014,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 179.07 148.59 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-51.0CRCT-ND"
+			(at 179.07 148.59 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 179.07 148.59 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805FR-0751RL"
+			(at 179.07 148.59 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0751RL/728012"
+			(at 179.07 148.59 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8dda67aa-8dfa-496b-858a-978062500f27")
 		)
@@ -6083,6 +7140,61 @@
 		)
 		(property "Description" "Resistor, small US symbol"
 			(at 345.44 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 345.44 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-100KCRCT-ND"
+			(at 345.44 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 345.44 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805FR-07100KL"
+			(at 345.44 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-07100KL/727544"
+			(at 345.44 73.66 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6263,165 +7375,6 @@
 		)
 	)
 	(symbol
-		(lib_id "CEP99-102:CEP99-102")
-		(at 118.11 135.89 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "91c18623-99ee-43c2-9b89-a8511d88193f")
-		(property "Reference" "T2"
-			(at 107.95 143.51 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "CEP99-102"
-			(at 107.95 140.97 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Footprints:CEP99102"
-			(at 101.6 40.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://products.sumida.com/products/pdf/CEP99_CEP99B_eng_rev2.pdf?t=1532030986"
-			(at 101.6 -59.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "Pulse transformer for Automobiles.High withstand Voltage  2,500Vrms,Operating temperature  - 40deg.  +125deg."
-			(at 118.11 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" "10"
-			(at 101.6 -259.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 101.6 -359.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 101.6 -459.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "Sumida"
-			(at 101.6 -559.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Part_Number" "CEP99-102"
-			(at 101.6 -659.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "7"
-			(uuid "2b880007-a9a8-47e2-ae29-f526f1e2b2e4")
-		)
-		(pin "4"
-			(uuid "4804f50b-fa9d-41f4-b50f-c9871ed91edf")
-		)
-		(pin "8"
-			(uuid "3572af91-71b7-4775-84b3-7d26d484f529")
-		)
-		(pin "1"
-			(uuid "8d4ea7ed-1f14-48ae-87a1-817d04f14afc")
-		)
-		(pin "6"
-			(uuid "9ceafa24-5710-4fdb-81c9-d6d6e11662d3")
-		)
-		(pin "5"
-			(uuid "265eda7a-5019-432c-a5aa-150527c02c6c")
-		)
-		(pin "3"
-			(uuid "60b5eb35-a183-4702-a2c5-a3c37765ac38")
-		)
-		(pin "2"
-			(uuid "4443384a-d0aa-4f9c-ba65-1783f47bb2d9")
-		)
-		(instances
-			(project "Battery Management Unit (BMU)"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
-					(reference "T2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 209.55 186.69 0)
 		(unit 1)
@@ -6485,6 +7438,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 209.55 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-499CRCT-ND"
+			(at 209.55 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 209.55 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805FR-07499RL"
+			(at 209.55 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-07499RL/727986"
+			(at 209.55 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "424acd08-6337-47b1-9b27-fe3a25e1269b")
 		)
@@ -6495,166 +7503,6 @@
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "R18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "CEP99-102:CEP99-102")
-		(at 97.79 189.23 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "98b6fe4e-248e-48a0-8d60-2a29d36aada9")
-		(property "Reference" "T1"
-			(at 107.95 196.85 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "CEP99-102"
-			(at 107.95 194.31 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Footprints:CEP99102"
-			(at 114.3 94.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://products.sumida.com/products/pdf/CEP99_CEP99B_eng_rev2.pdf?t=1532030986"
-			(at 114.3 -5.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "Pulse transformer for Automobiles.High withstand Voltage  2,500Vrms,Operating temperature  - 40deg.  +125deg."
-			(at 97.79 189.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" "10"
-			(at 114.3 -205.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 114.3 -305.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 114.3 -405.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "Sumida"
-			(at 114.3 -505.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Part_Number" "CEP99-102"
-			(at 114.3 -605.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "7"
-			(uuid "d775b2cf-b4d1-4fcb-9cf6-3ab96a13fcbb")
-		)
-		(pin "4"
-			(uuid "07489f9d-625c-43d6-a0c3-763ae831f936")
-		)
-		(pin "8"
-			(uuid "3952a8ad-5f3f-47b3-9f95-369f73485a67")
-		)
-		(pin "1"
-			(uuid "e0f73608-e984-41a0-b7f7-781ff4bc291f")
-		)
-		(pin "6"
-			(uuid "d2d59a03-d333-4849-a1da-4ae18ce3168b")
-		)
-		(pin "5"
-			(uuid "82c925e8-b349-4ecd-8db0-2d0da941bd27")
-		)
-		(pin "3"
-			(uuid "2df493ca-2367-46e1-98c5-99e64effb6d7")
-		)
-		(pin "2"
-			(uuid "0aa098ef-d604-4829-adda-b396b890a83d")
-		)
-		(instances
-			(project "Battery Management Unit (BMU)"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
-					(reference "T1")
 					(unit 1)
 				)
 			)
@@ -6714,6 +7562,61 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 209.55 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 209.55 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-499CRCT-ND"
+			(at 209.55 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 209.55 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805FR-07499RL"
+			(at 209.55 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-07499RL/727986"
 			(at 209.55 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -6806,6 +7709,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 135.89 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-4295-1-ND"
+			(at 135.89 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 135.89 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0805KRNPO9BN101"
+			(at 135.89 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KRNPO9BN101/5884169"
+			(at 135.89 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "470be94a-46e5-401f-a25c-8c96e28394b4")
 		)
@@ -6816,6 +7774,239 @@
 			(project "Battery Management Unit (BMU)"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
 					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "HM2147NLT:HM2147NLT")
+		(at 87.63 128.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a0cad477-b293-4d0b-98cd-7fd98120273a")
+		(property "Reference" "T1"
+			(at 102.87 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "HM2147NLT"
+			(at 102.87 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Footprints:HM2147NLT"
+			(at 114.3 223.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.in/datasheet/2/447/Pulse_7_18_2022_BM101_6_22_A__003_-3000424.pdf"
+			(at 114.3 323.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "Audio Transformers / Signal Transformers 500uH 1500V AEC-Q200"
+			(at 87.63 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "3.45"
+			(at 114.3 523.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "Yageo Group"
+			(at 114.3 623.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "HM2147NLT"
+			(at 114.3 723.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "673-HM2147NLT"
+			(at 114.3 823.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Pulse-Electronics/HM2147NLT?qs=vvQtp7zwQdPcBq8r5qisBw%3D%3D"
+			(at 114.3 923.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Part Number" "HM2147NLT"
+			(at 114.3 1023.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/hm2147nlt/pulse-electronics-corporation?utm_currency=USD&region=nac"
+			(at 114.3 1123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 87.63 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "553-HM2147NLTCT-ND"
+			(at 87.63 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "Pulse Electronics"
+			(at 87.63 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "HM2147NLT"
+			(at 87.63 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/pulse-electronics/HM2147NLT/17279602"
+			(at 87.63 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "a8c951a9-2880-4059-bbfe-edc34b28d45d")
+		)
+		(pin "1"
+			(uuid "66074860-3a44-4691-8fde-e9bb515d6f4f")
+		)
+		(pin "4"
+			(uuid "ba47ddb8-454d-4682-9687-f86f3a0a8716")
+		)
+		(pin "6"
+			(uuid "f24a3a1b-c9e1-4d0b-b615-1143dcfd84ce")
+		)
+		(pin "5"
+			(uuid "4b244d56-7223-47d9-b68c-1606363e87b7")
+		)
+		(pin "2"
+			(uuid "0ab8168b-23e4-4d72-92c8-6e05b17bcfb3")
+		)
+		(instances
+			(project "Battery Management Unit (BMU)"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/e6a80062-bf71-493b-b7d1-d8d35ceb29fd"
+					(reference "T1")
 					(unit 1)
 				)
 			)
@@ -6966,6 +8157,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 232.41 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-1887-1-ND"
+			(at 232.41 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 232.41 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0805KKX7R9BB224"
+			(at 232.41 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KKX7R9BB224/5195293"
+			(at 232.41 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4781469b-80f6-437e-b331-72e5db0db0e2")
 		)
@@ -7045,6 +8291,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 209.55 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-499CRCT-ND"
+			(at 209.55 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 209.55 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805FR-07499RL"
+			(at 209.55 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-07499RL/727986"
+			(at 209.55 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "252bc935-b801-401d-8b12-ecdfbee01b3e")
 		)
@@ -7083,7 +8384,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1u"
+		(property "Value" "100n"
 			(at 309.88 65.532 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7118,6 +8419,61 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 312.42 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 312.42 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-1140-1-ND"
+			(at 312.42 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 312.42 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0805KRX7R9BB104"
+			(at 312.42 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB104/302874"
+			(at 312.42 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7203,6 +8559,61 @@
 			)
 		)
 		(property "Description" ""
+			(at 311.15 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 311.15 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "296-BQ79600PWRQ1CT-ND"
+			(at 311.15 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "Texas Instruments"
+			(at 311.15 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "BQ79600PWRQ1"
+			(at 311.15 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/texas-instruments/BQ79600PWRQ1/13173848"
 			(at 311.15 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -7326,6 +8737,61 @@
 		)
 		(property "Description" "Resistor, small US symbol"
 			(at 339.09 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 339.09 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-100KCRCT-ND"
+			(at 339.09 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 339.09 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805FR-07100KL"
+			(at 339.09 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-07100KL/727544"
+			(at 339.09 73.66 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7726,6 +9192,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 132.08 181.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-0.0ARCT-ND"
+			(at 132.08 181.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 132.08 181.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805JR-070RL"
+			(at 132.08 181.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805JR-070RL/728216"
+			(at 132.08 181.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0595adf9-4648-4a68-a247-c263e7dd5724")
 		)
@@ -7764,7 +9285,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1u"
+		(property "Value" "100n"
 			(at 217.424 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7808,6 +9329,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 218.44 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-1140-1-ND"
+			(at 218.44 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 218.44 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0805KRX7R9BB104"
+			(at 218.44 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB104/302874"
+			(at 218.44 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2a4af820-d05d-449c-a7ad-7832686e12f4")
 		)
@@ -7825,7 +9401,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 92.71 181.61 90)
+		(at 77.47 181.61 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7835,7 +9411,7 @@
 		(dnp no)
 		(uuid "d25dedc7-2d4a-439a-bec3-5ae2744a30c7")
 		(property "Reference" "R6"
-			(at 92.71 179.324 90)
+			(at 77.47 179.324 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7845,7 +9421,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 92.964 183.896 90)
+			(at 77.724 183.896 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7855,7 +9431,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 92.964 180.594 90)
+			(at 77.724 180.594 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7866,7 +9442,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 181.61 0)
+			(at 77.47 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7877,7 +9453,62 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 92.71 181.61 0)
+			(at 77.47 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 77.47 181.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-0.0ARCT-ND"
+			(at 77.47 181.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 77.47 181.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805JR-070RL"
+			(at 77.47 181.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805JR-070RL/728216"
+			(at 77.47 181.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7969,6 +9600,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 133.35 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-4295-1-ND"
+			(at 133.35 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 133.35 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0805KRNPO9BN101"
+			(at 133.35 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KRNPO9BN101/5884169"
+			(at 133.35 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "31c97746-3f00-4072-8617-b6f36874c851")
 		)
@@ -8039,6 +9725,61 @@
 		)
 		(property "Description" "Resistor, US symbol"
 			(at 179.07 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 179.07 181.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-51.0CRCT-ND"
+			(at 179.07 181.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 179.07 181.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805FR-0751RL"
+			(at 179.07 181.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0751RL/728012"
+			(at 179.07 181.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8128,6 +9869,61 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 331.47 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-10.0KCRCT-ND"
+			(at 331.47 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 331.47 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805FR-0710KL"
+			(at 331.47 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535"
+			(at 331.47 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "2e8774ec-6e1c-48af-b627-ad8449154941")
 		)
@@ -8145,7 +9941,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 92.71 189.23 90)
+		(at 77.47 189.23 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8155,7 +9951,7 @@
 		(dnp no)
 		(uuid "e7b809e3-600e-4e47-a1b2-a09940aafe21")
 		(property "Reference" "R7"
-			(at 92.71 186.944 90)
+			(at 77.47 186.944 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8165,7 +9961,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 92.71 191.516 90)
+			(at 77.47 191.516 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8175,7 +9971,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 92.964 188.214 90)
+			(at 77.724 188.214 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8186,7 +9982,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 189.23 0)
+			(at 77.47 189.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8197,7 +9993,62 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 92.71 189.23 0)
+			(at 77.47 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 77.47 189.23 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-0.0ARCT-ND"
+			(at 77.47 189.23 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 77.47 189.23 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805JR-070RL"
+			(at 77.47 189.23 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805JR-070RL/728216"
+			(at 77.47 189.23 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8280,6 +10131,61 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 227.33 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 227.33 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "311-1887-1-ND"
+			(at 227.33 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "YAGEO"
+			(at 227.33 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0805KKX7R9BB224"
+			(at 227.33 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KKX7R9BB224/5195293"
 			(at 227.33 82.55 0)
 			(hide yes)
 			(show_name no)

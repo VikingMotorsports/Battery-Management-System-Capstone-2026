@@ -6793,7 +6793,7 @@
 				)
 			)
 		)
-		(property "MPN" "8.85382E+11"
+		(property "MPN" "885382207008"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21944,7 +21944,7 @@
 				)
 			)
 		)
-		(property "MPN" "8.85012E+11"
+		(property "MPN" "885012207079"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24304,7 +24304,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "1u"
 			(at 0 1.68 0)
 			(layer "F.Fab")
 			(uuid "0560c90f-583e-4471-8c77-2f8781eb2d4d")

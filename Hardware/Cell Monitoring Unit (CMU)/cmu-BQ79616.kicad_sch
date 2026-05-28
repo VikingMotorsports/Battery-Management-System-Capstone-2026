@@ -5610,7 +5610,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "1u"
 			(at 144.78 156.2165 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12185,7 +12185,7 @@
 				)
 			)
 		)
-		(property "MPN" "8.85382E+11"
+		(property "MPN" "885382207008"
 			(at 86.36 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -12904,7 +12904,7 @@
 				)
 			)
 		)
-		(property "MPN" "8.85012E+11"
+		(property "MPN" "885012207079"
 			(at 170.18 153.67 0)
 			(hide yes)
 			(show_name no)

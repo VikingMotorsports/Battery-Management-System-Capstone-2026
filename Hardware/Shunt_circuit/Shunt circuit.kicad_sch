@@ -5247,7 +5247,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB104/302874?s=N4IgTCBcDaIMwEYEFokBYAMrkDkAiIAugL5A"
 			(at 135.89 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -5258,7 +5258,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "0.1µF, 50V, X7R, 0805 ceramic capacitor"
 			(at 135.89 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -5269,7 +5269,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 135.89 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -5280,7 +5280,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-1140-1-ND"
 			(at 135.89 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -5291,7 +5291,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 135.89 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -5302,7 +5302,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "CC0805KRX7R9BB104"
 			(at 135.89 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -5449,7 +5449,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://pim.murata.com/asset/pim4/isolatedDCDCconverter/KDC_NXE1_PDF_ISOLATEDDCDCCONVERTER"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/murata-power-solutions-inc/NXF1S0303MC-R7/8346402?s=N4IgTCBcDaIHIA0BiBGAygBgMzYLIGEBaAJQHYQBdAXyA"
 			(at 154.94 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -5460,7 +5460,7 @@
 				)
 			)
 		)
-		(property "Description" "1W 3.3V to 3.3V 303mA DC-DC Converter with 3kV isolation"
+		(property "Description" "1W isolated DC-DC converter, 3.3V to 3.3V"
 			(at 154.94 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -5471,7 +5471,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 154.94 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -5482,7 +5482,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "811-3479-1-ND"
 			(at 154.94 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -5493,7 +5493,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Murata Power Solutions"
 			(at 154.94 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -5504,7 +5504,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "NXF1S0303MC-R7"
 			(at 154.94 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -5583,7 +5583,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/lite-on-inc/LTST-C170KRKT/386779"
 			(at 111.76 33.02 90)
 			(hide yes)
 			(show_name no)
@@ -5594,7 +5594,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode, small symbol"
+		(property "Description" "Red LED, 0805"
 			(at 111.76 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -5616,7 +5616,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 111.76 33.02 90)
 			(hide yes)
 			(show_name no)
@@ -5627,7 +5627,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "160-1415-2-ND"
 			(at 111.76 33.02 90)
 			(hide yes)
 			(show_name no)
@@ -5638,7 +5638,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Lite-On"
 			(at 111.76 33.02 90)
 			(hide yes)
 			(show_name no)
@@ -5649,7 +5649,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "LTST-C170KRKT"
 			(at 111.76 33.02 90)
 			(hide yes)
 			(show_name no)
@@ -5717,7 +5717,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710RL/727534?s=N4IgTCBcDaIMwEYEFoEAYB0aDCAlbAKsgHIAiIAugL5A"
 			(at 69.85 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -5728,7 +5728,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
+		(property "Description" "10Ω, 1%, 0805 resistor"
 			(at 69.85 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -5739,7 +5739,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 69.85 88.9 90)
 			(hide yes)
 			(show_name no)
@@ -5750,7 +5750,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-10.0CRCT-ND"
 			(at 69.85 88.9 90)
 			(hide yes)
 			(show_name no)
@@ -5761,7 +5761,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 69.85 88.9 90)
 			(hide yes)
 			(show_name no)
@@ -5772,7 +5772,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RC0805FR-0710RL"
 			(at 69.85 88.9 90)
 			(hide yes)
 			(show_name no)
@@ -5843,7 +5843,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-075K1L/727988?s=N4IgTCBcDaIMwEYEFoCsA6BAGA0gYQCU8AVZAOQBEQBdAXyA"
 			(at 116.84 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -5854,7 +5854,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
+		(property "Description" "5.1kΩ, 1%, 0805 resistor"
 			(at 116.84 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -5865,7 +5865,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 116.84 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -5876,7 +5876,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-5.10KCRCT-ND"
 			(at 116.84 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -5887,7 +5887,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 116.84 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -5898,7 +5898,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RC0805FR-075K1L"
 			(at 116.84 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -6722,7 +6722,7 @@
 				)
 			)
 		)
-		(property "Description" "High-Side or Low-Side Measurement, Bi-Directional Current and Power Monitor (0-85V) with I2C, SMBus-, and PMBus-Compatible Interface, TSSOP-10 (Texas DGS0010A / VSSOP)"
+		(property "Description" "INA238-Q1 current/voltage/power monitor, 10-VSSOP"
 			(at 93.98 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -6733,7 +6733,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "N/A"
 			(at 93.98 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -6744,7 +6744,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "296-INA238AQDGSRQ1CT-ND"
 			(at 93.98 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -6755,7 +6755,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Texas Instruments"
 			(at 93.98 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -6766,7 +6766,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "INA238AQDGSRQ1"
 			(at 93.98 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -7185,7 +7185,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-074K7L/727929?s=N4IgTCBcDaIMwEYEFoAsA6A7ABgNIGEAlfAFWQDkAREAXQF8g"
 			(at 111.76 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -7196,7 +7196,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
+		(property "Description" "4.7kΩ, 1%, 0805 resistor"
 			(at 111.76 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -7207,7 +7207,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 111.76 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -7218,7 +7218,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-4.70KCRCT-ND"
 			(at 111.76 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -7229,7 +7229,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 111.76 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -7240,7 +7240,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RC0805FR-074K7L"
 			(at 111.76 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -7311,7 +7311,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-075K1L/727988?s=N4IgTCBcDaIMwEYEFoCsA6BAGA0gYQCU8AVZAOQBEQBdAXyA"
 			(at 123.19 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -7322,7 +7322,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
+		(property "Description" "5.1kΩ, 1%, 0805 resistor"
 			(at 123.19 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -7333,7 +7333,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 123.19 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -7344,7 +7344,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-5.10KCRCT-ND"
 			(at 123.19 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -7355,7 +7355,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 123.19 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -7366,7 +7366,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RC0805FR-075K1L"
 			(at 123.19 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -7560,7 +7560,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/liteon/LTST-C170GKT/269226?s=N4IgTCBcDaIIwDYAMBaOcDsBONKByAIiALoC%2BQA"
 			(at 189.23 33.02 90)
 			(hide yes)
 			(show_name no)
@@ -7571,7 +7571,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode, small symbol"
+		(property "Description" "Green LED, 0805"
 			(at 189.23 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -7593,7 +7593,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 189.23 33.02 90)
 			(hide yes)
 			(show_name no)
@@ -7604,7 +7604,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "160-1179-1-ND"
 			(at 189.23 33.02 90)
 			(hide yes)
 			(show_name no)
@@ -7615,7 +7615,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Lite-On"
 			(at 189.23 33.02 90)
 			(hide yes)
 			(show_name no)
@@ -7626,7 +7626,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "LTST-C170GKT"
 			(at 189.23 33.02 90)
 			(hide yes)
 			(show_name no)
@@ -7927,7 +7927,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/iso1541.pdf"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/texas-instruments/ISO1540QDRQ1/6615386"
 			(at 154.94 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -7938,7 +7938,7 @@
 				)
 			)
 		)
-		(property "Description" "I2C Isolator, 2.5 kVrms, Bidirectional clock and data, SOIC-8"
+		(property "Description" "Isolated I2C interface, SOIC-8"
 			(at 154.94 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -7949,7 +7949,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 154.94 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -7960,7 +7960,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "296-45354-1-ND"
 			(at 154.94 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -7971,7 +7971,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Texas Instruments"
 			(at 154.94 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -7982,7 +7982,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "ISO1540QDRQ1"
 			(at 154.94 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -8399,7 +8399,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB104/302874?s=N4IgTCBcDaIMwEYEFokBYAMrkDkAiIAugL5A"
 			(at 85.09 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -8410,7 +8410,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "0.1µF, 50V, X7R, 0805 ceramic capacitor"
 			(at 85.09 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -8421,7 +8421,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 85.09 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -8432,7 +8432,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-1140-1-ND"
 			(at 85.09 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -8443,7 +8443,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 85.09 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -8454,7 +8454,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "CC0805KRX7R9BB104"
 			(at 85.09 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -8601,7 +8601,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/gpn/iso7710-q1"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/texas-instruments/ISO7710FQDRQ1/7400130?s=N4IgTCBcDaIJIGUDyB2FBGADAMQIoBEAlXdEAXQF8g"
 			(at 154.94 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -8613,7 +8613,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single-channel digital isolator, SOIC-8"
 			(at 154.94 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -8624,7 +8624,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 154.94 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -8635,7 +8635,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "296-51196-1-ND"
 			(at 154.94 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -8646,7 +8646,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Texas Instruments"
 			(at 154.94 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -8657,7 +8657,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "ISO7710FQDRQ1"
 			(at 154.94 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -8946,7 +8946,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB104/302874?s=N4IgTCBcDaIMwEYEFokBYAMrkDkAiIAugL5A"
 			(at 115.57 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -8957,7 +8957,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "0.1µF, 50V, X7R, 0805 ceramic capacitor"
 			(at 115.57 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -8968,7 +8968,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 115.57 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -8979,7 +8979,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-1140-1-ND"
 			(at 115.57 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -8990,7 +8990,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 115.57 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -9001,7 +9001,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "CC0805KRX7R9BB104"
 			(at 115.57 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -9550,7 +9550,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-071KL/727444?s=N4IgTCBcDaIMwEYEFoEDoAMGDSBhASrgCrIByAIiALoC%2BQA"
 			(at 189.23 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -9561,7 +9561,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
+		(property "Description" "1kΩ, 1%, 0805 resistor"
 			(at 189.23 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -9572,7 +9572,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 189.23 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -9583,7 +9583,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-1.00KCRCT-ND"
 			(at 189.23 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -9594,7 +9594,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 189.23 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -9605,7 +9605,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RC0805FR-071KL"
 			(at 189.23 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -9675,7 +9675,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/CC0805KKX7R7BB105/2103103?s=N4IgTCBcDaIMwEYEFoFwGwFZXIHIBEQBdAXyA"
 			(at 127 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -9686,7 +9686,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "1µF, 16V, X7R, 0805 ceramic capacitor"
 			(at 127 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -9697,7 +9697,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 127 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -9708,7 +9708,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-1365-1-ND"
 			(at 127 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -9719,7 +9719,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 127 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -9730,7 +9730,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "CC0805KKX7R7BB105"
 			(at 127 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -9801,7 +9801,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-074K7L/727929?s=N4IgTCBcDaIMwEYEFoAsA6A7ABgNIGEAlfAFWQDkAREAXQF8g"
 			(at 182.88 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9812,7 +9812,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
+		(property "Description" "4.7kΩ, 1%, 0805 resistor"
 			(at 182.88 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9823,7 +9823,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 182.88 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9834,7 +9834,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-4.70KCRCT-ND"
 			(at 182.88 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9845,7 +9845,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 182.88 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9856,7 +9856,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RC0805FR-074K7L"
 			(at 182.88 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9927,7 +9927,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB104/302874?s=N4IgTCBcDaIMwEYEFokBYAMrkDkAiIAugL5A"
 			(at 137.16 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -9938,7 +9938,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "0.1µF, 50V, X7R, 0805 ceramic capacitor"
 			(at 137.16 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -9949,7 +9949,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 137.16 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -9960,7 +9960,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-1140-1-ND"
 			(at 137.16 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -9971,7 +9971,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 137.16 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -9982,7 +9982,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "CC0805KRX7R9BB104"
 			(at 137.16 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -10131,7 +10131,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB104/302874?s=N4IgTCBcDaIMwEYEFokBYAMrkDkAiIAugL5A"
 			(at 165.1 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -10142,7 +10142,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "0.1µF, 50V, X7R, 0805 ceramic capacitor"
 			(at 165.1 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -10153,7 +10153,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 165.1 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -10164,7 +10164,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-1140-1-ND"
 			(at 165.1 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -10175,7 +10175,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 165.1 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -10186,7 +10186,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "CC0805KRX7R9BB104"
 			(at 165.1 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -10256,7 +10256,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PRPC010SAAN-RC/2775244?s=N4IgTCBcDaIMoEYAMCEFEDCBaZWByAIiALoC%2BQA"
 			(at 247.65 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -10267,7 +10267,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "10-pin vertical header, 2.54mm"
 			(at 247.65 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -10278,7 +10278,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 247.65 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -10289,7 +10289,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "S1011EC-10-ND"
 			(at 247.65 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -10300,7 +10300,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Sullins Connector Solutions"
 			(at 247.65 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -10311,7 +10311,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "PRPC010SAAN-RC"
 			(at 247.65 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -10682,7 +10682,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB104/302874?s=N4IgTCBcDaIMwEYEFokBYAMrkDkAiIAugL5A"
 			(at 182.88 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -10693,7 +10693,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "0.1µF, 50V, X7R, 0805 ceramic capacitor"
 			(at 182.88 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -10704,7 +10704,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 182.88 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -10715,7 +10715,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-1140-1-ND"
 			(at 182.88 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -10726,7 +10726,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 182.88 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -10737,7 +10737,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "CC0805KRX7R9BB104"
 			(at 182.88 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -10805,7 +10805,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710RL/727534?s=N4IgTCBcDaIMwEYEFoEAYB0aDCAlbAKsgHIAiIAugL5A"
 			(at 69.85 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -10816,7 +10816,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
+		(property "Description" "10Ω, 1%, 0805 resistor"
 			(at 69.85 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -10827,7 +10827,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 69.85 99.06 90)
 			(hide yes)
 			(show_name no)
@@ -10838,7 +10838,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-10.0CRCT-ND"
 			(at 69.85 99.06 90)
 			(hide yes)
 			(show_name no)
@@ -10849,7 +10849,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 69.85 99.06 90)
 			(hide yes)
 			(show_name no)
@@ -10860,7 +10860,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RC0805FR-0710RL"
 			(at 69.85 99.06 90)
 			(hide yes)
 			(show_name no)
@@ -11054,7 +11054,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB104/302874?s=N4IgTCBcDaIMwEYEFokBYAMrkDkAiIAugL5A"
 			(at 115.57 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -11065,7 +11065,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "0.1µF, 50V, X7R, 0805 ceramic capacitor"
 			(at 115.57 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -11076,7 +11076,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 115.57 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -11087,7 +11087,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-1140-1-ND"
 			(at 115.57 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -11098,7 +11098,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 115.57 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -11109,7 +11109,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "CC0805KRX7R9BB104"
 			(at 115.57 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -11179,7 +11179,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-074K7L/727929?s=N4IgTCBcDaIMwEYEFoAsA6A7ABgNIGEAlfAFWQDkAREAXQF8g"
 			(at 177.8 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -11190,7 +11190,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
+		(property "Description" "4.7kΩ, 1%, 0805 resistor"
 			(at 177.8 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -11201,7 +11201,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 177.8 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -11212,7 +11212,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-4.70KCRCT-ND"
 			(at 177.8 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -11223,7 +11223,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 177.8 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -11234,7 +11234,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RC0805FR-074K7L"
 			(at 177.8 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -11504,7 +11504,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/phoenix-contact/1715721/260631?s=N4IgTCBcDa4OxwLQEYwDYDMiByAREAugL5A"
 			(at 34.29 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -11515,7 +11515,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "2-position terminal block, 5.08mm, horizontal"
 			(at 34.29 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -11526,7 +11526,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 34.29 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -11537,7 +11537,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "277-1263-ND"
 			(at 34.29 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -11548,7 +11548,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Phoenix Contact"
 			(at 34.29 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -11559,7 +11559,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "1715721"
 			(at 34.29 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -11629,7 +11629,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB104/302874?s=N4IgTCBcDaIMwEYEFokBYAMrkDkAiIAugL5A"
 			(at 171.45 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -11640,7 +11640,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "0.1µF, 50V, X7R, 0805 ceramic capacitor"
 			(at 171.45 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -11651,7 +11651,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 171.45 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -11662,7 +11662,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-1140-1-ND"
 			(at 171.45 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -11673,7 +11673,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 171.45 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -11684,7 +11684,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "CC0805KRX7R9BB104"
 			(at 171.45 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -11756,7 +11756,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-071KL/727444?s=N4IgTCBcDaIMwEYEFoEDoAMGDSBhASrgCrIByAIiALoC%2BQA"
 			(at 111.76 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -11767,7 +11767,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
+		(property "Description" "1kΩ, 1%, 0805 resistor"
 			(at 111.76 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -11778,7 +11778,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 111.76 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -11789,7 +11789,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "311-1.00KCRCT-ND"
 			(at 111.76 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -11800,7 +11800,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "YAGEO"
 			(at 111.76 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -11811,7 +11811,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RC0805FR-071KL"
 			(at 111.76 40.64 0)
 			(hide yes)
 			(show_name no)

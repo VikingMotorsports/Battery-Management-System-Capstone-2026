@@ -5750,6 +5750,71 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2cece77f-99c9-402d-b500-fbf8f7209eda")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DPN" "SAM1028-16-ND"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2d189408-a83d-4b0a-a70c-d8d16534a1de")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MFR" "Samtec Inc."
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "daf387ab-da1d-4885-aca0-aa8b5101d78c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "TSW-116-07-G-D"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "27d8b499-2141-4428-a193-0aecc0eb9fcc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/samtec-inc/TSW-116-07-T-D/1101561?utm_source=chatgpt.com&oppcref=6cdbc333-f2d1-4e89-ac93-8aaded010a39"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4ac2572c-a4b9-4e9c-b9f6-f34bcba29991")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_2x??_*")
 		(path "/b8849035-8dd6-409d-bb81-7a4547469056")
 		(sheetname "/")
@@ -5763,7 +5828,7 @@
 				)
 			)
 		)
-		(attr through_hole dnp)
+		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 -1.38)

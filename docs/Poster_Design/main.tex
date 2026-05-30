@@ -1,0 +1,97 @@
+\documentclass[ansiE, boxedsections, landscape]{sciposter}
+
+% Packages
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{amsmath}
+\usepackage{url}
+
+% Enables use of registered trademark
+\usepackage{textcomp}
+
+% Color Formatting
+% Define PSU official colors
+\definecolor{PSUgreen}{RGB}{106,127,16}
+\definecolor{PSUltgreen}{RGB}{168,180,0}
+\definecolor{PSUblue}{RGB}{0,117,154}
+\definecolor{PSUltblue}{RGB}{161,216,224}
+\definecolor{PSUgray}{RGB}{71,67,52}
+\definecolor{PSUBrown}{RGB}{96,53,29}
+\definecolor{PSUsienna}{RGB}{163,63,31}
+\definecolor{PSUred}{RGB}{210,73,42}
+\definecolor{PSUorange}{RGB}{220,155,50}
+\definecolor{PSUyellow}{RGB}{230,220,143}
+\definecolor{PSUtan}{RGB}{232,221,162}
+\definecolor{PSUpurple}{RGB}{101,3,96}
+
+\definecolor{BoxCol}{RGB}{168,180,0}
+\renewcommand{\columnseprulecolor}{\color{PSUBrown}}
+
+% Text Formatting
+\renewcommand{\LARGE}{\fontsize{72pt}{78pt}\selectfont}
+\renewcommand{\Large}{\fontsize{64pt}{68pt}\selectfont}
+\renewcommand{\large}{\fontsize{36pt}{42pt}\selectfont}
+\renewcommand{\normalsize}{\fontsize{18pt}{24pt}\selectfont}
+
+\renewcommand{\titlesize}{\LARGE}
+\renewcommand{\authorsize}{\Large}
+\renewcommand{\instsize}{\large}
+
+\renewcommand{\sectionsize}{\large}
+\renewcommand{\subsectionsize}{\normalsize}
+
+% Title
+%\leftlogo[1]{./Logo/PGE_logo}
+\rightlogo[1]{./Logo/PSU_logo}
+\title{\color{PSUgreen}\uppercase{Title}}
+\author{Author 1, Author 2, Author 3}
+\institute{Portland State University \\ Department of Electrical \& Computer Engineering \\1900 SW 4th Ave, Portland, Oregon}
+
+
+% Footer
+\conference{{Name of the Presentation Venue}, Location, Date}
+\renewcommand{\footlogo}{%
+    %\resizebox{\logowidth}{!}{\includegraphics{./Logo/Geared-Logo.png}}
+}
+
+% Use more white space around your work, as light and empty space are more attractive to the eye. Avoid large, continuous blocks of text; use small blocks instead. Make sure the small blocks of text can stand-alone. It should still make sense if someone comes up to your poster and reads only a small portion of it. Use the minimum amount of text possible. Consider using right-justified text. Justified text might look nicer from a distance, but is more difficult to read. Remember that people will be standing and reading the text on the spot.
+\begin{document}
+
+\maketitle
+
+\begin{multicols}{3}
+
+%********************
+%   Introduction
+%********************
+\section*{Introduction}
+
+%********************
+%   Methods
+%********************
+\section*{Methods}
+
+\subsection*{}
+
+%********************
+%   Results
+%********************
+\section*{Results}
+
+
+%********************
+%   Conclusion
+%********************
+\section*{Conclusion}
+
+
+%********************
+%   Summary
+%********************
+\section*{Summary}
+
+
+\end{multicols}
+\end{document}

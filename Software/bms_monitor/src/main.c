@@ -34,7 +34,9 @@ int main(void)
 #if defined(CONFIG_APP_FAULT_MONITORING)
     fault_data_t faults = {0};
 #endif
+#if defined(CONFIG_APP_CAN_TELEMETRY)
     bms_metrics_t metrics;
+#endif
 #if defined(CONFIG_APP_CELL_BALANCING)
     balancing_data_t balancing = {0};
     balancing_state_t previous_balancing_state;
@@ -163,9 +165,11 @@ int main(void)
 
     while (1)
     {
+#if defined(CONFIG_APP_CAN_TELEMETRY)
         bool have_voltages = false;
         bool have_temperatures = false;
         bool have_current = false;
+#endif
 #if defined(CONFIG_APP_FAULT_MONITORING)
         bool had_fault_interrupt = false;
 #endif
@@ -197,7 +201,9 @@ int main(void)
         }
 
         debug_print_voltages(&voltages);
+#if defined(CONFIG_APP_CAN_TELEMETRY)
         have_voltages = true;
+#endif
 #endif
 
 #if defined(CONFIG_APP_CURRENT_MONITORING)
@@ -209,7 +215,9 @@ int main(void)
         else
         {
             debug_print_current(&current);
+#if defined(CONFIG_APP_CAN_TELEMETRY)
             have_current = true;
+#endif
         }
 #endif
 
@@ -257,7 +265,9 @@ int main(void)
         else
         {
             debug_print_temperatures(&temperatures);
+#if defined(CONFIG_APP_CAN_TELEMETRY)
             have_temperatures = true;
+#endif
         }
 #endif
 
@@ -273,6 +283,7 @@ int main(void)
         }
 #endif
 
+#if defined(CONFIG_APP_CAN_TELEMETRY)
         calculate_metrics(
 #if defined(CONFIG_APP_VOLTAGE_MONITORING)
             have_voltages ? &voltages : NULL,
@@ -303,6 +314,7 @@ int main(void)
         {
             LOG_ERR("telemetry_transmit failed: %d", ret);
         }
+#endif
 
         k_msleep(1000);
     }

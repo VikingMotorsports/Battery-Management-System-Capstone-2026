@@ -50,12 +50,14 @@ int monitor_init(void)
 
     LOG_INF("starting monitor init");
 
+#if defined(CONFIG_APP_CAN_TELEMETRY)
     ret = can_init();
     if (ret < 0)
     {
         LOG_ERR("can_init failed: %d", ret);
         return ret;
     }
+#endif
 
 #if defined(CONFIG_APP_CURRENT_MONITORING)
     ret = i2c_init();

@@ -373,6 +373,67 @@ void debug_print_faults(const fault_data_t *faults)
 #endif
 }
 
+void debug_print_telemetry(const bms_metrics_t *metrics, const fault_data_t *faults)
+{
+#if defined(CONFIG_APP_DEBUG_PRINTS) && defined(CONFIG_APP_DEBUG_CAN_TELEMETRY)
+    bool under_temperature = false;
+    bool over_temperature = false;
+    bool under_voltage = false;
+    bool over_voltage = false;
+    bool over_current_discharge = false;
+
+    if (metrics == NULL)
+    {
+        printk("CAN telemetry got null pointer\n");
+        return;
+    }
+
+    if (faults != NULL)
+    {
+        for (size_t i = 0; i < NUM_STACK_DEVICES; i++)
+        {
+            over_temperature |= faults->stack[i].fault_ot != 0U;
+            under_temperature |= faults->stack[i].fault_ut != 0U;
+            over_voltage |= (faults->stack[i].fault_ov1 != 0U) || (faults->stack[i].fault_ov2 != 0U);
+            under_voltage |= (faults->stack[i].fault_uv1 != 0U) || (faults->stack[i].fault_uv2 != 0U);
+        }
+
+        over_current_discharge = faults->ina.shunt_over_limit;
+    }
+
+    printk("CAN telemetry transmitted\n");
+    printk("\tBMS_Protection: UT=%u OT=%u UV=%u OV=%u OCD=%u\n",
+           under_temperature,
+           over_temperature,
+           under_voltage,
+           over_voltage,
+           over_current_discharge);
+
+    printk("\tBMS_Monitoring: Vmin[%u]=",
+           metrics->cell_voltage_min.valid ? metrics->cell_voltage_min.id : 0U);
+    print_float_3(metrics->cell_voltage_min.valid ? metrics->cell_voltage_min.value : 0.0f);
+    printk(" V Vmax[%u]=",
+           metrics->cell_voltage_max.valid ? metrics->cell_voltage_max.id : 0U);
+    print_float_3(metrics->cell_voltage_max.valid ? metrics->cell_voltage_max.value : 0.0f);
+    printk(" V Tmin[%u]=",
+           metrics->cell_temperature_min.valid ? metrics->cell_temperature_min.id : 0U);
+    print_float_3(metrics->cell_temperature_min.valid ? metrics->cell_temperature_min.value : 0.0f);
+    printk(" C Tmax[%u]=",
+           metrics->cell_temperature_max.valid ? metrics->cell_temperature_max.id : 0U);
+    print_float_3(metrics->cell_temperature_max.valid ? metrics->cell_temperature_max.value : 0.0f);
+    printk(" C I=");
+    print_float_3(metrics->pack_current_valid ? metrics->pack_current : 0.0f);
+    printk(" A Vpack=");
+    print_float_3(metrics->pack_voltage_valid ? metrics->pack_voltage : 0.0f);
+    printk(" V P=");
+    print_float_3(metrics->pack_power_valid ? metrics->pack_power : 0.0f);
+    printk(" W\n\n");
+#else
+    ARG_UNUSED(metrics);
+    ARG_UNUSED(faults);
+#endif
+}
+
 static const char *balancing_state_name(balancing_state_t state)
 {
     switch (state)

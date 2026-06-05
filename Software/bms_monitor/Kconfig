@@ -86,6 +86,13 @@ config APP_DEBUG_BALANCING
     help
       Print cell balancing debug output.
 
+config APP_DEBUG_CAN_TELEMETRY
+    bool "Enable CAN telemetry debug printing"
+    default y
+    depends on APP_DEBUG_PRINTS && APP_CAN_TELEMETRY
+    help
+      Print CAN telemetry debug output.
+
 endmenu
 
 source "Kconfig.zephyr"

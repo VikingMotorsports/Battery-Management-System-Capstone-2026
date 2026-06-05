@@ -314,6 +314,17 @@ int main(void)
         {
             LOG_ERR("telemetry_transmit failed: %d", ret);
         }
+        else
+        {
+            debug_print_telemetry(
+                &metrics,
+#if defined(CONFIG_APP_FAULT_MONITORING)
+                &faults
+#else
+                NULL
+#endif
+            );
+        }
 #endif
 
         k_msleep(1000);

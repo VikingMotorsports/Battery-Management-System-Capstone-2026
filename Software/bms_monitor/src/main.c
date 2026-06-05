@@ -123,6 +123,12 @@ int main(void)
     LOG_INF("cell balancing disabled");
 #endif
 
+#if defined(CONFIG_APP_CAN_TELEMETRY)
+    LOG_INF("CAN telemetry init complete");
+#else
+    LOG_INF("CAN telemetry disabled");
+#endif
+
     k_msleep(10);
 
 #if defined(APP_BQ796XX_MONITORING)

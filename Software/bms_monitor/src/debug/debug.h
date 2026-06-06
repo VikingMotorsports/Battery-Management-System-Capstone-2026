@@ -7,6 +7,7 @@
 #include "monitor/current/current.h"
 #include "monitor/balancing/balancing.h"
 #include "metrics.h"
+#include "protocols/bms_protocol.h"
 
 void debug_print_voltages(const cell_voltage_data_t *voltages);
 void debug_print_temperatures(const temperature_data_t *temperatures);

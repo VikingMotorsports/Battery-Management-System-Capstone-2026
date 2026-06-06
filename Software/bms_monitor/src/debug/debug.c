@@ -402,14 +402,18 @@ void debug_print_telemetry(const bms_metrics_t *metrics, const fault_data_t *fau
     }
 
     printk("CAN telemetry transmitted\n");
-    printk("\tBMS_Protection: UT=%u OT=%u UV=%u OV=%u OCD=%u\n",
+    printk("\t0x%03X BMS_Protection DLC=%u: UT=%u OT=%u UV=%u OV=%u OCD=%u\n",
+           BMS_PROTECTION_ID,
+           BMS_PROTECTION_DLC,
            under_temperature,
            over_temperature,
            under_voltage,
            over_voltage,
            over_current_discharge);
 
-    printk("\tBMS_Monitoring: Vmin[%u]=",
+    printk("\t0x%03X BMS_Monitoring DLC=%u: Vmin[%u]=",
+           BMS_MONITORING_ID,
+           BMS_MONITORING_DLC,
            metrics->cell_voltage_min.valid ? metrics->cell_voltage_min.id : 0U);
     print_float_3(metrics->cell_voltage_min.valid ? metrics->cell_voltage_min.value : 0.0f);
     printk(" V Vmax[%u]=",

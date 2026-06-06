@@ -4,6 +4,12 @@
 #include <stdbool.h>
 #include <stdint.h>
 
+#define BMS_PROTECTION_ID 0x010U
+#define BMS_MONITORING_ID 0x250U
+
+#define BMS_PROTECTION_DLC 1U
+#define BMS_MONITORING_DLC 32U
+
 typedef struct
 {
     bool under_temperature;

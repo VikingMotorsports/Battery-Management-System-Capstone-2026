@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#define CAN_MAX_PAYLOAD_BYTES 64U
+#define CAN_MAX_PAYLOAD_BYTES 8U
 
 typedef struct
 {

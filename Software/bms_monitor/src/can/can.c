@@ -40,17 +40,10 @@ int can_init(void)
         return ret;
     }
 
-    ret = can_set_bitrate_data(can_dev, CAN_BUS_BITRATE);
+    ret = can_set_mode(can_dev, CAN_MODE_NORMAL);
     if (ret < 0)
     {
-        LOG_ERR("can_set_bitrate_data failed: %d", ret);
-        return ret;
-    }
-
-    ret = can_set_mode(can_dev, CAN_MODE_FD);
-    if (ret < 0)
-    {
-        LOG_ERR("can_set_mode(CAN_MODE_FD) failed: %d", ret);
+        LOG_ERR("can_set_mode failed: %d", ret);
         return ret;
     }
 
@@ -77,16 +70,14 @@ int can_transmit(const can_message_t *msg)
         return -EINVAL;
     }
 
-    if (msg->len > CAN_MAX_DLEN)
+    if (msg->len > CAN_MAX_PAYLOAD_BYTES)
     {
-        LOG_ERR("CAN FD payload too large: len=%u", (unsigned int)msg->len);
+        LOG_ERR("CAN payload too large: len=%u", (unsigned int)msg->len);
         return -EMSGSIZE;
     }
 
     frame.id = msg->id;
     frame.dlc = can_bytes_to_dlc(msg->len);
-
-    frame.flags |= CAN_FRAME_FDF;
 
     if (msg->len > 0U)
     {

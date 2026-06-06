@@ -2,6 +2,8 @@
 
 #include <zephyr/sys/printk.h>
 #include <zephyr/sys/util.h>
+#include <stdbool.h>
+#include <stddef.h>
 
 #if defined(CONFIG_APP_FAULT_MONITORING) && \
     (defined(CONFIG_APP_VOLTAGE_MONITORING) || defined(CONFIG_APP_TEMPERATURE_MONITORING))
@@ -411,25 +413,45 @@ void debug_print_telemetry(const bms_metrics_t *metrics, const fault_data_t *fau
            over_voltage,
            over_current_discharge);
 
-    printk("\t0x%03X BMS_Monitoring DLC=%u: Vmin[%u]=",
-           BMS_MONITORING_ID,
-           BMS_MONITORING_DLC,
+    printk("\t0x%03X BMS_CellVoltageMin DLC=%u: CellVoltMinID=%u CellVoltMin=",
+           BMS_CELL_VOLTAGE_MIN_ID,
+           BMS_ID_FLOAT_DLC,
            metrics->cell_voltage_min.valid ? metrics->cell_voltage_min.id : 0U);
     print_float_3(metrics->cell_voltage_min.valid ? metrics->cell_voltage_min.value : 0.0f);
-    printk(" V Vmax[%u]=",
+    printk(" V\n");
+
+    printk("\t0x%03X BMS_CellVoltageMax DLC=%u: CellVoltMaxID=%u CellVoltMax=",
+           BMS_CELL_VOLTAGE_MAX_ID,
+           BMS_ID_FLOAT_DLC,
            metrics->cell_voltage_max.valid ? metrics->cell_voltage_max.id : 0U);
     print_float_3(metrics->cell_voltage_max.valid ? metrics->cell_voltage_max.value : 0.0f);
-    printk(" V Tmin[%u]=",
+    printk(" V\n");
+
+    printk("\t0x%03X BMS_CellTemperatureMin DLC=%u: CellTempMinID=%u CellTempMin=",
+           BMS_CELL_TEMPERATURE_MIN_ID,
+           BMS_ID_FLOAT_DLC,
            metrics->cell_temperature_min.valid ? metrics->cell_temperature_min.id : 0U);
     print_float_3(metrics->cell_temperature_min.valid ? metrics->cell_temperature_min.value : 0.0f);
-    printk(" C Tmax[%u]=",
+    printk(" C\n");
+
+    printk("\t0x%03X BMS_CellTemperatureMax DLC=%u: CellTempMaxID=%u CellTempMax=",
+           BMS_CELL_TEMPERATURE_MAX_ID,
+           BMS_ID_FLOAT_DLC,
            metrics->cell_temperature_max.valid ? metrics->cell_temperature_max.id : 0U);
     print_float_3(metrics->cell_temperature_max.valid ? metrics->cell_temperature_max.value : 0.0f);
-    printk(" C I=");
+    printk(" C\n");
+
+    printk("\t0x%03X BMS_PackElectrical DLC=%u: PackCurrent=",
+           BMS_PACK_ELECTRICAL_ID,
+           BMS_PACK_ELECTRICAL_DLC);
     print_float_3(metrics->pack_current_valid ? metrics->pack_current : 0.0f);
-    printk(" A Vpack=");
+    printk(" A PackVoltage=");
     print_float_3(metrics->pack_voltage_valid ? metrics->pack_voltage : 0.0f);
-    printk(" V P=");
+    printk(" V\n");
+
+    printk("\t0x%03X BMS_PackPower DLC=%u: PackPower=",
+           BMS_PACK_POWER_ID,
+           BMS_PACK_POWER_DLC);
     print_float_3(metrics->pack_power_valid ? metrics->pack_power : 0.0f);
     printk(" W\n\n");
 #else

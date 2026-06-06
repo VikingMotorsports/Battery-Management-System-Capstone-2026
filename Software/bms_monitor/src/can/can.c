@@ -50,7 +50,7 @@ int can_init(void)
     ret = can_set_mode(can_dev, CAN_MODE_FD);
     if (ret < 0)
     {
-        LOG_ERR("can_set_mode(CAN_MODE_FD) failed: %d", ret);
+        LOG_ERR("can_set_mode failed: %d", ret);
         return ret;
     }
 
@@ -79,7 +79,7 @@ int can_transmit(const can_message_t *msg)
 
     if (msg->len > CAN_MAX_DLEN)
     {
-        LOG_ERR("CAN FD payload too large: len=%u", (unsigned int)msg->len);
+        LOG_ERR("CAN payload too large: len=%u", (unsigned int)msg->len);
         return -EMSGSIZE;
     }
 
